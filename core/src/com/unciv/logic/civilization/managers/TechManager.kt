@@ -216,6 +216,13 @@ class TechManager : IsPartOfGameInfoSerialization {
         return (scienceOfLast8Turns.sum() * civInfo.gameInfo.speed.scienceCostModifier).toInt()
     }
 
+    /** Instantly completes the currently-researched technology (used by the Greek Great Scientist). */
+    fun completeCurrentTech() {
+        val current = currentTechnologyName() ?: return
+        val remaining = costOfTech(current) - researchOfTech(current)
+        if (remaining > 0) addScience(remaining)
+    }
+
     private fun addCurrentScienceToScienceOfLast8Turns(science: Int) {
         scienceOfLast8Turns[civInfo.gameInfo.turns % 8] = science
     }

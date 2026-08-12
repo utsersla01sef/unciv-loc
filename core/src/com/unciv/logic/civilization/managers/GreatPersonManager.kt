@@ -76,6 +76,7 @@ class GreatPersonManager : IsPartOfGameInfoSerialization {
         }
 
         for ((greatPerson, value) in greatPersonPointsCounter) {
+            if (!isAvailableForCiv(greatPerson)) continue
             val requiredPoints = getPointsRequiredForGreatPerson(greatPerson)
             if (value >= requiredPoints) {
                 greatPersonPointsCounter.add(greatPerson, -requiredPoints)
@@ -84,6 +85,14 @@ class GreatPersonManager : IsPartOfGameInfoSerialization {
             }
         }
         return null
+    }
+
+    /** Returns false if [unitName] is a Great Person unit restricted via `uniqueTo` to a civilization other than this manager's. */
+    @Readonly
+    private fun isAvailableForCiv(unitName: String): Boolean {
+        val unit = civInfo.gameInfo.ruleset.units[unitName] ?: return false
+        val uniqueTo = unit.uniqueTo ?: return true
+        return civInfo.matchesFilter(uniqueTo)
     }
 
     fun addGreatPersonPoints() {
@@ -110,6 +119,7 @@ class GreatPersonManager : IsPartOfGameInfoSerialization {
         .filter { it.isGreatPerson }
         .map { civInfo.getEquivalentUnit(it.name) }
         .filterNot { it.isUnavailableBySettings(civInfo.gameInfo) }
+        .filterNot { it.uniqueTo != null && !civInfo.matchesFilter(it.uniqueTo!!) }
         .toHashSet()
 
     @Readonly

@@ -7109,3 +7109,17 @@ TileSets/Minimal/Tiles/River-BottomRight
   orig: 32, 28
   offset: 0, 0
   index: -1
+TileSets/HexaRealm/Units/Great Writer
+  rotate: false
+  xy: 429, 1513
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Units/Great Writer-Modern era
+  rotate: false
+  xy: 357, 1385
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1

@@ -16,16 +16,25 @@ import kotlin.math.min
 @Suppress("UNUSED_PARAMETER") // references need to have the signature expected by UnitActions.actionTypeToFunctions
 object UnitActionsGreatPerson {
 
+    private const val GREAT_SCIENTIST_COOLDOWN_TURNS = 10
+
     internal fun getHurryResearchActions(unit: MapUnit, tile: Tile) = sequence {
         for (unique in unit.getMatchingUniques(UniqueType.CanHurryResearch)){
+            val turnsSinceLastUse = unit.civ.gameInfo.turns - unit.greatScientistLastUsedTurn
+            val onCooldown = turnsSinceLastUse < GREAT_SCIENTIST_COOLDOWN_TURNS
+            val cooldownRemaining = GREAT_SCIENTIST_COOLDOWN_TURNS - turnsSinceLastUse
             val useFrequency = getUseFrequency(unit, unique, 76f)
             yield(UnitAction(
                 UnitActionType.HurryResearch, useFrequency,
+                title = if (onCooldown) "Hurry Research ([$cooldownRemaining] turns)"
+                    else UnitActionType.HurryResearch.value,
                 action = {
-                    unit.civ.tech.addScience(unit.civ.tech.getScienceFromGreatScientist())
-                    unit.consume()
+                    unit.civ.tech.completeCurrentTech()
+                    unit.greatScientistLastUsedTurn = unit.civ.gameInfo.turns
+                    unit.useMovementPoints(unit.currentMovement)
                 }.takeIf {
-                    unit.hasMovement()
+                    !onCooldown
+                        && unit.hasMovement()
                         && unit.civ.tech.currentTechnologyName() != null
                         && !unit.civ.tech.currentTechnology()!!.hasUnique(UniqueType.CannotBeHurried)
                 }

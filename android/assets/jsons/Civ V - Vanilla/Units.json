@@ -1285,6 +1285,7 @@
 	{
 		"name": "Great Scientist",
 		"unitType": "Civilian",
+		"uniqueTo": "Greece",
 		"uniques": ["Can hurry technology research",
             "Can instantly construct a [Academy] improvement <by consuming this unit>",
             "Is part of Great Person group [Scientist]",
@@ -1301,12 +1302,12 @@
 		"movement": 2
 	},
 	{
-		"name": "Great Engineer",
+		"name": "Great Writer",
 		"unitType": "Civilian",
-		"uniques": ["Can speed up construction of a building",
-            "Can instantly construct a [Manufactory] improvement <by consuming this unit>",
-            "Is part of Great Person group [Engineer]",
-            "Great Person - [Production]", "Unbuildable", "Uncapturable"],
+		"uniques": ["Can generate a large amount of culture",
+            "Can instantly construct a [Landmark] improvement <by consuming this unit>",
+            "Is part of Great Person group [Writer]",
+            "Great Person - [Culture]", "Unbuildable", "Uncapturable"],
 		"movement": 2
 	},
 	{

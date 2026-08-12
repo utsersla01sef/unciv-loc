@@ -88,6 +88,9 @@ class MapUnit : IsPartOfGameInfoSerialization {
     // New - track only *how many have been used*, derive max from uniques, left = max - used
     var abilityToTimesUsed: HashMap<String, Int> = hashMapOf()
 
+    /** Turn on which this Great Scientist (Archimedes) last completed a technology. Used for cooldown gating. */
+    var greatScientistLastUsedTurn: Int = Int.MIN_VALUE / 2
+
     var religion: String? = null
     var religiousStrengthLost = 0
 

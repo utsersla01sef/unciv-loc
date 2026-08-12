@@ -98,15 +98,15 @@ object CivilianUnitAutomation {
             return ReligiousUnitAutomation.automateInquisitor(unit)
 
         val isLateGame = isLateGame(unit.civ)
-        // Great scientist -> Hurry research if late game
-        // Great writer -> Hurry policy  if late game
-        if (isLateGame) {
-            val hurriedResearch = UnitActions.invokeUnitAction(unit, UnitActionType.HurryResearch)
-            if (hurriedResearch) return
+        // Great scientist (Greek Archimedes) -> Hurry research whenever off cooldown (unit is permanent)
+        val hurriedResearch = UnitActions.invokeUnitAction(unit, UnitActionType.HurryResearch)
+        if (hurriedResearch) return
 
+        // Great writer -> Hurry policy if late game
+        if (isLateGame) {
             val hurriedPolicy = UnitActions.invokeUnitAction(unit, UnitActionType.HurryPolicy)
             if (hurriedPolicy) return
-            //TODO: save up great scientists/writers for late game (8 turns after research labs/broadcast towers resp.)
+            //TODO: save up great writers for late game (8 turns after broadcast towers)
         }
 
         // Great merchant -> Conduct trade mission if late game and if not at war.

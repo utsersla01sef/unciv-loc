@@ -56,31 +56,31 @@ class UnitUniquesTests {
         // Do this early so the uniqueObjects lazy is still un-triggered
         val requireUnique = UniqueType.ConsumesResources.text.fillPlaceholders("3", "Iron")
         // Get a clone with lazies un-tripped
-        val oldImprovement = game.ruleset.tileImprovements["Manufactory"]!!
+        val oldImprovement = game.ruleset.tileImprovements["Landmark"]!!
         val improvement = json().run { fromJson(TileImprovement::class.java, toJson(oldImprovement)) }
         improvement.uniques.add(requireUnique)
-        Assert.assertFalse("Test preparation failed to add ConsumesResources to Manufactory",
+        Assert.assertFalse("Test preparation failed to add ConsumesResources to Landmark",
             improvement.uniqueObjects.none { it.type == UniqueType.ConsumesResources })
-        game.ruleset.tileImprovements["Manufactory"] = improvement
+        game.ruleset.tileImprovements["Landmark"] = improvement
 
         game.makeHexagonalMap(1)
         val civ = game.addCiv(isPlayer = true)
         val centerTile = game.getTile(HexCoord.Zero)
         val capital = game.addCity(civ, centerTile)
 
-        // Place an Engineer and see if he could create a Manufactory
+        // Place a Writer and see if he could create a Landmark
         val unitTile = game.getTile(HexCoord(1,0))
-        val unit = game.addUnit("Great Engineer", civ, unitTile)
+        val unit = game.addUnit("Great Writer", civ, unitTile)
         unit.currentMovement = unit.baseUnit.movement.toFloat()  // Required!
         val actionsWithoutIron = try {
             UnitActionsFromUniques.getImprovementConstructionActionsFromGeneralUnique(unit, unitTile)
         } catch (ex: Throwable) {
             // Give that IndexOutOfBoundsException a nicer name
             Assert.fail("getImprovementConstructionActions throws Exception ${ex.javaClass.simpleName}")
-            game.ruleset.tileImprovements["Manufactory"] = oldImprovement
+            game.ruleset.tileImprovements["Landmark"] = oldImprovement
             return
         }.filter { it.action != null }
-        Assert.assertTrue("Great Engineer should NOT be able to create a Manufactory modded to require Iron with 0 Iron",
+        Assert.assertTrue("Great Writer should NOT be able to create a Landmark modded to require Iron with 0 Iron",
             actionsWithoutIron.none())
 
         // Supply Iron
@@ -95,12 +95,12 @@ class UnitUniquesTests {
         val ironAvailable = civ.getResourceAmount("Iron")
         Assert.assertTrue("Test preparation failed to add Iron to Civ resources", ironAvailable >= 3)
 
-        // See if that same Engineer could create a Manufactory NOW
+        // See if that same Writer could create a Landmark NOW
         val actionsWithIron = UnitActionsFromUniques.getImprovementConstructionActionsFromGeneralUnique(unit, unitTile)
             .filter { it.action != null }
-        Assert.assertFalse("Great Engineer SHOULD be able to create a Manufactory modded to require Iron once Iron is available",
+        Assert.assertFalse("Great Writer SHOULD be able to create a Landmark modded to require Iron once Iron is available",
             actionsWithIron.none())
-        game.ruleset.tileImprovements["Manufactory"] = oldImprovement
+        game.ruleset.tileImprovements["Landmark"] = oldImprovement
     }
 
     @Test

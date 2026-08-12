@@ -16,12 +16,12 @@
         "unitNames": ["Aretas III", "Andrew Carnegie", "Coco Chanel", "Marcus Licinius Crassus", "Enrico Dandolo", "Anthony van Diemen", "Jakob Fugger", "Harkuf", "Edward Harriman", "Milton S. Hershey", "Ibn Battuta", "Steve Jobs", "John Maynard Keynes", "Sir James Lancaster", "Sir Alexander Mackenzie", "Giovanni de Medici", "John Stuart Mill", "Henri Nestlé", "Marco Polo", "John D. Rockefeller", "Sir Thomas Roe", "Shah Jahan", "Adam Smith", "Levi Strauss", "Raja Todar Mal", "Thomas Twining", "Cornelius Vanderbilt", "Richard Whittington", "Wang Anshi", "Zhang Qian"]
     },
     { 
-        "name": "Engineer",
-        "unitNames": ["Archimedes", "Alexander Graham Bell", "Isambard Kingdom Brunel", "Karl Benz", "Henry Bessemer", "Bi Sheng", "Cai Lun", "Charles Augustin de Coulomb", "Louis Daguerre", "Gottlieb Daimler", "Charles Stark Draper", "George Eastman", "Thomas Edison", "Alexandre Gustave Eiffel", "Henry Ford", "Benjamin Franklin", "Robert Goddard", "George Washington Goethals", "Heron", "Imhotep", "Joseph Marie Jacquard", "Ferdinand de Lesseps", "Guglielmo Marconi", "William Morton", "Nikolaus August Otto", "Blaise Pascal", "Norbert Rillieux", "John Roebling", "Wilhelm Schickard", "Mimar Sinan", "Nain Singh", "Nikola Tesla", "James Watt", "Frank Lloyd Wright", "Orville Wright", "Wilbur Wright", "Zhang Heng"]
+        "name": "Writer",
+        "unitNames": ["Qu Yuan", "Li Bai", "Du Fu", "Su Shi", "Cao Xueqin", "Sima Qian", "Luo Guanzhong", "Shi Nai'an", "Wu Cheng'en", "Pu Songling", "Lu Xun", "Guan Hanqing", "Wang Shifu", "Tang Xianzu", "Bai Juyi", "Li Qingzhao", "Xin Qiji", "Han Yu", "Ouyang Xiu", "Lu You", "Tao Yuanming", "William Shakespeare", "Homer", "Dante Alighieri", "Johann Wolfgang von Goethe", "Leo Tolstoy", "Fyodor Dostoevsky", "Charles Dickens", "Victor Hugo", "Miguel de Cervantes", "Virgil", "John Milton", "Franz Kafka", "James Joyce", "Mark Twain", "Molière", "Edgar Allan Poe", "Murasaki Shikibu"]
     },
     {
         "name": "Scientist",
-        "unitNames": ["Al-Khwarizmi", "Al-Razi", "Abu al-Qasim al-Zahrawi", "Alhazen", "Aristotle", "Aryabhata", "Francis Bacon", "Tycho Brahe", "Niels Bohr", "Nicolaus Copernicus", "Marie Curie", "John Dalton", "Charles Darwin", "René Descartes", "Albert Einstein", "Euclid", "Leonard Euler", "Michael Faraday", "Enrico Fermi", "Richard Feynman", "Rosalind Franklin", "Galileo Galilei", "Carl Friedrich Gauss", "Werner Heisenberg", "Alexander von Humboldt", "Hypatia", "Johannes Kepler", "Andrey Kolmogorov", "Antoine Laurent Lavoisier", "Mary Leakey", "Antony van Leeuwenhoek", "Gottfried Leibniz", "Carl Linnaeus", "Mikhail Lomonosov", "James Clerk Maxwell", "Gregor Mendel", "Dmitri Mendeleev", "Merit-Ptah", "Nasir al-Din al-Tusi", "Nabu-rimanni", "John von Neumann", "Isaac Newton", "Louis Pasteur", "Plato", "Ptolemy", "Ernest Rutherford", "Andrey Sakharov", "Claude Shannon", "Shen Kuo", "Socrates", "Alan Turing", "Xi Ling Shi", "Zu Chongzhi"]
+        "unitNames": ["Archimedes"]
     },
     {
         "name": "Khan",

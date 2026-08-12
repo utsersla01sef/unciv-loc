@@ -1691,3 +1691,10 @@ UnitTypeIcons/DomainWater
   orig: 100, 100
   offset: 0, 0
   index: -1
+EmojiIcons/Great Writer
+  rotate: false
+  xy: 1211, 1688
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
