@@ -865,3 +865,24 @@ TechIcons/Horse Archery
   orig: 100, 100
   offset: 0, 0
   index: -1
+TechIcons/Land Measuring
+  rotate: false
+  xy: 652, 730
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Wave Piloting
+  rotate: false
+  xy: 976, 622
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Windcatchers
+  rotate: false
+  xy: 112, 4
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1

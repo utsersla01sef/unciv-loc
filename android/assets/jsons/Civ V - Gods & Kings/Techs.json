@@ -197,7 +197,7 @@
 			{
 				"name": "Monasticism",
 				"row": 1,
-				"prerequisites": ["Rhetoric","Civil Service"],
+				"prerequisites": ["Civil Service"],
                 "uniques": ["[+50]% weight to this choice for AI decisions"],
 				"quote": "'Idleness is the enemy of the soul; and therefore the brethren ought to be exercised in manual labour.' - St. Benedict"
 			},
@@ -210,7 +210,7 @@
 			{
 				"name": "Feudalism",
 				"row": 3,
-				"prerequisites": ["Civil Service","Currency"],
+				"prerequisites": ["Civil Service"],
                 "uniques": ["[+100]% weight to this choice for AI decisions"],
 				"quote": "'A feudal lord is a king in his own domain.' - Medieval proverb"
 			},
@@ -224,7 +224,7 @@
 			{
 				"name": "Canon Law",
 				"row": 6,
-				"prerequisites": ["Theology","Rhetoric"],
+				"prerequisites": ["Theology"],
                 "uniques": ["[+50]% weight to this choice for AI decisions"],
 				"quote": "'The law is not made for a righteous person, but for the lawless and disobedient.' - 1 Timothy 1:9"
 			},
@@ -255,7 +255,7 @@
 				"name": "Compass",
 				"cost": 375,
 				"row": 1,
-				"prerequisites": ["Lookouts","Sailing"],
+				"prerequisites": ["Lookouts"],
                 "uniques": ["[-50]% weight to this choice for AI decisions"],
 				"quote": "'I find the great thing in this world is not so much where we stand, as in what direction we are moving.' - Oliver Wendell Holmes"
 			},
@@ -279,7 +279,7 @@
 			{
 				"name": "Parliamentary Law",
 				"row": 5,
-				"prerequisites": ["Civil Service","Education"],
+				"prerequisites": ["Education"],
                 "uniques": ["[+100]% weight to this choice for AI decisions"],
 				"quote": "'It is the common fate of the indolent to see their rights become a prey to the active.' - John Philpot Curran"
 			},
@@ -434,7 +434,7 @@
 				"quote": "'Faith moves mountains.' - Ethiopian tradition"
 			},
 			{
-				"name": "Star Navigation",
+				"name": "Wave Piloting",
 				"row": 8,
 				"prerequisites": ["Wayfinding"],
 				"uniques": ["Only available <for [Polynesian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
@@ -448,7 +448,7 @@
 				"quote": "'An arrow can only be shot by pulling it backward.' - Steppe proverb"
 			},
 			{
-				"name": "Geometry",
+				"name": "Land Measuring",
 				"row": 10,
 				"prerequisites": ["Trade Craft"],
 				"uniques": ["Only available <for [Greek] Civilizations>", "[+100]% weight to this choice for AI decisions"],
@@ -478,7 +478,7 @@
 				"quote": "'The silkworm spins its thread in silence.' - Chinese proverb"
 			},
 			{
-				"name": "Astrolabe Works",
+				"name": "Windcatchers",
 				"row": 3,
 				"prerequisites": ["Irrigation Canals"],
 				"uniques": ["Only available <for [Middle Eastern] Civilizations>", "[+100]% weight to this choice for AI decisions"],
@@ -515,7 +515,7 @@
 			{
 				"name": "Outrigger Canoes",
 				"row": 8,
-				"prerequisites": ["Star Navigation"],
+				"prerequisites": ["Wave Piloting"],
 				"uniques": ["Only available <for [Polynesian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'The canoe is your island, the ocean your road.' - Polynesian saying"
 			},
@@ -529,7 +529,7 @@
 			{
 				"name": "Siege Engines",
 				"row": 10,
-				"prerequisites": ["Geometry"],
+				"prerequisites": ["Land Measuring"],
 				"uniques": ["Only available <for [Greek] Civilizations>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Small opportunities are often the beginning of great enterprises.' - Demosthenes"
 			}
