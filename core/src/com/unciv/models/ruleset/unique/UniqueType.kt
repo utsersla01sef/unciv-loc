@@ -556,6 +556,7 @@ enum class UniqueType(
     CanMoveOnWater("May travel on Water tiles without embarking", UniqueTarget.Unit),
     CanPassImpassable("Can pass through impassable tiles", UniqueTarget.Unit),
     IgnoresTerrainCost("Ignores terrain cost", UniqueTarget.Unit),
+    IgnoresRiverMovementCost("Ignores river movement cost", UniqueTarget.Unit),
     IgnoresZOC("Ignores Zone of Control", UniqueTarget.Unit),
     RoughTerrainPenalty("Rough terrain penalty", UniqueTarget.Unit),
     CanEnterIceTiles("Can enter ice tiles", UniqueTarget.Unit),

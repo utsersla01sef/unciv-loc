@@ -119,7 +119,6 @@
 				"name": "Rhetoric",
 				"row": 3,
 				"prerequisites": ["Writing"],
-				"uniques": ["Enables Research agreements <Civilopedia link [Tutorials/Research Agreements]>"],
 				"quote": "'There is only one good, knowledge, and one evil, ignorance.' - Socrates"
 			},
 			{

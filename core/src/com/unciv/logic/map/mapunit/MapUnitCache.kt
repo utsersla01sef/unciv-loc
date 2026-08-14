@@ -68,6 +68,7 @@ class MapUnitCache(private val mapUnit: MapUnit) {
 
     var hasStrengthBonusInRadiusUnique = false
     var hasCitadelPlacementUnique = false
+    var ignoresRiverCost = false
     
     var state = GameContext.EmptyState
 
@@ -125,6 +126,7 @@ class MapUnitCache(private val mapUnit: MapUnit) {
         hasCitadelPlacementUnique = mapUnit.getMatchingUniques(UniqueType.ConstructImprovementInstantly)
             .mapNotNull { mapUnit.civ.gameInfo.ruleset.tileImprovements[it.params[0]] }
             .any { it.hasUnique(UniqueType.OneTimeTakeOverTilesInRadius) }
+        ignoresRiverCost = mapUnit.hasUnique(UniqueType.IgnoresRiverMovementCost)
     }
 
     companion object {
@@ -132,6 +134,7 @@ class MapUnitCache(private val mapUnit: MapUnit) {
             UniqueType.AllTilesCost1Move,
             UniqueType.CanPassImpassable,
             UniqueType.IgnoresTerrainCost,
+            UniqueType.IgnoresRiverMovementCost,
             UniqueType.IgnoresZOC,
             UniqueType.RoughTerrainPenalty,
             UniqueType.CannotMove,

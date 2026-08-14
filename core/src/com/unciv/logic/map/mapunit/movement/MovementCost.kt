@@ -83,7 +83,10 @@ object MovementCost {
             return unit.civ.tech.movementSpeedOnRoads + extraCost
 
         if (unit.cache.ignoresTerrainCost) return 1f + extraCost
-        if (areConnectedByRiver) return 100f  // Rivers take the entire turn to cross
+        if (areConnectedByRiver) {
+            if (unit.cache.ignoresRiverCost) return 1f + extraCost
+            return 100f  // Rivers take the entire turn to cross
+        }
 
         // Cities reduce terrain cost to 1
         val terrainCost = if (to.isCityCenter()) 1f
