@@ -1,6 +1,6 @@
 [
 	{
-		"name":"Scientist",
+		"name":"Artisan",
 		"science":3,
 		"greatPersonPoints": {"Great Writer":3},
 		"color": [0,0,255]

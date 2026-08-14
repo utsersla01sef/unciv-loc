@@ -690,7 +690,7 @@
 		"movement": 2
 	},
 	{
-		"name": "Great Scientist",
+		"name": "Natural Philosopher",
 		"unitType": "Civilian",
 		"uniqueTo": "Greece",
 		"uniques": ["Can hurry technology research",

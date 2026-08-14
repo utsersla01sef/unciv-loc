@@ -152,7 +152,7 @@ object UnitActionsGreatPerson {
 
     /** Shows a "Choose Skill" button when Archimedes has unspent upgrade points. */
     internal fun getChooseArchimedesSkillActions(unit: MapUnit, tile: Tile) = sequence {
-        if (unit.baseUnit.name != "Great Scientist" || unit.archimedesUpgradePoints <= 0) return@sequence
+        if (unit.baseUnit.name != "Natural Philosopher" || unit.archimedesUpgradePoints <= 0) return@sequence
         val physicsKnown = unit.promotions.promotions.contains("ArchimedesPhysics")
         val mathKnown = unit.promotions.promotions.contains("ArchimedesMath")
         val engineeringKnown = unit.promotions.promotions.contains("ArchimedesEngineering")

@@ -42,7 +42,7 @@ class UnitUniquesTests {
         val unitTile = game.getTile(1,0)
         cityStateCapital.expansion.takeOwnership(unitTile)
 
-        val greatPerson = game.addUnit("Great Scientist", mainCiv, unitTile)
+        val greatPerson = game.addUnit("Natural Philosopher", mainCiv, unitTile)
 
         // then
         val giftAction = UnitActions.getUnitActions(greatPerson, UnitActionType.GiftUnit)

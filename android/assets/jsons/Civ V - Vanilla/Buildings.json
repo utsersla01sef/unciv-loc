@@ -294,7 +294,7 @@
 	},
 
 	{
-		"name": "National College",
+		"name": "Master Workshop",
 		"cost": 125,
 		"science": 3,
 		"culture": 1,
@@ -485,35 +485,35 @@
 		"requiredTech": "Compass"
 	},
 	{
-		"name": "University",
+		"name": "Hall of Learning",
 		"maintenance": 2,
 		"hurryCostModifier": 15,
 		"percentStatBonus": {"science": 33},
-		"specialistSlots": {"Scientist": 2},
+		"specialistSlots": {"Artisan": 2},
 		"requiredBuilding": "Library",
 		"uniques": ["[+2 Science] from [Jungle] tiles [in this city]"],
 		"requiredTech": "Education"
 	},
 	{
 		"name": "Wat",
-		"replaces": "University",
+		"replaces": "Hall of Learning",
 		"uniqueTo": "Siam",
 		"maintenance": 2,
 		"hurryCostModifier": 15,
 		"percentStatBonus": {"science": 33},
-		"specialistSlots": {"Scientist": 2},
+		"specialistSlots": {"Artisan": 2},
 		"culture": 3,
 		"requiredBuilding": "Library",
 		"uniques": ["[+2 Science] from [Jungle] tiles [in this city]"],
 		"requiredTech": "Education"
 	},
 	{
-		"name": "Oxford University",
+		"name": "Grand Guildhouse",
 		"cost": 125,
 		"science": 3,
 		"culture": 1,
 		"isNationalWonder": true,
-		"uniques": ["Only available <if [University] is constructed in all [non-[Puppeted]] cities>", "Free Technology", "Cost increases by [30] per owned city"],
+		"uniques": ["Only available <if [Hall of Learning] is constructed in all [non-[Puppeted]] cities>", "Free Technology", "Cost increases by [30] per owned city"],
 		"requiredTech": "Education"
 	},
 	{

@@ -50,7 +50,7 @@ object Constants {
     
     // Treaties
     const val peaceTreaty = "Peace Treaty"
-    const val researchAgreement = "Research Agreement"
+    const val researchAgreement = "Scholarly Exchange"
     const val defensivePact = "Defensive Pact"
     
     // Agreements

@@ -103,7 +103,7 @@ object CivilianUnitAutomation {
         if (hurriedResearch) return
 
         // Archimedes skills: auto-pick a skill if points available, then use skills off cooldown
-        if (unit.baseUnit.name == "Great Scientist") {
+        if (unit.baseUnit.name == "Natural Philosopher") {
             UnitActions.invokeUnitAction(unit, UnitActionType.ChooseArchimedesSkill)
             // Use Mathematics first (direct science, always useful)
             if (UnitActions.invokeUnitAction(unit, UnitActionType.ArchimedesMath)) return
