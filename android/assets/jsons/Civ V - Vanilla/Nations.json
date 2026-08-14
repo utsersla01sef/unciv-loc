@@ -146,7 +146,7 @@
 		"tradeRequest": "Would you be interested in a trade agreement with England?",
 		"outerColor": [109, 2, 0],
 		"innerColor": [255, 255, 255],
-		"uniqueName": "Sun Never Sets",
+		"uniqueName": "Cinque Ports",
 		"uniques": ["[+2] Movement <for [Water] units>", "European"],
 		"cities": ["London","York","Nottingham","Hastings","Canterbury","Coventry","Warwick","Newcastle","Oxford","Liverpool",
 			"Dover","Brighton","Norwich","Leeds","Reading","Birmingham","Richmond","Exeter","Cambridge","Gloucester",
@@ -281,7 +281,7 @@
         "outerColor": [ 28,51,119],
         "innerColor": [255,255,255],
 
-		"uniqueName": "Manifest Destiny",
+		"uniqueName": "Frontier Legacy",
 		"uniques": ["[+1] Sight <for [{Military} {Land}] units>", "[-50]% Gold cost of acquiring tiles [in all cities]", "European"],
 		"cities": ["Washington","New York","Boston","Philadelphia","Atlanta","Chicago","Seattle","San Francisco","Los Angeles","Houston",
 			"Portland","St. Louis","Miami","Buffalo","Detroit","New Orleans","Baltimore","Denver","Cincinnati","Dallas","Memphis",

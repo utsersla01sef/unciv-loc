@@ -3315,3 +3315,122 @@ TileSets/AbsoluteUnits/Units/Great Writer-Industrial era-2
   orig: 77, 65
   offset: 0, 0
   index: -1
+TileSets/AbsoluteUnits/Units/War Cog
+  rotate: false
+  xy: 846, 621
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/War Cog-1
+  rotate: false
+  xy: 918, 685
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/War Cog-2
+  rotate: false
+  xy: 846, 557
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/War Cog-Barbarians
+  rotate: false
+  xy: 918, 621
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Stradiot
+  rotate: false
+  xy: 362, 254
+  size: 77, 78
+  orig: 77, 78
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Stradiot-1
+  rotate: false
+  xy: 277, 138
+  size: 77, 78
+  orig: 77, 78
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Stradiot-2
+  rotate: false
+  xy: 362, 168
+  size: 77, 78
+  orig: 77, 78
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Stradiot-Austria
+  rotate: false
+  xy: 107, 35
+  size: 77, 78
+  orig: 77, 78
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Corsair
+  rotate: false
+  xy: 990, 357
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Corsair-1
+  rotate: false
+  xy: 1062, 421
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Corsair-2
+  rotate: false
+  xy: 990, 293
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Batavian Raiders
+  rotate: false
+  xy: 1062, 213
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Batavian Raiders-1
+  rotate: false
+  xy: 1062, 149
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Batavian Raiders-2
+  rotate: false
+  xy: 918, 53
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Great Cog
+  rotate: false
+  xy: 990, 85
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Great Cog-1
+  rotate: false
+  xy: 1062, 85
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Great Cog-2
+  rotate: false
+  xy: 846, 17
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1

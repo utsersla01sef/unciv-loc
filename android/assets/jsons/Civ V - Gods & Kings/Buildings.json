@@ -751,7 +751,7 @@
 		"requiredTech": "Wayfinding"
 	},
 	{
-		"name": "Hermitage",
+		"name": "Scriptorium",
 		"cost": 125,
 		"percentStatBonus": {"culture": 50},
 		"culture": 5,
@@ -760,7 +760,7 @@
 		"requiredTech": "Cathedral Building"
 	},
 	{
-		"name": "Taj Mahal",
+		"name": "Konark Sun Temple",
 		"culture": 1,
 		"happiness": 4,
 		"greatPersonPoints": {"Great Artist": 2},
@@ -788,7 +788,7 @@
 		"requiredTech": "Trade Craft"
 	},
 	{
-		"name": "Coffee House",
+		"name": "Tavern",
 		"replaces": "Windmill",
 		"uniqueTo": "Austria",
 		"production": 2,

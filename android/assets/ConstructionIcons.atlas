@@ -74,13 +74,6 @@ BuildingIcons/Bazaar
   orig: 100, 100
   offset: 0, 0
   index: -1
-BuildingIcons/Big Ben
-  rotate: false
-  xy: 440, 106
-  size: 100, 100
-  orig: 100, 100
-  offset: 0, 0
-  index: -1
 BuildingIcons/Bomb Shelter
   rotate: false
   xy: 298, 1078
@@ -2359,6 +2352,62 @@ pp_firework
 UnitIcons/Great Writer
   rotate: false
   xy: 917, 1728
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Konark Sun Temple
+  rotate: false
+  xy: 1781, 1620
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Tavern
+  rotate: false
+  xy: 700, 1944
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Scriptorium
+  rotate: false
+  xy: 730, 864
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/War Cog
+  rotate: false
+  xy: 622, 972
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Great Cog
+  rotate: false
+  xy: 1486, 540
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Corsair
+  rotate: false
+  xy: 1378, 756
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Batavian Raiders
+  rotate: false
+  xy: 1486, 972
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Stradiot
+  rotate: false
+  xy: 838, 864
   size: 100, 100
   orig: 100, 100
   offset: 0, 0

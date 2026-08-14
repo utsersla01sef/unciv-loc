@@ -553,7 +553,7 @@
 		"cost": 100,
 		"requiredTech": "Compass",
 		"obsoleteTech": "Wayfinding",
-		"upgradesTo": "Frigate",
+		"upgradesTo": "War Cog",
 		"uniques": ["Cannot enter ocean tiles"],
 		"attackSound": "arrow"
 	},
@@ -753,7 +753,7 @@
 		"requiredTech": "Shipbuilding",
 		"uniques": ["[+1] Sight", "Withdraws before melee combat <with [80]% chance>"],
 		"hurryCostModifier": 30,
-		"attackSound": "cannon"
+		"attackSound": "nonmetalhit"
 	},
 	{
 		"name": "Turtle Ship",
@@ -766,32 +766,32 @@
 		"requiredTech": "Shipbuilding",
 		"uniques": ["Cannot enter ocean tiles"],
 		"hurryCostModifier": 30,
-		"attackSound": "cannon"
+		"attackSound": "nonmetalhit"
 	},
 	{
-		"name": "Privateer",
+		"name": "Corsair",
 		"unitType": "Melee Water",
 		"movement": 5,
 		"strength": 25,
 		"cost": 150,
 		"requiredTech": "Wayfinding",
-		"promotions": ["Coastal Raider I", "[Privateer] ability"],
-		"attackSound": "cannon"
+		"promotions": ["Coastal Raider I", "[Corsair] ability"],
+		"attackSound": "nonmetalhit"
 	},
 	{
-		"name": "Sea Beggar",
+		"name": "Batavian Raiders",
 		"unitType": "Melee Water",
-		"replaces": "Privateer",
+		"replaces": "Corsair",
 		"uniqueTo": "The Netherlands",
 		"movement": 5,
 		"strength": 25,
 		"cost": 150,
 		"requiredTech": "Wayfinding",
-		"promotions": ["Coastal Raider I", "Coastal Raider II", "Supply", "[Privateer] ability"],
-		"attackSound": "cannon"
+		"promotions": ["Coastal Raider I", "Coastal Raider II", "Supply", "[Corsair] ability"],
+		"attackSound": "nonmetalhit"
 	},
 	{
-		"name": "Frigate",
+		"name": "War Cog",
 		"unitType": "Ranged Water",
 		"movement": 5,
 		"strength": 25,
@@ -800,12 +800,12 @@
 		"requiredResource": "Iron",
 		"requiredTech": "Wayfinding",
 		"hurryCostModifier": 20,
-		"attackSound": "shipCannonVolley"
+		"attackSound": "nonmetalhit"
 	},
 	{
-		"name": "Ship of the Line",
+		"name": "Great Cog",
 		"unitType": "Ranged Water",
-		"replaces": "Frigate",
+		"replaces": "War Cog",
 		"uniqueTo": "England",
 		"movement": 5,
 		"strength": 30,
@@ -815,7 +815,7 @@
 		"uniques": ["[+1] Sight"],
 		"requiredTech": "Wayfinding",
 		"hurryCostModifier": 20,
-		"attackSound": "shipCannonVolley"
+		"attackSound": "nonmetalhit"
 	},
 	{
 		"name": "Lancer",
@@ -859,7 +859,7 @@
 		"attackSound": "horse"
 	},
 	{
-		"name": "Hussar",
+		"name": "Stradiot",
 		"unitType": "Mounted",
 		"replaces": "Lancer",
 		"uniqueTo": "Austria",
@@ -870,8 +870,8 @@
 		"requiredResource": "Horses",
 		"uniques": ["Can move after attacking","No defensive terrain bonus","[-33]% Strength <vs cities> <when attacking>",
 			"[+1] Sight"],
-		"promotions": ["[Hussar] ability"],
-		"attackSound": "cavalry"
+		"promotions": ["[Stradiot] ability"],
+		"attackSound": "horse"
 	},
 
 	/* Great people */

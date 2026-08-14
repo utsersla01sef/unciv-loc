@@ -607,7 +607,7 @@
 		"requiredTech": "Shipbuilding",
 		"uniques": ["[+2] Sight"],
 		"hurryCostModifier": 30,
-		"attackSound": "cannon"
+		"attackSound": "nonmetalhit"
 	},
 	{
 		"name": "Turtle Ship",
@@ -620,10 +620,10 @@
 		"requiredTech": "Shipbuilding",
 		"uniques": ["Cannot enter ocean tiles"],
 		"hurryCostModifier": 30,
-		"attackSound": "cannon"
+		"attackSound": "nonmetalhit"
 	},
 	{
-		"name": "Frigate",
+		"name": "War Cog",
 		"unitType": "Ranged Water",
 		"movement": 5,
 		"strength": 30,
@@ -632,12 +632,12 @@
 		"requiredResource": "Iron",
 		"requiredTech": "Wayfinding",
 		"hurryCostModifier": 20,
-		"attackSound": "shipCannonVolley"
+		"attackSound": "nonmetalhit"
 	},
 	{
-		"name": "Ship of the Line",
+		"name": "Great Cog",
 		"unitType": "Ranged Water",
-		"replaces": "Frigate",
+		"replaces": "War Cog",
 		"uniqueTo": "England",
 		"movement": 5,
 		"strength": 30,
@@ -647,7 +647,7 @@
 		"uniques": ["[+1] Sight"],
 		"requiredTech": "Wayfinding",
 		"hurryCostModifier": 20,
-		"attackSound": "shipCannonVolley"
+		"attackSound": "nonmetalhit"
 	},
 	{
 		"name": "Lancer",

@@ -7123,3 +7123,73 @@ TileSets/HexaRealm/Units/Great Writer-Modern era
   orig: 64, 56
   offset: 0, 0
   index: -1
+TileSets/FantasyHex/Units/War Cog
+  rotate: false
+  xy: 740, 913
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Units/Great Cog
+  rotate: false
+  xy: 1060, 1084
+  size: 32, 29
+  orig: 32, 29
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Units/Corsair
+  rotate: false
+  xy: 980, 1031
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Units/Batavian Raiders
+  rotate: false
+  xy: 980, 667
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Units/Stradiot
+  rotate: false
+  xy: 860, 955
+  size: 32, 29
+  orig: 32, 29
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Units/War Cog
+  rotate: false
+  xy: 1556, 1447
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Units/Great Cog
+  rotate: false
+  xy: 1941, 707
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Units/Corsair
+  rotate: false
+  xy: 1221, 1140
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Units/Batavian Raiders
+  rotate: false
+  xy: 1653, 790
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Units/Stradiot
+  rotate: false
+  xy: 577, 1696
+  size: 64, 65
+  orig: 64, 65
+  offset: 0, 0
+  index: -1
