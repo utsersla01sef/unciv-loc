@@ -327,5 +327,163 @@
 				"quote": "'Compound interest is the most powerful force in the universe.' - Albert Einstein"
 			}
 		]
+	},
+	{
+		"columnNumber": 8,
+		"era": "Late Medieval era",
+		"techCost": 1300,
+		"buildingCost": 280,
+		"wonderCost": 700,
+		"techs": [
+			{
+				"name": "Roman Roads",
+				"row": 1,
+				"prerequisites": ["Trade Craft"],
+				"uniques": ["Only available <for [Mediterranean] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'All roads lead to Rome.' - Medieval proverb"
+			},
+			{
+				"name": "Imperial Exams",
+				"row": 2,
+				"prerequisites": ["Trade Craft"],
+				"uniques": ["Only available <for [East Asian] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Studying is like sailing against the current: not to advance is to drop back.' - Chinese proverb"
+			},
+			{
+				"name": "Irrigation Canals",
+				"row": 3,
+				"prerequisites": ["Trade Craft"],
+				"uniques": ["Only available <for [Middle Eastern] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'He who has no water has no land.' - Arabian proverb"
+			},
+			{
+				"name": "Longbow Traditions",
+				"row": 4,
+				"prerequisites": ["Trade Craft"],
+				"uniques": ["Only available <for [European] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Train up a cub and he will follow you as a bow.' - English proverb"
+			},
+			{
+				"name": "Terrace Agriculture",
+				"row": 5,
+				"prerequisites": ["Trade Craft"],
+				"uniques": ["Only available <for [American] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'The land is not inherited from our ancestors, but borrowed from our children.' - Andean saying"
+			},
+			{
+				"name": "Stepwells",
+				"row": 6,
+				"prerequisites": ["Trade Craft"],
+				"uniques": ["Only available <for [South Asian] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Water is the driving force of all nature.' - attributed to ancient Indian wisdom"
+			},
+			{
+				"name": "Rock Churches",
+				"row": 7,
+				"prerequisites": ["Trade Craft"],
+				"uniques": ["Only available <for [African] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Faith moves mountains.' - Ethiopian tradition"
+			},
+			{
+				"name": "Star Navigation",
+				"row": 8,
+				"prerequisites": ["Wayfinding"],
+				"uniques": ["Only available <for [Polynesian] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Follow the stars to find your way home.' - Polynesian saying"
+			},
+			{
+				"name": "Horse Archery",
+				"row": 9,
+				"prerequisites": ["Trade Craft"],
+				"uniques": ["Only available <for [Hunnic] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'An arrow can only be shot by pulling it backward.' - Steppe proverb"
+			},
+			{
+				"name": "Geometry",
+				"row": 10,
+				"prerequisites": ["Trade Craft"],
+				"uniques": ["Only available <for [Greek] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Give me a place to stand and I shall move the earth.' - Archimedes"
+			}
+		]
+	},
+	{
+		"columnNumber": 9,
+		"era": "Late Medieval era",
+		"techCost": 1500,
+		"buildingCost": 300,
+		"wonderCost": 800,
+		"techs": [
+			{
+				"name": "Legion Discipline",
+				"row": 1,
+				"prerequisites": ["Roman Roads"],
+				"uniques": ["Only available <for [Mediterranean] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Fortune favors the brave.' - Latin proverb"
+			},
+			{
+				"name": "Sericulture",
+				"row": 2,
+				"prerequisites": ["Imperial Exams"],
+				"uniques": ["Only available <for [East Asian] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'The silkworm spins its thread in silence.' - Chinese proverb"
+			},
+			{
+				"name": "Astrolabe Works",
+				"row": 3,
+				"prerequisites": ["Irrigation Canals"],
+				"uniques": ["Only available <for [Middle Eastern] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'The stars are the letters of heaven.' - Arabian saying"
+			},
+			{
+				"name": "Stone Castles",
+				"row": 4,
+				"prerequisites": ["Longbow Traditions"],
+				"uniques": ["Only available <for [European] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'An Englishman's home is his castle.' - English proverb"
+			},
+			{
+				"name": "Calendar Stones",
+				"row": 5,
+				"prerequisites": ["Terrace Agriculture"],
+				"uniques": ["Only available <for [American] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Time is the longest distance between two places.' - Mesoamerican saying"
+			},
+			{
+				"name": "Sanskrit Lore",
+				"row": 6,
+				"prerequisites": ["Stepwells"],
+				"uniques": ["Only available <for [South Asian] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Knowledge is the third eye of man.' - Sanskrit proverb"
+			},
+			{
+				"name": "Trans-Sahara Routes",
+				"row": 7,
+				"prerequisites": ["Rock Churches"],
+				"uniques": ["Only available <for [African] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Salt comes from the north, gold from the south, but wisdom comes from the journey.' - Sahel proverb"
+			},
+			{
+				"name": "Outrigger Canoes",
+				"row": 8,
+				"prerequisites": ["Star Navigation"],
+				"uniques": ["Only available <for [Polynesian] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'The canoe is your island, the ocean your road.' - Polynesian saying"
+			},
+			{
+				"name": "Composite Bows",
+				"row": 9,
+				"prerequisites": ["Horse Archery"],
+				"uniques": ["Only available <for [Hunnic] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'A bow without an arrow is a song without words.' - Steppe proverb"
+			},
+			{
+				"name": "Siege Engines",
+				"row": 10,
+				"prerequisites": ["Geometry"],
+				"uniques": ["Only available <for [Greek] Civilizations>","[+100]% weight to this choice for AI decisions"],
+				"quote": "'Small opportunities are often the beginning of great enterprises.' - Demosthenes"
+			}
+		]
 	}
 ]

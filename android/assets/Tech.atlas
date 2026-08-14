@@ -725,3 +725,143 @@ TechIcons/Cartography
   orig: 100, 100
   offset: 0, 0
   index: -1
+TechIcons/Calendar Stones
+  rotate: false
+  xy: 838, 838
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Irrigation Canals
+  rotate: false
+  xy: 112, 4
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Outrigger Canoes
+  rotate: false
+  xy: 976, 622
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Sericulture
+  rotate: false
+  xy: 544, 298
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Stepwells
+  rotate: false
+  xy: 112, 4
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Star Navigation
+  rotate: false
+  xy: 514, 838
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Trans-Sahara Routes
+  rotate: false
+  xy: 1810, 838
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Rock Churches
+  rotate: false
+  xy: 436, 514
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Terrace Agriculture
+  rotate: false
+  xy: 4, 544
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Roman Roads
+  rotate: false
+  xy: 1192, 730
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Legion Discipline
+  rotate: false
+  xy: 544, 730
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Imperial Exams
+  rotate: false
+  xy: 1162, 838
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Astrolabe Works
+  rotate: false
+  xy: 544, 406
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Siege Engines
+  rotate: false
+  xy: 328, 82
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Longbow Traditions
+  rotate: false
+  xy: 406, 838
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Sanskrit Lore
+  rotate: false
+  xy: 868, 298
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Stone Castles
+  rotate: false
+  xy: 1702, 838
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Composite Bows
+  rotate: false
+  xy: 406, 838
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Geometry
+  rotate: false
+  xy: 652, 730
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Horse Archery
+  rotate: false
+  xy: 328, 514
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
