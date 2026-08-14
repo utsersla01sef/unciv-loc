@@ -73,7 +73,8 @@ object UnitActionsGreatPerson {
                         constructIfEnough()
                     }
 
-                    unit.consume()
+                    if (unit.baseUnit.name != "Natural Philosopher") unit.consume()
+                    else unit.useMovementPoints(unit.currentMovement)
                 }.takeIf { unit.hasMovement() && canHurryWonder }
             ))
         }
@@ -107,7 +108,8 @@ object UnitActionsGreatPerson {
                         constructIfEnough()
                     }
 
-                    unit.consume()
+                    if (unit.baseUnit.name != "Natural Philosopher") unit.consume()
+                    else unit.useMovementPoints(unit.currentMovement)
                 }.takeIf { unit.hasMovement() && canHurryConstruction }
             ))
         }
