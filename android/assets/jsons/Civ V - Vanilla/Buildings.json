@@ -294,6 +294,31 @@
 	},
 
 	{
+		"name": "Cloister",
+		"cost": 80,
+		"faith": 2,
+		"culture": 1,
+		"requiredTech": "Monasticism",
+		"uniques": ["Only available <in cities with a [Temple]>"]
+	},
+	{
+		"name": "Manor",
+		"cost": 100,
+		"food": 1,
+		"production": 1,
+		"gold": 1,
+		"requiredTech": "Feudalism",
+		"uniques": ["Never destroyed when the city is captured"]
+	},
+	{
+		"name": "Town Hall",
+		"cost": 120,
+		"gold": 2,
+		"happiness": 1,
+		"requiredTech": "Parliamentary Law",
+		"uniques": ["Never destroyed when the city is captured"]
+	},
+	{
 		"name": "Master Workshop",
 		"cost": 125,
 		"science": 3,
@@ -613,7 +638,7 @@
 		"hurryCostModifier": 10,
 		"maintenance": 2,
 		"requiredBuilding": "Colosseum",
-		"requiredTech": "Printing Press"
+		"requiredTech": "Woodblock Printing"
 	},
 	// Column 8
 	{
@@ -623,7 +648,7 @@
 		"requiredBuilding": "Harbor",
 		"uniques": ["[+1 Production, +1 Gold] from [Water resource] tiles [in this city]",
 			"Must be next to [Coast]", "[+15]% Production when constructing [Water] units [in this city]"],
-		"requiredTech": "Navigation"
+		"requiredTech": "Wayfinding"
 	},
 	{
 		"name": "Taj Mahal",
@@ -632,7 +657,7 @@
 		"greatPersonPoints": {"Great Artist": 2},
 		"isWonder": true,
 		"uniques": ["Empire enters golden age"],
-		"requiredTech": "Printing Press",
+		"requiredTech": "Woodblock Printing",
 		"quote": "'The Taj Mahal rises above the banks of the river like a solitary tear suspended on the cheek of time.' - Rabindranath Tagore"
 	},
 	{
@@ -651,7 +676,7 @@
 		"hurryCostModifier": 25,
 		"maintenance": 2,
 		"uniques": ["Must not be on [Hill]", "[+10]% Production when constructing [All] buildings [in this city]"],
-		"requiredTech": "Mercantilism"
+		"requiredTech": "Trade Craft"
 	},
 
 	// Industrial Era
@@ -664,7 +689,7 @@
 		"greatPersonPoints": {"Great Merchant": 2},
 		"isWonder": true,
 		"uniques": ["[Gold] cost of purchasing items in cities [-15]%"],
-		"requiredTech": "Mercantilism",
+		"requiredTech": "Trade Craft",
 		"quote": "'To achieve great things, two things are needed: a plan, and not quite enough time.' - Leonard Bernstein"
 	},
 

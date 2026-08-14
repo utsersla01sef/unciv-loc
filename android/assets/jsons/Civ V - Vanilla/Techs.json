@@ -155,16 +155,37 @@
 		"wonderCost": 300,
 		"techs": [
 			{
+				"name": "Monasticism",
+				"row": 1,
+				"prerequisites": ["Rhetoric","Civil Service"],
+				"uniques": ["[+50]% weight to this choice for AI decisions"],
+				"quote": "'Idleness is the enemy of the soul; and therefore the brethren ought to be exercised in manual labour.' - St. Benedict"
+			},
+			{
 				"name": "Theology",
 				"row": 2,
 				"prerequisites": ["Calendar", "Rhetoric"],
 				"quote": "'Three things are necessary for the salvation of man: to know what he ought to believe; to know what he ought to desire; and to know what he ought to do' - St. Thomas Aquinas"
 			},
 			{
+				"name": "Feudalism",
+				"row": 3,
+				"prerequisites": ["Civil Service","Currency"],
+				"uniques": ["[+100]% weight to this choice for AI decisions"],
+				"quote": "'A feudal lord is a king in his own domain.' - Medieval proverb"
+			},
+			{
 				"name": "Civil Service",
 				"row": 4,
 				"prerequisites": ["Rhetoric","Trapping"],
 				"quote": "'The only thing that saves us from the bureaucracy is its inefficiency' - Eugene McCarthy"
+			},
+			{
+				"name": "Canon Law",
+				"row": 6,
+				"prerequisites": ["Theology","Rhetoric"],
+				"uniques": ["[+50]% weight to this choice for AI decisions"],
+				"quote": "'The law is not made for a righteous person, but for the lawless and disobedient.' - 1 Timothy 1:9"
 			},
 			{
 				"name": "Currency",
@@ -210,11 +231,32 @@
 				"quote": "'Education is the best provision for old age.' - Aristotle"
 			},
 			{
-				"name": "Chivalry",
+				"name": "Alchemy",
+				"row": 4,
+				"prerequisites": ["Metal Casting","Currency"],
+				"uniques": ["[+100]% weight to this choice for AI decisions"],
+				"quote": "'The alchemists in their search for gold discovered many other things of greater value.' - Arthur Schopenhauer"
+			},
+			{
+				"name": "Parliamentary Law",
 				"row": 5,
+				"prerequisites": ["Civil Service","Education"],
+				"uniques": ["[+100]% weight to this choice for AI decisions"],
+				"quote": "'It is the common fate of the indolent to see their rights become a prey to the active.' - John Philpot Curran"
+			},
+			{
+				"name": "Chivalry",
+				"row": 6,
 				"prerequisites": ["Civil Service","Currency","Horseback Riding"],
                 "uniques": ["Enables Defensive Pacts <Civilopedia link [Tutorials/Defensive Pacts]>"],
 				"quote": "'Whoso pulleth out this sword of this stone and anvil, is rightwise king born of all England.' - Malory"
+			},
+			{
+				"name": "Cartography",
+				"row": 8,
+				"prerequisites": ["Compass","Education"],
+				"uniques": ["[+50]% weight to this choice for AI decisions"],
+				"quote": "'Here be dragons.' - Medieval mapmakers"
 			}
 		]
 	},
@@ -228,7 +270,7 @@
 			{
 				"name": "Artisanry",
 				"row": 8,
-				"prerequisites": ["Hydraulics"],
+				"prerequisites": ["Metal Casting"],
 				"uniques": ["Improves movement speed on roads"],
 				"quote": "'The press is the best instrument for enlightening the mind of man, and improving him as a rational, moral and social being.' - Thomas Jefferson"
 			},
@@ -267,21 +309,21 @@
 		"wonderCost": 625,
 		"techs": [
 			{
-				"name": "Printing Press",
+				"name": "Woodblock Printing",
 				"row": 8,
 				"prerequisites": ["Artisanry","Siegecraft"],
 				"quote": "'It is a newspaper's duty to print the news and raise hell.' - The Chicago Times"
 			},
 			{
-				"name": "Navigation",
+				"name": "Wayfinding",
 				"row": 2,
 				"prerequisites": ["Shipbuilding"],
 				"quote": "'The winds and the waves are always on the side of the ablest navigators.' - Edward Gibbon"
 			},
 			{
-				"name": "Mercantilism",
+				"name": "Trade Craft",
 				"row": 6,
-				"prerequisites": ["Banking","Printing Press"],
+				"prerequisites": ["Banking","Woodblock Printing"],
 				"quote": "'Compound interest is the most powerful force in the universe.' - Albert Einstein"
 			}
 		]

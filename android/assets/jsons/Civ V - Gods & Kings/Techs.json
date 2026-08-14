@@ -195,10 +195,24 @@
 		"wonderCost": 300,
 		"techs": [
 			{
+				"name": "Monasticism",
+				"row": 1,
+				"prerequisites": ["Rhetoric","Civil Service"],
+                "uniques": ["[+50]% weight to this choice for AI decisions"],
+				"quote": "'Idleness is the enemy of the soul; and therefore the brethren ought to be exercised in manual labour.' - St. Benedict"
+			},
+			{
 				"name": "Theology",
 				"row": 2,
 				"prerequisites": ["Rhetoric", "Drama and Poetry"],
 				"quote": "'Three things are necessary for the salvation of man: to know what he ought to believe; to know what he ought to desire; and to know what he ought to do' - St. Thomas Aquinas"
+			},
+			{
+				"name": "Feudalism",
+				"row": 3,
+				"prerequisites": ["Civil Service","Currency"],
+                "uniques": ["[+100]% weight to this choice for AI decisions"],
+				"quote": "'A feudal lord is a king in his own domain.' - Medieval proverb"
 			},
 			{
 				"name": "Civil Service",
@@ -206,6 +220,13 @@
 				"prerequisites": ["Currency","Horseback Riding","Drama and Poetry"],
 				"uniques": ["Enables Open Borders agreements <Civilopedia link [Tutorials/Open Borders]>","[+100]% weight to this choice for AI decisions"],
 				"quote": "'The only thing that saves us from the bureaucracy is its inefficiency' - Eugene McCarthy"
+			},
+			{
+				"name": "Canon Law",
+				"row": 6,
+				"prerequisites": ["Theology","Rhetoric"],
+                "uniques": ["[+50]% weight to this choice for AI decisions"],
+				"quote": "'The law is not made for a righteous person, but for the lawless and disobedient.' - 1 Timothy 1:9"
 			},
 			{
 				"name": "Guilds",
@@ -234,7 +255,7 @@
 				"name": "Compass",
 				"cost": 375,
 				"row": 1,
-				"prerequisites": ["Lookouts","Theology"],
+				"prerequisites": ["Lookouts","Sailing"],
                 "uniques": ["[-50]% weight to this choice for AI decisions"],
 				"quote": "'I find the great thing in this world is not so much where we stand, as in what direction we are moving.' - Oliver Wendell Holmes"
 			},
@@ -249,11 +270,32 @@
 				"quote": "'Education is the best provision for old age.' - Aristotle"
 			},
 			{
+				"name": "Alchemy",
+				"row": 4,
+				"prerequisites": ["Metal Casting","Guilds"],
+                "uniques": ["[+100]% weight to this choice for AI decisions"],
+				"quote": "'The alchemists in their search for gold discovered many other things of greater value.' - Arthur Schopenhauer"
+			},
+			{
+				"name": "Parliamentary Law",
+				"row": 5,
+				"prerequisites": ["Civil Service","Education"],
+                "uniques": ["[+100]% weight to this choice for AI decisions"],
+				"quote": "'It is the common fate of the indolent to see their rights become a prey to the active.' - John Philpot Curran"
+			},
+			{
 				"name": "Chivalry",
 				"row": 6,
 				"prerequisites": ["Civil Service","Guilds"],
                 "uniques": ["Enables Defensive Pacts <Civilopedia link [Tutorials/Defensive Pacts]>"],
                 "quote": "'Whoso pulleth out this sword of this stone and anvil, is rightwise king born of all England.' - Malory"
+			},
+			{
+				"name": "Cartography",
+				"row": 8,
+				"prerequisites": ["Compass","Education"],
+                "uniques": ["[+50]% weight to this choice for AI decisions"],
+				"quote": "'Here be dragons.' - Medieval mapmakers"
 			}
 		]
 	},
@@ -267,7 +309,7 @@
 			{
 				"name": "Artisanry",
 				"row": 8,
-				"prerequisites": ["Guilds","Hydraulics"],
+				"prerequisites": ["Guilds","Metal Casting"],
 				"uniques": ["Improves movement speed on roads"],
 				"quote": "'The press is the best instrument for enlightening the mind of man, and improving him as a rational, moral and social being.' - Thomas Jefferson"
 			},
@@ -308,28 +350,28 @@
 		"wonderCost": 625,
 		"techs": [
 			{
-				"name": "Printing Press",
+				"name": "Woodblock Printing",
 				"row": 8,
 				"prerequisites": ["Artisanry","Siegecraft"],
                 "uniques": ["[+100]% weight to this choice for AI decisions"],
 				"quote": "'It is a newspaper's duty to print the news and raise hell.' - The Chicago Times"
 			},
 			{
-				"name": "Navigation",
+				"name": "Wayfinding",
 				"row": 2,
 				"prerequisites": ["Shipbuilding"],
 				"quote": "'The winds and the waves are always on the side of the ablest navigators.' - Edward Gibbon"
 			},
 			{
-				"name": "Architecture",
+				"name": "Cathedral Building",
 				"row": 4,
-				"prerequisites": ["Banking","Printing Press"],
+				"prerequisites": ["Banking","Woodblock Printing"],
 				"quote": "'Architecture begins where engineering ends.' - Walter Gropius"
 			},
 			{
-				"name": "Mercantilism",
+				"name": "Trade Craft",
 				"row": 6,
-				"prerequisites": ["Banking","Printing Press"],
+				"prerequisites": ["Banking","Woodblock Printing"],
                 "uniques": ["[+50]% weight to this choice for AI decisions"],
 				"quote": "'Compound interest is the most powerful force in the universe.' - Albert Einstein"
 			}
