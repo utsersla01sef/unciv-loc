@@ -203,7 +203,7 @@
 		"maintenance": 1,
 		"uniques": ["Must be next to [Coast]", "[+1 Food] from [Ocean] tiles [in this city]",
 			"[+1 Food] from [Coast] tiles [in this city]", "[+1 Food] from [Fish] tiles [in this city]" ],
-		"requiredTech": "Optics"
+		"requiredTech": "Lookouts"
 	},
 	{
 		"name": "Stable",
@@ -222,7 +222,7 @@
 		"hurryCostModifier": 50,
 		"uniques": ["Removes extra unhappiness from annexed cities",
 			"Can only be built <in [Annexed] cities>"],
-		"requiredTech": "Mathematics"
+		"requiredTech": "Reckoning"
 	},
 	{
 		"name": "Hanging Gardens",
@@ -230,7 +230,7 @@
 		"food": 10,
 		"culture": 1,
 		"isWonder": true,
-		"requiredTech": "Mathematics",
+		"requiredTech": "Reckoning",
 		"quote": "'I think that if ever a mortal heard the word of God it would be in a garden at the cool of the day.' - F. Frankfort Moore"
 	},
 	{
@@ -266,7 +266,7 @@
 		"requiredBuilding": "Monument",
 		"maintenance": 2,
 		"hurryCostModifier": 25,
-		"requiredTech": "Philosophy",
+		"requiredTech": "Rhetoric",
 		"specialistSlots": {"Artist": 1},
 		"uniques": ["Destroyed when the city is captured"]
 	},
@@ -280,7 +280,7 @@
 		"happiness": 2,
 		"requiredBuilding": "Monument",
 		"hurryCostModifier": 25,
-		"requiredTech": "Philosophy"
+		"requiredTech": "Rhetoric"
 	},
 	{
 		"name": "Mud Pyramid Mosque",
@@ -290,7 +290,7 @@
 		"hurryCostModifier": 25,
 		"culture": 4,
 		"requiredBuilding": "Monument",
-		"requiredTech": "Philosophy"
+		"requiredTech": "Rhetoric"
 	},
 
 	{
@@ -301,7 +301,7 @@
 		"isNationalWonder": true,
 		"percentStatBonus": {"science": 50},
 		"uniques": ["Only available <if [Library] is constructed in all [non-[Puppeted]] cities>", "Cost increases by [30] per owned city"],
-		"requiredTech": "Philosophy"
+		"requiredTech": "Rhetoric"
 	},
 	{
 		"name": "The Oracle",
@@ -309,7 +309,7 @@
 		"greatPersonPoints": {"Great Writer": 1},
 		"isWonder": true,
 		"uniques": ["Free Social Policy"],
-		"requiredTech": "Philosophy",
+		"requiredTech": "Rhetoric",
 		"quote": "'The ancient Oracle said that I was the wisest of all the Greeks. It is because I alone, of all the Greeks, know that I know nothing' - Socrates"
 	},
 	{
@@ -318,7 +318,7 @@
 		"culture": 1,
 		"isNationalWonder": true,
 		"uniques": ["Only available <if [Monument] is constructed in all [non-[Puppeted]] cities>", "[+25]% Great Person generation [in this city]", "Cost increases by [30] per owned city"],
-		"requiredTech": "Philosophy"
+		"requiredTech": "Rhetoric"
 	},
 	{
 		"name": "Market",
@@ -354,7 +354,7 @@
 		"maintenance": 1,
 		"hurryCostModifier": 0,
 		"uniques": ["[40]% Food is carried over after population increases [in this city]"],
-		"requiredTech": "Engineering"
+		"requiredTech": "Hydraulics"
 	},
 	{
 		"name": "Heroic Epic",
@@ -564,7 +564,7 @@
 		"culture": 1,
 		"isNationalWonder": true,
 		"uniques": ["Only available <if [Workshop] is constructed in all [non-[Puppeted]] cities>", "Cost increases by [30] per owned city"],
-		"requiredTech": "Machinery"
+		"requiredTech": "Artisanry"
 	},
 	{
 		"name": "Armory",
@@ -572,7 +572,7 @@
 		"maintenance": 1,
 		"requiredBuilding": "Barracks",
 		"uniques": ["New [Military] units start with [15] XP [in this city]", "Destroyed when the city is captured"],
-		"requiredTech": "Machinery"
+		"requiredTech": "Artisanry"
 	},
 
 	// Renaissance Era

@@ -108,7 +108,7 @@
 		"wonderCost": 250,
 		"techs": [
 			{
-				"name": "Optics",
+				"name": "Lookouts",
 				"cost": 85,
 				"row": 1,
 				"prerequisites": ["Sailing"],
@@ -116,7 +116,7 @@
 				"quote": "'He made an instrument to know if the moon shine at full or no.' - Samuel Butler"
 			},
 			{
-				"name": "Philosophy",
+				"name": "Rhetoric",
 				"row": 3,
 				"prerequisites": ["Writing"],
 				"uniques": ["Enables Research agreements <Civilopedia link [Tutorials/Research Agreements]>"],
@@ -129,10 +129,10 @@
 				"quote": "'A Horse! A Horse! My kingdom for a horse!' - Shakespeare (Richard III)"
 			},
 			{
-				"name": "Mathematics",
+				"name": "Reckoning",
 				"row": 7,
 				"prerequisites": ["The Wheel", "Archery"],
-				"quote": "'Mathematics is the gate and key to the sciences.' - Roger Bacon"
+				"quote": "'Reckoning is the gate and key to the sciences.' - Roger Bacon"
 			},
 			{
 				"name": "Construction",
@@ -158,26 +158,26 @@
 			{
 				"name": "Theology",
 				"row": 2,
-				"prerequisites": ["Calendar", "Philosophy"],
+				"prerequisites": ["Calendar", "Rhetoric"],
 				"quote": "'Three things are necessary for the salvation of man: to know what he ought to believe; to know what he ought to desire; and to know what he ought to do' - St. Thomas Aquinas"
 			},
 			{
 				"name": "Civil Service",
 				"row": 4,
-				"prerequisites": ["Philosophy","Trapping"],
+				"prerequisites": ["Rhetoric","Trapping"],
 				"quote": "'The only thing that saves us from the bureaucracy is its inefficiency' - Eugene McCarthy"
 			},
 			{
 				"name": "Currency",
 				"row": 7,
-				"prerequisites": ["Mathematics"],
+				"prerequisites": ["Reckoning"],
 				"uniques": ["Enables conversion of city production to [Gold]"],
 				"quote": "'Better is bread with a happy heart than wealth with vexation.' - Amenemope"
 			},
 			{
-				"name": "Engineering",
+				"name": "Hydraulics",
 				"row": 8,
-				"prerequisites": ["Mathematics","Construction"],
+				"prerequisites": ["Reckoning","Construction"],
 				"uniques": ["Roads connect tiles across rivers"],
 				"quote": "'Instrumental or mechanical science is the noblest and, above all others, the most useful.' - Leonardo da Vinci"
 			},
@@ -200,7 +200,7 @@
 				"name": "Compass",
 				"cost": 375,
 				"row": 1,
-				"prerequisites": ["Optics"],
+				"prerequisites": ["Lookouts"],
 				"quote": "'I find the great thing in this world is not so much where we stand, as in what direction we are moving.' - Oliver Wendell Holmes"
 			},
 			{
@@ -227,16 +227,16 @@
 		"wonderCost": 500,
 		"techs": [
 			{
-				"name": "Machinery",
+				"name": "Artisanry",
 				"row": 8,
-				"prerequisites": ["Engineering"],
+				"prerequisites": ["Hydraulics"],
 				"uniques": ["Improves movement speed on roads"],
 				"quote": "'The press is the best instrument for enlightening the mind of man, and improving him as a rational, moral and social being.' - Thomas Jefferson"
 			},
 			{
 				"name": "Siegecraft",
 				"row": 9,
-				"prerequisites": ["Engineering","Metal Casting"],
+				"prerequisites": ["Hydraulics","Metal Casting"],
 				"quote": "'Measure what is measurable, and make measurable what is not so.' - Galileo Galilei"
 			},
 			{
@@ -270,7 +270,7 @@
 			{
 				"name": "Printing Press",
 				"row": 8,
-				"prerequisites": ["Machinery","Siegecraft"],
+				"prerequisites": ["Artisanry","Siegecraft"],
 				"quote": "'It is a newspaper's duty to print the news and raise hell.' - The Chicago Times"
 			},
 			{

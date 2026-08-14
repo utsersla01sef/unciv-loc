@@ -620,3 +620,38 @@ TechIcons/Mercantilism
   orig: 100, 100
   offset: 0, 0
   index: -1
+TechIcons/Lookouts
+  rotate: false
+  xy: 544, 406
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Reckoning
+  rotate: false
+  xy: 652, 730
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Rhetoric
+  rotate: false
+  xy: 868, 730
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Hydraulics
+  rotate: false
+  xy: 112, 4
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Artisanry
+  rotate: false
+  xy: 328, 406
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1

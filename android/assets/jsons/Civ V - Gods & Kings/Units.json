@@ -152,7 +152,7 @@
 		"rangedStrength": 7,
 		"cost": 40,
 		"requiredTech": "Archery",
-		"obsoleteTech": "Machinery",
+		"obsoleteTech": "Artisanry",
 		"upgradesTo": "Crossbowman",
 		"attackSound": "arrow"
 	},
@@ -438,7 +438,7 @@
 		"strength": 7,
 		"rangedStrength": 8,
 		"cost": 75,
-		"requiredTech": "Mathematics",
+		"requiredTech": "Reckoning",
 		"obsoleteTech": "Siegecraft",
 		"upgradesTo": "Trebuchet",
 		"uniques": ["[+200]% Strength <vs cities> <when attacking>", "No defensive terrain bonus",
@@ -455,7 +455,7 @@
 		"strength": 8,
 		"rangedStrength": 10,
 		"cost": 75,
-		"requiredTech": "Mathematics",
+		"requiredTech": "Reckoning",
 		"obsoleteTech": "Siegecraft",
 		"upgradesTo": "Trebuchet",
 		"uniques": ["[+200]% Strength <vs cities> <when attacking>", "No defensive terrain bonus",
@@ -471,7 +471,7 @@
 		"rangedStrength": 11,
 		"cost": 75,
 		"requiredTech": "Construction",
-		"obsoleteTech": "Machinery",
+		"obsoleteTech": "Artisanry",
 		"upgradesTo": "Crossbowman",
 		"attackSound": "arrow"
 	},
@@ -648,7 +648,7 @@
 		"strength": 13,
 		"rangedStrength": 18,
 		"cost": 120,
-		"requiredTech": "Machinery",
+		"requiredTech": "Artisanry",
 		"attackSound": "crossbow"
 	},
 	{
@@ -660,7 +660,7 @@
 		"rangedStrength": 14,
 		"replaces": "Crossbowman",
 		"cost": 120,
-		"requiredTech": "Machinery",
+		"requiredTech": "Artisanry",
 		"promotions": ["[Chu-Ko-Nu] ability"],
 		"attackSound": "crossbow"
 	},
@@ -674,7 +674,7 @@
 		"replaces": "Crossbowman",
 		"uniqueTo": "England",
 		"cost": 120,
-		"requiredTech": "Machinery",
+		"requiredTech": "Artisanry",
 		"promotions": ["Extended Range"],
 		"attackSound": "arrow"
 	},
@@ -909,12 +909,12 @@
             "[+25] Strength",
             "[+100]% Strength <when defending>",
             "Reveal up to [all] [All] within a [3] tile radius <for all movement> <for units with [ArchimedesPhysics]>",
-            "Can instantly construct a [All] improvement <for all movement> <for units with [ArchimedesEngineering]>",
-            "Turn this tile into a [Plains] tile <for all movement> <for units with [ArchimedesEngineering]>",
-            "Add [Iron] to this tile <for all movement> <for units with [ArchimedesEngineering]>",
-            "Turn this tile into a [Coast] tile <for all movement> <for units with [ArchimedesEngineering]> <in [Land] tiles>",
-            "Can speed up construction of a building <for units with [ArchimedesEngineering]>",
-            "Can speed up the construction of a wonder <for units with [ArchimedesEngineering]>"],
+            "Can instantly construct a [All] improvement <for all movement> <for units with [ArchimedesHydraulics]>",
+            "Turn this tile into a [Plains] tile <for all movement> <for units with [ArchimedesHydraulics]>",
+            "Add [Iron] to this tile <for all movement> <for units with [ArchimedesHydraulics]>",
+            "Turn this tile into a [Coast] tile <for all movement> <for units with [ArchimedesHydraulics]> <in [Land] tiles>",
+            "Can speed up construction of a building <for units with [ArchimedesHydraulics]>",
+            "Can speed up the construction of a wonder <for units with [ArchimedesHydraulics]>"],
 		"movement": 2
 	},
 	{

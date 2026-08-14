@@ -222,7 +222,7 @@
 		"maintenance": 1,
 		"uniques": ["Must be next to [Coast]", "[+1 Food] from [Ocean] tiles [in this city]",
 			"[+1 Food] from [Coast] tiles [in this city]", "[+1 Food] from [Fish] tiles [in this city]" ],
-		"requiredTech": "Optics"
+		"requiredTech": "Lookouts"
 	},
 	{
 		"name": "The Great Lighthouse",
@@ -232,7 +232,7 @@
 		"isWonder": true,
 		"uniques": ["Must be next to [Coast]", "[+1] Movement <for [{Military} {Water}] units>",
 			"[+1] Sight <for [{Military} {Water}] units>", "Gain a free [Lighthouse] [in this city]"],
-		"requiredTech": "Optics",
+		"requiredTech": "Lookouts",
 		"quote": "'They that go down to the sea in ships, that do business in great waters; these see the works of the Lord, and his wonders in the deep.' - The Bible, Psalms 107:23-24"
 	},
 	{
@@ -261,7 +261,7 @@
 		"hurryCostModifier": 50,
 		"uniques": ["Removes extra unhappiness from annexed cities",
 			"Can only be built <in [Annexed] cities>"],
-		"requiredTech": "Mathematics"
+		"requiredTech": "Reckoning"
 	},
 	{
 		"name": "Hanging Gardens",
@@ -269,7 +269,7 @@
 		"food": 6,
 		"culture": 1,
 		"isWonder": true,
-		"requiredTech": "Mathematics",
+		"requiredTech": "Reckoning",
 		"uniques": ["Gain a free [Garden] [in this city]"],
 		"quote": "'I think that if ever a mortal heard the word of God it would be in a garden at the cool of the day.' - F. Frankfort Moore"
 	},
@@ -295,7 +295,7 @@
 		"requiredBuilding": "Shrine",
 		"maintenance": 2,
 		"hurryCostModifier": 25,
-		"requiredTech": "Philosophy",
+		"requiredTech": "Rhetoric",
 		"uniques": ["Only available <when religion is enabled>", "Destroyed when the city is captured"]
 	},
 	{
@@ -308,7 +308,7 @@
 		"happiness": 2,
 		"requiredBuilding": "Shrine",
 		"hurryCostModifier": 25,
-		"requiredTech": "Philosophy"
+		"requiredTech": "Rhetoric"
 	},
 	{
 		"name": "Mud Pyramid Mosque",
@@ -319,7 +319,7 @@
 		"culture": 2,
 		"faith": 2,
 		"requiredBuilding": "Shrine",
-		"requiredTech": "Philosophy"
+		"requiredTech": "Rhetoric"
 	},
 	{
 		"name": "Master Workshop",
@@ -329,7 +329,7 @@
 		"isNationalWonder": true,
 		"percentStatBonus": {"science": 50},
 		"uniques": ["Only available <if [Library] is constructed in all [non-[Puppeted]] cities>", "Cost increases by [30] per owned city"],
-		"requiredTech": "Philosophy"
+		"requiredTech": "Rhetoric"
 	},
 	{
 		"name": "The Oracle",
@@ -337,7 +337,7 @@
 		"greatPersonPoints": {"Great Writer": 1},
 		"isWonder": true,
 		"uniques": ["Free Social Policy"],
-		"requiredTech": "Philosophy",
+		"requiredTech": "Rhetoric",
 		"quote": "'The ancient Oracle said that I was the wisest of all the Greeks. It is because I alone, of all the Greeks, know that I know nothing' - Socrates"
 	},
 	{
@@ -400,7 +400,7 @@
 		"maintenance": 1,
 		"hurryCostModifier": 0,
 		"uniques": ["[40]% Food is carried over after population increases [in this city]"],
-		"requiredTech": "Engineering"
+		"requiredTech": "Hydraulics"
 	},
 	{
 		"name": "Great Wall",
@@ -409,7 +409,7 @@
 		"isWonder": true,
 		"uniques": ["Enemy [Land] units must spend [1] extra movement points when inside your territory",
 			"Gain a free [Walls] [in this city]"],
-		"requiredTech": "Engineering",
+		"requiredTech": "Hydraulics",
 		"quote": "'The art of war teaches us to rely not on the likelihood of the enemy's not attacking, but rather on the fact that we have made our position unassailable.' - Sun Tzu"
 	},
 	{
@@ -624,7 +624,7 @@
 		"culture": 1,
 		"isNationalWonder": true,
 		"uniques": ["Only available <if [Workshop] is constructed in all [non-[Puppeted]] cities>", "Cost increases by [30] per owned city"],
-		"requiredTech": "Machinery"
+		"requiredTech": "Artisanry"
 	},
 	{
 		"name": "Notre Dame",
