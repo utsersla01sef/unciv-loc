@@ -221,6 +221,14 @@ enum class UnitActionType(
         { ImageGetter.getUnitActionPortrait("HideMore") }, false, defaultPage = 1),
     AddInCapital( "Add in capital",
         { ImageGetter.getUnitActionPortrait("AddInCapital")}, UncivSound.Chimes),
+    ChooseArchimedesSkill("Choose Skill",
+        { ImageGetter.getUnitActionPortrait("ShowMore")}, UncivSound.Chimes),
+    ArchimedesPhysics("Physics",
+        { ImageGetter.getUnitActionPortrait("HurryResearch")}, UncivSound.Chimes),
+    ArchimedesMath("Mathematics",
+        { ImageGetter.getUnitActionPortrait("HurryResearch")}, UncivSound.Chimes),
+    ArchimedesEngineering("Engineering",
+        { ImageGetter.getUnitActionPortrait("HurryConstruction")}, UncivSound.Construction),
     ;
 
     // Allow shorter initializations

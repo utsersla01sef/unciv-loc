@@ -77,7 +77,7 @@ enum class CivilopediaCategories (
         // The Personalities file contains unused chaff
         { ruleset, _ -> ruleset.personalities.values.filter { personality -> ruleset.nations.values.any { it.personality == personality.name } } }
     ),
-    Technology ("Technologies",
+    Technology ("Crafts",
         CivilopediaImageGetters.technology,
         KeyboardBinding.PediaTechnologies,
         "TechIcons/Philosophy",

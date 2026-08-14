@@ -102,6 +102,17 @@ object CivilianUnitAutomation {
         val hurriedResearch = UnitActions.invokeUnitAction(unit, UnitActionType.HurryResearch)
         if (hurriedResearch) return
 
+        // Archimedes skills: auto-pick a skill if points available, then use skills off cooldown
+        if (unit.baseUnit.name == "Great Scientist") {
+            UnitActions.invokeUnitAction(unit, UnitActionType.ChooseArchimedesSkill)
+            // Use Mathematics first (direct science, always useful)
+            if (UnitActions.invokeUnitAction(unit, UnitActionType.ArchimedesMath)) return
+            // Use Engineering when in a city (production boost)
+            if (UnitActions.invokeUnitAction(unit, UnitActionType.ArchimedesEngineering)) return
+            // Use Physics when near military units
+            if (UnitActions.invokeUnitAction(unit, UnitActionType.ArchimedesPhysics)) return
+        }
+
         // Great writer -> Hurry policy if late game
         if (isLateGame) {
             val hurriedPolicy = UnitActions.invokeUnitAction(unit, UnitActionType.HurryPolicy)

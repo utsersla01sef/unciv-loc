@@ -91,6 +91,15 @@ class MapUnit : IsPartOfGameInfoSerialization {
     /** Turn on which this Great Scientist (Archimedes) last completed a technology. Used for cooldown gating. */
     var greatScientistLastUsedTurn: Int = Int.MIN_VALUE / 2
 
+    /** Archimedes skill system: upgrade points spent to unlock Physics/Math/Engineering. */
+    var archimedesUpgradePoints: Int = 0
+    /** Terrain types Archimedes has ended a turn on (each grants 1 upgrade point, once). */
+    var archimedesVisitedTerrains: HashSet<String> = hashSetOf()
+    /** Cooldown trackers for the three Archimedes active skills. */
+    var archimedesPhysicsLastUsedTurn: Int = Int.MIN_VALUE / 2
+    var archimedesMathLastUsedTurn: Int = Int.MIN_VALUE / 2
+    var archimedesEngineeringLastUsedTurn: Int = Int.MIN_VALUE / 2
+
     var religion: String? = null
     var religiousStrengthLost = 0
 

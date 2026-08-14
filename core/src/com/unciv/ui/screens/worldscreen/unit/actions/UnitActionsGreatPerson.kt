@@ -31,6 +31,7 @@ object UnitActionsGreatPerson {
                 action = {
                     unit.civ.tech.completeCurrentTech()
                     unit.greatScientistLastUsedTurn = unit.civ.gameInfo.turns
+                    unit.archimedesUpgradePoints++
                     unit.useMovementPoints(unit.currentMovement)
                 }.takeIf {
                     !onCooldown
@@ -142,4 +143,100 @@ object UnitActionsGreatPerson {
             ))
         }
     }
+
+    // region Archimedes skill system (Greece-unique Great Scientist)
+
+    private const val ARCHIMEDES_PHYSICS_COOLDOWN = 8
+    private const val ARCHIMEDES_MATH_COOLDOWN = 10
+    private const val ARCHIMEDES_ENGINEERING_COOLDOWN = 12
+
+    /** Shows a "Choose Skill" button when Archimedes has unspent upgrade points. */
+    internal fun getChooseArchimedesSkillActions(unit: MapUnit, tile: Tile) = sequence {
+        if (unit.baseUnit.name != "Great Scientist" || unit.archimedesUpgradePoints <= 0) return@sequence
+        val physicsKnown = unit.promotions.promotions.contains("ArchimedesPhysics")
+        val mathKnown = unit.promotions.promotions.contains("ArchimedesMath")
+        val engineeringKnown = unit.promotions.promotions.contains("ArchimedesEngineering")
+        val anyAvailable = !physicsKnown || !mathKnown || !engineeringKnown
+        if (!anyAvailable) return@sequence
+        val picks = sequenceOf(
+            Triple("ArchimedesPhysics", "Physics", physicsKnown),
+            Triple("ArchimedesMath", "Mathematics", mathKnown),
+            Triple("ArchimedesEngineering", "Engineering", engineeringKnown)
+        ).filter { !it.third }.toList()
+        yield(UnitAction(
+            UnitActionType.ChooseArchimedesSkill, 200f,
+            title = "Choose Skill ([$${unit.archimedesUpgradePoints}])",
+            action = {
+                val choice = if (unit.civ.isAI()) picks.random(unit.civ.state.stateBasedRandom("ArchimedesSkill"))
+                    else picks.first()  // Human: simplified, picks first available; a full picker UI could be added later
+                unit.promotions.addPromotion(choice.first, isFree = true)
+                unit.archimedesUpgradePoints -= 1
+            }.takeIf { picks.isNotEmpty() }
+        ))
+    }
+
+    /** Physics: grants combat buffs to nearby friendly military units for 3 turns. Cooldown 8. */
+    internal fun getArchimedesPhysicsActions(unit: MapUnit, tile: Tile) = sequence {
+        if (!unit.promotions.promotions.contains("ArchimedesPhysics")) return@sequence
+        val turnsSinceLastUse = unit.civ.gameInfo.turns - unit.archimedesPhysicsLastUsedTurn
+        val onCooldown = turnsSinceLastUse < ARCHIMEDES_PHYSICS_COOLDOWN
+        val cooldownRemaining = ARCHIMEDES_PHYSICS_COOLDOWN - turnsSinceLastUse
+        yield(UnitAction(
+            UnitActionType.ArchimedesPhysics, 90f,
+            title = if (onCooldown) "Physics ([$cooldownRemaining] turns)" else UnitActionType.ArchimedesPhysics.value,
+            action = {
+                for (nearbyTile in tile.getTilesInDistance(2)) {
+                    for (otherUnit in nearbyTile.getUnits()) {
+                        if (otherUnit.civ == unit.civ && otherUnit != unit && otherUnit.baseUnit.unitType.let { 
+                                it == "Sword" || it == "Mounted" || it == "Archery" || it == "Siege" || 
+                                it == "Ranged Water" || it == "Melee Water" }) {
+                            otherUnit.setStatus("InspiredByArchimedes", 3)
+                            if (otherUnit.baseUnit.unitType in listOf("Archery", "Siege", "Ranged Water"))
+                                otherUnit.setStatus("ArchimedeanRange", 3)
+                        }
+                    }
+                }
+                unit.archimedesPhysicsLastUsedTurn = unit.civ.gameInfo.turns
+                unit.useMovementPoints(unit.currentMovement)
+            }.takeIf { !onCooldown && unit.hasMovement() }
+        ))
+    }
+
+    /** Mathematics: instantly adds +300 Science to current research. Cooldown 10. */
+    internal fun getArchimedesMathActions(unit: MapUnit, tile: Tile) = sequence {
+        if (!unit.promotions.promotions.contains("ArchimedesMath")) return@sequence
+        val turnsSinceLastUse = unit.civ.gameInfo.turns - unit.archimedesMathLastUsedTurn
+        val onCooldown = turnsSinceLastUse < ARCHIMEDES_MATH_COOLDOWN
+        val cooldownRemaining = ARCHIMEDES_MATH_COOLDOWN - turnsSinceLastUse
+        yield(UnitAction(
+            UnitActionType.ArchimedesMath, 90f,
+            title = if (onCooldown) "Mathematics ([$cooldownRemaining] turns)" else UnitActionType.ArchimedesMath.value,
+            action = {
+                unit.civ.tech.addScience(300)
+                unit.archimedesMathLastUsedTurn = unit.civ.gameInfo.turns
+                unit.useMovementPoints(unit.currentMovement)
+            }.takeIf { !onCooldown && unit.hasMovement() && unit.civ.tech.currentTechnologyName() != null }
+        ))
+    }
+
+    /** Engineering: builds a Manufactory on current tile + adds +200 Production to current city. Cooldown 12. */
+    internal fun getArchimedesEngineeringActions(unit: MapUnit, tile: Tile) = sequence {
+        if (!unit.promotions.promotions.contains("ArchimedesEngineering")) return@sequence
+        val turnsSinceLastUse = unit.civ.gameInfo.turns - unit.archimedesEngineeringLastUsedTurn
+        val onCooldown = turnsSinceLastUse < ARCHIMEDES_ENGINEERING_COOLDOWN
+        val cooldownRemaining = ARCHIMEDES_ENGINEERING_COOLDOWN - turnsSinceLastUse
+        val city = tile.getCity()
+        yield(UnitAction(
+            UnitActionType.ArchimedesEngineering, 90f,
+            title = if (onCooldown) "Engineering ([$cooldownRemaining] turns)" else UnitActionType.ArchimedesEngineering.value,
+            action = {
+                tile.setImprovement("Manufactory", unit.civ, unit)
+                city?.cityConstructions?.addProductionPoints(200)
+                unit.archimedesEngineeringLastUsedTurn = unit.civ.gameInfo.turns
+                unit.useMovementPoints(unit.currentMovement)
+            }.takeIf { !onCooldown && unit.hasMovement() && city != null }
+        ))
+    }
+
+    // endregion
 }

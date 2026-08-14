@@ -592,3 +592,31 @@ TechIcons/Writing
   orig: 100, 100
   offset: 0, 0
   index: -1
+TechIcons/Siegecraft
+  rotate: false
+  xy: 328, 82
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Bladesmithing
+  rotate: false
+  xy: 868, 406
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Shipbuilding
+  rotate: false
+  xy: 514, 838
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TechIcons/Mercantilism
+  rotate: false
+  xy: 112, 436
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1

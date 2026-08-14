@@ -773,5 +773,25 @@
 	{	// For barbarian water units
 		"name": "Unable to pillage tiles",
 		"uniques": ["Unable to pillage tiles"]
+	},
+	{
+		"name": "InspiredByArchimedes",
+		"uniques": ["[+20]% Strength", "[+1] Movement"]
+	},
+	{
+		"name": "ArchimedeanRange",
+		"uniques": ["[+1] Range"]
+	},
+	{
+		"name": "ArchimedesPhysics",
+		"uniques": ["[-100]% weight to this choice for AI decisions"]
+	},
+	{
+		"name": "ArchimedesMath",
+		"uniques": ["[-100]% weight to this choice for AI decisions"]
+	},
+	{
+		"name": "ArchimedesEngineering",
+		"uniques": ["[-100]% weight to this choice for AI decisions"]
 	}
 ]

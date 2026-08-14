@@ -62,7 +62,7 @@ class TechPolicyDiplomacyButtons(val worldScreen: WorldScreen) : Table(BaseScree
         fogOfWarButton.label.setFontSize(30)
         fogOfWarButton.labelCell.pad(10f)
         fogOfWarButton.pack()
-        fogOfWarButtonHolder.onActivation(UncivSound.Paper, KeyboardBinding.TechnologyTree) {
+        fogOfWarButtonHolder.onActivation(UncivSound.Paper, KeyboardBinding.Crafts) {
             worldScreen.fogOfWar = !worldScreen.fogOfWar
             worldScreen.shouldUpdate = true
         }
@@ -70,7 +70,7 @@ class TechPolicyDiplomacyButtons(val worldScreen: WorldScreen) : Table(BaseScree
         pickTechButton.background = BaseScreen.skinStrings.getUiBackground("WorldScreen/PickTechButton", BaseScreen.skinStrings.roundedEdgeRectangleShape, colorFromRGB(7, 46, 43))
         pickTechButton.defaults().pad(20f)
         pickTechButton.add(pickTechLabel)
-        techButtonHolder.onActivation(UncivSound.Paper, KeyboardBinding.TechnologyTree) {
+        techButtonHolder.onActivation(UncivSound.Paper, KeyboardBinding.Crafts) {
             game.pushScreen(TechPickerScreen(viewingCiv))
         }
 
@@ -142,7 +142,7 @@ class TechPolicyDiplomacyButtons(val worldScreen: WorldScreen) : Table(BaseScree
         } else {
             val canResearch = viewingCiv.tech.canResearchTech()
             if (canResearch || viewingCiv.tech.researchedTechnologies.size != 0) {
-                val text = if (canResearch) "{Pick a tech}!" else "Technologies"
+                val text = if (canResearch) "{Pick a tech}!" else "Crafts"
                 pickTechLabel.setText(text.tr())
                 techButtonHolder.actor = pickTechButton
             }

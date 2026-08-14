@@ -62,6 +62,15 @@ class UnitTurnManager(val unit: MapUnit) {
         for (unique in unit.getTriggeredUniques(UniqueType.TriggerUponEndingTurnInTile)
                 { unit.getTile().matchesFilter(it.params[0], unit.civ) })
             UniqueTriggerActivation.triggerUnique(unique, unit)
+
+        // Archimedes skill system: grant 1 upgrade point when ending a turn on a new terrain type
+        if (unit.baseUnit.name == "Great Scientist" && unit.baseUnit.uniqueTo == "Greece") {
+            val terrainName = unit.getTile().lastTerrain.name
+            if (terrainName.isNotEmpty() && terrainName !in unit.archimedesVisitedTerrains) {
+                unit.archimedesVisitedTerrains.add(terrainName)
+                unit.archimedesUpgradePoints++
+            }
+        }
     }
 
 

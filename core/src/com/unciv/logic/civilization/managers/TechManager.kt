@@ -179,7 +179,20 @@ class TechManager : IsPartOfGameInfoSerialization {
         if (isUnresearchable(tech)) return false
         if (isResearched(tech.name) && !tech.isContinuallyResearchable()) return false
 
-        return tech.prerequisites.all { isResearched(it) }
+        if (!tech.prerequisites.all { isResearched(it) }) return false
+
+        // Era gate: all techs in earlier eras must be researched or unresearchable
+        // (unresearchable covers OnlyAvailable-restricted group/civ techs, so they never block other civs)
+        val techEraNumber = tech.column?.era?.let { getRuleset().eras[it]?.eraNumber } ?: return true
+        for (otherTech in getRuleset().technologies.values) {
+            val otherEraNumber = otherTech.column?.era?.let { getRuleset().eras[it]?.eraNumber } ?: continue
+            if (otherEraNumber < techEraNumber
+                && !isResearched(otherTech.name)
+                && !isUnresearchable(otherTech)) {
+                return false
+            }
+        }
+        return true
     }
 
     @Readonly fun allTechsAreResearched() = allTechsAreResearched
