@@ -43,7 +43,7 @@
         "startingCulture": 200,
         "settlerPopulation": 1,
         "settlerBuildings": ["Shrine","Monument"],
-        "startingObsoleteWonders": ["Temple of Artemis", "Stonehenge", "The Great Library", "Mausoleum of Halicarnassus", "The Pyramids", "Statue of Zeus"],
+
         "baseUnitBuyCost": 200,
         "embarkDefense": 6,
         "startPercent": 25,
@@ -61,8 +61,7 @@
         "startingCulture": 300,
         "settlerPopulation": 2,
         "settlerBuildings": ["Shrine","Monument","Granary","Lighthouse"],
-        "startingObsoleteWonders": ["Temple of Artemis", "Stonehenge", "The Great Library", "Mausoleum of Halicarnassus", "The Pyramids", "Statue of Zeus",
-            "The Great Lighthouse", "Hanging Gardens", "Terracotta Army", "The Oracle", "Petra", "Great Wall", "Colossus"],
+
         "baseUnitBuyCost": 250,
         "embarkDefense": 7,
         "startPercent": 31,
@@ -80,9 +79,7 @@
         "startingCulture": 400,
         "settlerPopulation": 2,
         "settlerBuildings": ["Shrine","Monument","Granary","Lighthouse","Market","Workshop","Library","Colosseum"],
-        "startingObsoleteWonders": ["Temple of Artemis", "Stonehenge", "The Great Library", "Mausoleum of Halicarnassus", "The Pyramids", "Statue of Zeus",
-            "The Great Lighthouse", "Hanging Gardens", "Terracotta Army", "The Oracle", "Petra", "Great Wall", "Colossus",
-            "Hagia Sophia", "Great Mosque of Djenne", "Chichen Itza", "Machu Picchu", "Angkor Wat"],
+
         "baseUnitBuyCost": 300,
         "embarkDefense": 8,
         "startPercent": 37,

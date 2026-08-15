@@ -13,6 +13,31 @@ import kotlin.math.min
 
 object MinorCivPlacer {
 
+    /** This themed ruleset's science-civ: Greece hosts City-States in its region,
+     *  reinforcing the Hellenic city-state synergy (Patronage/Scholasticism gameplay). */
+    @Readonly
+    private fun getHellenicRegion(tileMap: TileMap, regions: List<Region>): Region? {
+        val greekStart = tileMap.startingLocationsByNation["Greece"]?.firstOrNull() ?: return null
+        return regions.firstOrNull { it.tiles.contains(greekStart) }
+    }
+
+    /** Guarantee the Hellenic region hosts at least [quota] city-states: they are taken
+     *  from the unassigned pool before all other assignment steps run. No later step
+     *  is reordered - everything after this proceeds with vanilla behavior. */
+    private fun guaranteeHellenicMinimum(
+        unassignedCivs: MutableList<Civilization>,
+        regions: List<Region>,
+        tileMap: TileMap,
+        quota: Int
+    ) {
+        val hellenicRegion = getHellenicRegion(tileMap, regions) ?: return
+        val deficit = quota - hellenicRegion.assignedMinorCivs.size
+        if (deficit <= 0) return
+        val civsToAssign = unassignedCivs.take(deficit)
+        hellenicRegion.assignedMinorCivs.addAll(civsToAssign)
+        unassignedCivs.removeAll(civsToAssign)
+    }
+
     /** Assigns [civs] to regions or "uninhabited" land and places them. Depends on
      *  assignLuxuries having been called previously.
      *  Note: can silently fail to place all city states if there is too little room.
@@ -23,6 +48,11 @@ object MinorCivPlacer {
 
         // Some but not all city states are assigned to regions directly. Determine the CS density.
         val unassignedCivs = assignMinorCivsDirectlyToRegions(civs, regions)
+
+        // Themed rule: Greece's region is guaranteed at least 2 city-states,
+        // drawn from the pool before wilderness/luxury/spread steps. Later steps
+        // keep their original (vanilla) ordering.
+        guaranteeHellenicMinimum(unassignedCivs, regions, tileMap, quota = 2)
 
         // Some city states are assigned to "uninhabited" continents - unless it's an archipelago type map
         // (Because then every continent will have been assigned to a region anyway)
