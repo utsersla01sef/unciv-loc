@@ -40,7 +40,7 @@
         "uniques": ["[+10]% [Food] [in all cities]", "[+15]% Production when constructing [Archery] units [in this city]",
             "[+15]% Production when constructing [Ranged Gunpowder] units [in this city]"],
 		"requiredTech": "Archery",
-		"quote": "'It is not so much for its beauty that the forest makes a claim upon men's hearts, as for that subtle something, that quality of air, that emanation from old trees, that so wonderfully changes and renews a weary spirit.' - Robert Louis Stevenson"
+		"quote": "'There was a grove beneath the protection of an ancient and sacred religion; long untouched by the axe, it stood dense with interlacing boughs.' - Ovid, Metamorphoses"
 	},
 	// Column 2
 	{
@@ -72,7 +72,7 @@
 		"isWonder": true,
 		"greatPersonPoints": {"Great Writer": 1},
 		"requiredTech": "Calendar",
-		"quote": "'Time crumbles things; everything grows old and is forgotten under the power of time' - Aristotle"
+		"quote": "'Bring me the Giant's Dance, that men may marvel at it forevermore; for the stones are healing stones, and none may stand against them.' - Geoffrey of Monmouth, Historia Regum Britanniae"
 	},
 	{
 		"name": "Library",
@@ -96,9 +96,10 @@
 		"culture": 1,
 		"greatPersonPoints": {"Great Writer": 1},
 		"isWonder": true,
+		"uniqueTo": "Greece",
 		"requiredTech": "Writing",
-		"uniques": ["Free Technology", "Gain a free [Library] [in this city]"],
-		"quote": "'Libraries are as the shrine where all the relics of the ancient saints, full of true virtue, and all that without delusion or imposture are preserved and reposed.' - Sir Francis Bacon"
+		"uniques": ["Free Technology", "Gain a free [Library] [in this city]", "Free [Natural Philosopher] appears"],
+		"quote": "'Eureka! - I have found it!' - Archimedes, on discovering the principle of displacement in his bath"
 	},
 	{
 		"name": "Circus",
@@ -231,7 +232,7 @@
 		"culture": 1,
 		"isWonder": true,
 		"requiredTech": "Reckoning",
-		"quote": "'I think that if ever a mortal heard the word of God it would be in a garden at the cool of the day.' - F. Frankfort Moore"
+		"quote": "'Upon vaulted terraces the gardens rise, one above another, on stone pillars; and the whole is a wonder to behold, bearing trees as tall as the cedars.' - Diodorus Siculus, Library of History"
 	},
 	{
 		"name": "Colosseum",
@@ -335,7 +336,7 @@
 		"isWonder": true,
 		"uniques": ["Free Social Policy"],
 		"requiredTech": "Rhetoric",
-		"quote": "'The ancient Oracle said that I was the wisest of all the Greeks. It is because I alone, of all the Greeks, know that I know nothing' - Socrates"
+		"quote": "'The lord whose oracle is at Delphi neither speaks nor conceals, but gives signs.' - Heraclitus"
 	},
 	{
 		"name": "National Epic",
@@ -399,7 +400,7 @@
 		"isWonder": true,
 		"uniques": ["Must be next to [Coast]", "[+1 Gold] from [Water] tiles [in this city]"],
 		"requiredTech": "Bronze Working",
-		"quote": "'Why man, he doth bestride the narrow world like a colossus, and we petty men walk under his huge legs, and peep about to find ourselves dishonorable graves.' - William Shakespeare, Julius Caesar"
+		"quote": "'Of the Colossus, men say that even lying fallen it excites wonder; few there are whose arms could span its thumb.' - Pliny the Elder, Natural History"
 	},
 
 	// Medieval Era
@@ -438,7 +439,7 @@
 		"isWonder": true,
 		"uniques": ["[-25]% Culture cost of natural border growth [in all cities]","[-25]% Gold cost of acquiring tiles [in all cities]"],
 		"requiredTech": "Theology",
-		"quote": "'The temple is like no other building in the world. It has towers and decoration and all the refinements which the human genius can conceive of.' - Antonio da Magdalena"
+		"quote": "'In the center of the kingdom rises a golden tower, flanked by towers of stone beyond counting - truly it is a wonder to all who behold it.' - Zhou Daguan, A Record of Cambodia, 1296"
 	},
 	{
 		"name": "Chichen Itza",
@@ -467,7 +468,7 @@
 		"isWonder": true,
 		"uniques": ["[+25]% [Gold] from Trade Routes","Must have an owned [{non-[Natural Wonder]} {Mountain}] within [2] tiles"],
 		"requiredTech": "Currency",
-		"quote": "'Few romances can ever surpass that of the granite citadel on top of the beetling precipices of Machu Picchu, the crown of Inca Land.' - Hiram Bingham"
+		"quote": "'O Creator, root of all, Lord of all, ancient of days: come and govern us, and bring us peace.' - Inca hymn to Viracocha"
 	},
 	{
 		"name": "Workshop",
@@ -548,7 +549,7 @@
 		"greatPersonPoints": {"Great Merchant": 1},
 		"isWonder": true,
 		"requiredTech": "Education",
-		"quote": "'Architecture has recorded the great ideas of the human race. Not only every religious symbol, but every human thought has its page in that vast book.' - Victor Hugo"
+		"quote": "'How dreadful is this place! This is none other but the house of God, and this is the gate of heaven.' - Genesis 28:17"
 	},
 	{
 		"name": "Castle",
@@ -630,7 +631,7 @@
 		"greatPersonPoints": {"Great Artist": 1},
 		"uniques": ["[-10]% Unhappiness from [Population] [in all non-occupied cities]"],
 		"requiredTech": "Banking",
-		"quote": "'Most of us can, as we choose, make of this world either a palace or a prison' - John Lubbock"
+		"quote": "'The palace is the greatest that ever was: its halls and chambers are gilded, and the workmanship is so fine that no man could devise better.' - Marco Polo, The Travels"
 	},
 	{
 		"name": "Theatre",
@@ -658,7 +659,7 @@
 		"isWonder": true,
 		"uniques": ["Empire enters golden age"],
 		"requiredTech": "Woodblock Printing",
-		"quote": "'The Taj Mahal rises above the banks of the river like a solitary tear suspended on the cheek of time.' - Rabindranath Tagore"
+		"quote": "'The Sun ascends the sky with his seven shining mares before him; the eye of the world moves among the days.' - Rig Veda, Surya hymns"
 	},
 	{
 		"name": "Porcelain Tower",
@@ -667,7 +668,7 @@
 		"isWonder": true,
 		"uniques": ["Free [Great Writer] appears", "Free [Great Writer] appears"],
 		"requiredTech": "Education",
-		"quote": "'Things always seem fairer when we look back at them, and it is out of that inaccessible tower of the past that Longing leans and beckons.' - James Russell Lowell"
+		"quote": "'The white sun sets behind the mountains, the Yellow River flows into the sea. To see a thousand miles farther, climb yet one floor higher.' - Wang Zhihuan, On the Stork Tower"
 	},
 	{
 		"name": "Windmill",

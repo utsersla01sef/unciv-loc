@@ -120,6 +120,9 @@ class GreatPersonManager : IsPartOfGameInfoSerialization {
         .map { civInfo.getEquivalentUnit(it.name) }
         .filterNot { it.isUnavailableBySettings(civInfo.gameInfo) }
         .filterNot { it.uniqueTo != null && !civInfo.matchesFilter(it.uniqueTo!!) }
+        // The Greek Natural Philosopher (single permanent Archimedes hero) is deliberately
+        // excluded from every free-Great-Person pool: never gifted, never picked, never quested
+        .filterNot { it.name == "Natural Philosopher" }
         .toHashSet()
 
     @Readonly

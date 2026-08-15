@@ -62,7 +62,7 @@
 		"outerColor": [255, 255, 255],
 		"innerColor": [65, 141, 254],
 		"uniqueName": "Hellenic League",
-		"uniques": ["[-50]% City-State Influence degradation", "City-State Influence recovers at twice the normal rate", "City-State territory always counts as friendly territory", "Free [Natural Philosopher] appears <upon discovering [Reckoning] technology>", "Greek"],
+		"uniques": ["[-50]% City-State Influence degradation", "City-State Influence recovers at twice the normal rate", "City-State territory always counts as friendly territory", "Greek"],
 		"cities": ["Athens","Sparta","Corinth","Argos","Knossos","Mycenae","Pharsalos","Ephesus","Halicarnassus","Rhodes",
 			"Eretria","Pergamon","Miletos","Megara","Phocaea","Sicyon","Tiryns","Samos","Mytilene","Chios",
 			"Paros","Elis","Syracuse","Herakleia","Gortyn","Chalkis","Pylos","Pella","Naxos",
@@ -75,7 +75,7 @@
 		"adjective": ["Chinese"],
 		"preferredVictoryType": "Cultural",
 
-        "startIntroPart1": "Heaven itself bends before your beauty, Empress Wu Zetian, ruler of eternal China! You lead one of the oldest and greatest civilization of humanity. In your time, China stood at the forefront of science and technology, bringing the world such contributions as gunpowder, the printing press, and the world of Confucius, and this, long before the rest of the world was mature enough to make the same discoveries!",
+        "startIntroPart1": "Heaven itself bends before your beauty, Empress Wu Zetian, ruler of eternal China! You lead one of the oldest and greatest civilization of humanity. In your time, China stood at the forefront of wisdom and craftsmanship, giving the world silk and porcelain, the poetry of the Tang, and the rites of Confucius, long before other lands were mature enough to receive such gifts!",
         "startIntroPart2": "Great Queen, can you make China prevail again, using your divine intelligence and beauty? China stands for greatness, and all its enemies will be dazzled soon enough! Will your new empire shine through the ages of history?",
 
         "declaringWar": "You won't ever be able to bother me again. Go meet Yama.",
@@ -133,7 +133,7 @@
 		"startBias": ["Coast"],
 		"preferredVictoryType": "Cultural",
 
-        "startIntroPart1": "Long live to Your Highness, Queen Elizabeth Gloriana, leader and protector of the glorious England! Through history, enduring many invasions, England strengthened its will, playing smartly with diplomacy, cunning, and military power, to eventually rose as one of the most dominant Empires the world has ever known. Their matchless navy, brilliant scientists and artists, and powerful merchants, have shaped the known world for centuries.",
+        "startIntroPart1": "Long live to Your Highness, Queen Elizabeth Gloriana, leader and protector of the glorious England! Through history, enduring many invasions, England strengthened its will, playing smartly with diplomacy, cunning, and military power, to eventually rose as one of the most dominant Empires the world has ever known. Their matchless navy, brilliant scholars and artists, and powerful merchants, have shaped the known world for centuries.",
         "startIntroPart2": "Queen Elizabeth, will England cast once more its brightness upon all lands and seas of the world? Will your new empire shine through the ages of history?",
 
         "declaringWar": "By the grace of God, your days are numbered.",
@@ -185,7 +185,7 @@
 		"startBias": ["Tundra"],
 		"preferredVictoryType": "Cultural",
 
-        "startIntroPart1": "Hail to Imperial Majesty Catherine, Empress of all Russians. Living in the largest country in the world, from the Pacific Ocean in the east to the Baltic Sea in the west, your people endured wars, droughts, and many disasters, imbuing the Russian society with heroism and tenacity, and producing artists and scientists among the best in the world. Russia is a powerful empire which rightfully claims its place in the world concert of superpowers.",
+        "startIntroPart1": "Hail to Imperial Majesty Catherine, Empress of all Russians. Living in the largest country in the world, from the Pacific Ocean in the east to the Baltic Sea in the west, your people endured wars, droughts, and many disasters, imbuing the Russian society with heroism and tenacity, and raising saints, artists, and warriors admired by all the world. Russia is a powerful empire which rightfully claims its place in the world concert of superpowers.",
         "startIntroPart2": "Empress Catherine, your people are eager for Russian glory, to revive the sacred light of the Motherland. Will your new empire shine through the ages of history?",
 
         "declaringWar": "You've behaved yourself very badly, you know it. Now it's payback time.",
@@ -242,8 +242,8 @@
 		"startBias": ["Desert"],
 		"preferredVictoryType": "Cultural",
 
-        "startIntroPart1": "Blessings of the Great God be upon you, O great caliph Harun al-Rashid, leader of the mighty Arabian people! The Muslim Empire, the Caliphate, born from chaos after the death of the prophet Muhammad in 632 AD, intended to apply the rule of God to all Earth. And by the will of God, the caliphate reached its full power, ruling Spain, North Africa, the Middle East, Anatolia, the Balkans and Persia, to even surpass the Great Roman Empire. The arts and sciences were a holy gift of Arabia during the Middle Ages, as the infidel lands of Europe delved deep into ignorance and chaos. Lasting for six hundred years, the Caliphate finally fell before the Mongols, the plague of the civilized world.",
-        "startIntroPart2": "Great Caliph Harun al Rashid, all Arabian people long for greatness! Arabia must be once again the land of arts and knowledge, which under the radiant law of God, will fear no enemy! Will your new empire shine through the ages of history?",
+        "startIntroPart1": "Blessings of the Great God be upon you, O great caliph Harun al-Rashid, leader of the mighty Arabian people! The Muslim Empire, the Caliphate, born from chaos after the death of the prophet Muhammad in 632 AD, intended to apply the rule of God to all Earth. And by the will of God, the caliphate reached its full power, ruling Spain, North Africa, the Middle East, Anatolia, the Balkans and Persia, to even surpass the Great Roman Empire. The one true faith and its holy law were the gift of Arabia to the world, while the infidel lands of Europe delved deep into ignorance and chaos. Lasting for six hundred years, the Caliphate finally fell before the Mongols, the plague of the civilized world.",
+        "startIntroPart2": "Great Caliph Harun al Rashid, all Arabian people long for greatness! Arabia must be once again the beacon of the faith, which under the radiant law of God, will fear no enemy! Will your new empire shine through the ages of history?",
 
         "declaringWar": "The world will be more beautiful without you. Prepare for war.",
 		"attacked": "Fool! You will soon regret dearly! I swear it!",
@@ -297,7 +297,7 @@
 		"startBias": ["Coast"],
 		"preferredVictoryType": "Domination",
 
-        "startIntroPart1": "Lord Oda Nobunaga, ruler of Japan, the land of the Rising Sun is at your command! Through history, Japanese people lived and died with honor, proud of their rich culture of arts and letters. Years of bloody civil wars, invasions of foreign powers, wealth but also great poverty, have never altered the strong will of the Rising Sun island, as the Bushido spirit has imbued the fields of battle and the Japanese society for millenia. At the end of the 19th century, under foreign influence, your people took the path of modernity, and in a few decades, made of Japan a land of technological innovation and powerful industry, with which only few nations can compete.",
+        "startIntroPart1": "Lord Oda Nobunaga, ruler of Japan, the land of the Rising Sun is at your command! Through history, Japanese people lived and died with honor, proud of their rich culture of arts and letters. Years of bloody civil wars, invasions of foreign powers, wealth but also great poverty, have never altered the strong will of the Rising Sun island, as the Bushido spirit has imbued the fields of battle and the Japanese society for millenia. Under your banner, the warring clans were tamed one by one, and the smiths of the islands raised sword and castle to a perfection few nations can rival.",
         "startIntroPart2": "O great daimyo, will you take on your hands the Japan destiny, for the Rising Sun to light the world? Will your new empire shine through the ages of history?",
 
         "declaringWar": "I hereby inform you of our intention to wipe out your civilization from this world.",
@@ -324,7 +324,7 @@
 		"startBias": ["Grassland"],
 		"preferredVictoryType": "Cultural",
 
-        "startIntroPart1": "Wise Mahatma Gandhi, great leader of India, we honor you! India is one of the oldest countries in the world with 10,000 years of history, built on spirit and religion, as three of the world's great religions - Hinduism, Buddhism and Jainism - appeared on this sacred land. Every aspect of India society reveres art, music and color, showing great wealth but also grinding poverty. For centuries, India was torn between local kingdoms fighting each other but also repelling invaders. In the 12th century AD, Muslim Turks tried to conquer India, then the Mongols took their place. In the early 17th century, India, still fragmented, was colonized by the English and their diplomacy and technological superiority. After two centuries of British dominion, Indian nationalism woke up, and you, Great Mahatma, have led a peaceful and victorious rebellion never seen anywhere in history!",
+        "startIntroPart1": "Wise Mahatma Gandhi, great leader of India, we honor you! India is one of the oldest countries in the world with 10,000 years of history, built on spirit and religion, as three of the world's great religions - Hinduism, Buddhism and Jainism - appeared on this sacred land. Every aspect of India society reveres art, music and color, showing great wealth but also grinding poverty. For centuries, India was torn between local kingdoms fighting each other but also repelling invaders. In the 12th century AD, Muslim Turks tried to conquer India, then the Mongols took their place. In the early 17th century, India, still fragmented, was colonized by the English and their distant fleets and cunning cannon. After two centuries of British dominion, Indian nationalism woke up, and you, Great Mahatma, have led a peaceful and victorious rebellion never seen anywhere in history!",
         "startIntroPart2": "Gandhi, your people ask again to be led on the path of freedom. Under protection of Ganesha and Surya, can India accomplish its great potential? Will your new empire shine through the ages of history?",
 
         "declaringWar": "I have just received a report that large numbers of my troops have crossed your borders.",
@@ -411,22 +411,22 @@
 		"startBias": ["Coast"],
 		"preferredVictoryType": "Cultural",
 
-        "startIntroPart1": "Greetings to you, King Sejong the Great, heir of the Choson Dynasty! Prosperity and benevolence towards the common man are the principles of your reign, and made of you the most beloved Korean king. You always aimed to provide a fair and equal society for all your people, and also to favor knowledge and technological discoveries. Your wisdom and intelligence imbued all the Korean society, and the scholars of the Jade Hall developed Korea's first written language, Hangul, sharing further literature and science to the people after centuries of darkness.",
-        "startIntroPart2": "Wise Sejong, will you gift your people with the radiance of harmony and knowledge to dispel the darkness once again? Will your new empire shine through the ages of history?",
+        "startIntroPart1": "Greetings to you, King Sejong the Great, heir of the Choson Dynasty! Benevolence and devotion towards the common man are the principles of your reign, and made of you the most beloved Korean king. You always aimed to provide a fair and equal society for all your people, and to guide them along the path of enlightenment. Your piety imbued all of Korean society, and the monks of the Jade Hall lit the first temple fires after centuries of darkness, sharing the light of faith with all the people.",
+        "startIntroPart2": "Wise Sejong, will you gift your people with the radiance of harmony and faith to dispel the darkness once again? Will your new empire shine through the ages of history?",
 
-        "declaringWar": "Jip-hyun-jun (Hall of Worthies) will no longer tolerate your irksome behavior. We will liberate the citizens under your oppression even with force, and enlighten them!",
-		"attacked": "Foolish, miserable wretch! You will be crushed by this country's magnificent scientific power!",
+        "declaringWar": "The monks of the Jade Hall will no longer tolerate your irksome behavior. We will liberate the citizens under your oppression even with force, and deliver them to the light!",
+		"attacked": "Foolish, miserable wretch! You will be crushed beneath this country's righteous storm of prayers!",
 		"defeated": "Now the question is who will protect my people. A dark age has come.",
 		"denounced": "Your words reveal more of your own prejudice than any fault in my own.",
-		"introduction": "Welcome to the palace of Choson, stranger. I am the learned King Sejong, who looks after his great people.",
+		"introduction": "Welcome to the palace of Choson, stranger. I am the devout King Sejong, who shepherds his great people.",
 
 		"neutralHello": "Hello.",
 		"hateHello": "Oh, it's you",
 		"tradeRequest": "We have many things to discuss and have much to benefit from each other.",
 		"outerColor": [27,33,96],
 		"innerColor": [255,0,0],
-		"uniqueName": "Scholars of the Jade Hall",
-        "uniques": ["[+2 Science] from every specialist [in all cities]", "[+2 Science] from every [Great Improvement]","Receive a tech boost when scientific buildings/wonders are built in capital", "East Asian"],
+		"uniqueName": "Monks of the Jade Hall",
+        "uniques": ["[+2 Faith] from every specialist [in all cities]", "[+2 Faith] from every [Great Improvement]","[+15]% [Faith] [in all cities]", "East Asian"],
 		"cities": ["Seoul","Busan","Jeonju","Daegu","Pyongyang","Kaesong","Suwon","Gwangju","Gangneung","Hamhung","Wonju","Ulsan",
 			"Changwon","Andong","Gongju","Haeju","Cheongju","Mokpo","Dongducheon","Geoje","Suncheon","Jinju","Sangju",
 			"Rason","Gyeongju","Chungju","Sacheon","Gimje","Anju"]
@@ -581,7 +581,7 @@
 		"startBias": ["Avoid [Tundra]"],
 		"preferredVictoryType": "Domination",
 
-        "startIntroPart1": "Askia, leader of the Songhai people and greatest of all, may God watch your path towards glory! Songhai was under the rule of the mighty West African state of Mali until the middle of the 14th century. Great King Sunni Ali Ber fought for independance, and showed to all Songhai's power, by conquering territories and repelling many foes who sought to destroy the rising kingdom. Ultimately, conquest of the wealthy cities of Timbuktu and Jenne made Songhai an empire with enough economic power to survive for a century, until the empire bowed down before foes with advanced technology - muskets against spearmen.",
+        "startIntroPart1": "Askia, leader of the Songhai people and greatest of all, may God watch your path towards glory! Songhai was under the rule of the mighty West African state of Mali until the middle of the 14th century. Great King Sunni Ali Ber fought for independance, and showed to all Songhai's power, by conquering territories and repelling many foes who sought to destroy the rising kingdom. Ultimately, conquest of the wealthy cities of Timbuktu and Jenne made Songhai an empire with enough economic power to survive for a century, until the empire bowed down before foes wielding fire-spitting arms - muskets against spearmen.",
         "startIntroPart2": "King Askia, your people know there's still hope, that the hour of revenge is coming. Give them wealth and power, give them mighty weapons of iron and fire, to destroy any foe, for Songhai to revive! Will your new empire shine through the ages of history?",
 
         "declaringWar": "You are an abomination to heaven and earth, the chief of ignorant savages! You must be destroyed!",
@@ -795,16 +795,16 @@
 		"cities": ["Kathmandu"]
 	},
 	{
-		"name": "Kuala Lumpur",
-		"adjective": ["KLite"],
+		"name": "Pagan",
+		"adjective": ["Paganese"],
 		"cityStateType": "Cultured",
 
 		"declaringWar": "You leave us no choice. War it must be.",
 		"attacked": "Very well, this shall not be forgotten.",
-		"defeated": "Today, the Malay people obey you, but do not think this is over...",
+		"defeated": "A thousand golden temples shall outlast your empire...",
 		"outerColor": [0, 0, 0],
 		"innerColor": [222, 237, 59],
-		"cities": ["Kuala Lumpur"]
+		"cities": ["Pagan"]
 	},
 	{
 		"name": "Lhasa",
@@ -845,8 +845,8 @@
 	},
 
 	{
-		"name": "Cape Town",
-		"adjective": ["Capetonian"],
+		"name": "Kilwa",
+		"adjective": ["Kilwan"],
 		"cityStateType": "Maritime",
 
 		"declaringWar": "You leave us no choice. War it must be.",
@@ -854,7 +854,7 @@
 		"defeated": "I have failed. May you, at least, know compassion towards our people.",
 		"outerColor": [0, 0, 0],
 		"innerColor": [217, 158, 78],
-		"cities": ["Cape Town"]
+		"cities": ["Kilwa"]
 	},
 	{
 		"name": "Genoa",
@@ -908,8 +908,8 @@
 		"uniques": ["Will not be displayed in Civilopedia", "Will not be chosen for new games", "Excluded from map editor"]
 	},
 	{
-		"name": "Quebec City",
-		"adjective": ["Québécois"],
+		"name": "Calicut",
+		"adjective": ["Calicutean"],
 		"cityStateType": "Maritime",
 
 		"declaringWar": "You leave us no choice. War it must be.",
@@ -917,7 +917,7 @@
 		"defeated": "We were too weak to protect ourselves...",
 		"outerColor": [0, 0, 0],
 		"innerColor": [51, 97, 242],
-		"cities": ["Quebec City"]
+		"cities": ["Calicut"]
 	},
 	{
 		"name": "Ragusa",
@@ -933,41 +933,41 @@
 		"cities": ["Ragusa"]
 	},
 	{
-		"name": "Rio de Janeiro",
-		"adjective": ["Carioca"],
+		"name": "Hormuz",
+		"adjective": ["Hormuzi"],
 		"cityStateType": "Maritime",
 		"startBias": ["Coast"],
 
-		"declaringWar": "I have to do this, for the sake of progress if nothing else. You must be opposed!",
+		"declaringWar": "I must do this, for the sake of trade if nothing else. You must be opposed!",
 		"attacked": "You can see how fruitless this will be for you... right?",
-		"defeated": "May God grant me these last wishes - peace and prosperity for Brazil.",
+		"defeated": "May God grant me these last wishes - peace and prosperity for Hormuz.",
 		"outerColor": [0, 0, 0],
 		"innerColor": [211, 220, 103],
-		"cities": ["Rio de Janeiro"]
+		"cities": ["Hormuz"]
 	},
 	{
-		"name": "Singapore",
-		"adjective": ["Singaporean"],
-		"cityStateType": "Maritime", // Changed from Maritime to Mercantile in GK
+		"name": "Singapura",
+		"adjective": ["Singapuran"],
+		"cityStateType": "Mercantile",
 
 		"declaringWar": "You leave us no choice. War it must be.",
 		"attacked": "Very well, this shall not be forgotten.",
 		"defeated": "Perhaps, in another world, we could have been friends...",
 		"outerColor": [0, 0, 0],
 		"innerColor": [246, 253, 160],
-		"cities": ["Singapore"]
+		"cities": ["Singapura"]
 	},
 	{
-		"name": "Sydney",
-		"adjective": ["Sydneysider"],
+		"name": "Malacca",
+		"adjective": ["Malaccan"],
 		"cityStateType": "Maritime",
 
-		"declaringWar": "After thorough deliberation, Australia finds itself at a crossroads. Prepare yourself, for war is upon us.",
-		"attacked": "We will mobilize every means of resistance to stop this transgression against our nation!",
-		"defeated": "The principles for which we have fought will survive longer than any nation you could ever build.",
+		"declaringWar": "After thorough deliberation, Malacca finds itself at a crossroads. Prepare yourself, for war is upon us.",
+		"attacked": "We will close the strait to every ship you send against this transgression!",
+		"defeated": "The emporium of the straits falls silent, but the sea remembers.",
 		"outerColor": [0, 0, 0],
 		"innerColor": [51, 97, 242],
-		"cities": ["Sydney"]
+		"cities": ["Malacca"]
 	},
 	{
 		"name": "Ur", // Introduced in BNW
@@ -1039,8 +1039,8 @@
 	},
 
 	{
-		"name": "Almaty",
-		"adjective": ["Almatinian"],
+		"name": "Taraz",
+		"adjective": ["Tarazian"],
 		"cityStateType": "Militaristic",
 
 		"declaringWar": "You leave us no choice. War it must be.",
@@ -1048,7 +1048,7 @@
 		"defeated": "How could we fall to the likes of you?!",
 		"outerColor": [0, 0, 0],
 		"innerColor": [217, 158, 78],
-		"cities": ["Almaty"]
+		"cities": ["Taraz"]
 	},
 	{
 		"name": "Belgrade",
@@ -1063,16 +1063,16 @@
 		"cities": ["Belgrade"]
 	},
 	{
-		"name": "Budapest",
-		"adjective": ["Budapester", "Budapesti"],
+		"name": "Buda",
+		"adjective": ["Budai"],
 		"cityStateType": "Militaristic",
 
 		"declaringWar": "Let's have a nice little War, shall we?",
 		"attacked": "If you need your nose bloodied, we'll happily serve.",
-		"defeated": "The serbian guerilla will never stop haunting you!",
+		"defeated": "The horsemen of the plain will never stop haunting you!",
 		"outerColor": [0, 0, 0],
 		"innerColor": [217, 158, 78],
-		"cities": ["Budapest"]
+		"cities": ["Buda"]
 	},
 	{
 		"name": "Dublin", // Dublin became a city in GK, but is available in Vanilla.
@@ -1149,17 +1149,16 @@
 		"cities": ["Tyre"]
 	},
 	{
-		"name": "Valletta", // Introduced in GK
-		"adjective": ["Beltin"],
+		"name": "Mdina", // Introduced in GK
+		"adjective": ["Melitan"],
 		"cityStateType": "Militaristic",
-		"startBias": ["Coast"],
 
 		"declaringWar": "We don't like your face. To arms!",
 		"attacked": "You will see you have just bitten off more than you can chew.",
-		"defeated": "This ship may sink, but our spirits will linger.",
+		"defeated": "These walls may fall, but our spirits will linger.",
 		"outerColor": [0, 0, 0],
 		"innerColor": [222, 237, 59],
-		"cities": ["Valletta"],
+		"cities": ["Mdina"],
 		"uniques": ["Will not be displayed in Civilopedia", "Will not be chosen for new games", "Excluded from map editor"]
 	},
 

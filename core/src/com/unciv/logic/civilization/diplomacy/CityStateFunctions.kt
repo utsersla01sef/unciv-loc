@@ -126,9 +126,11 @@ class CityStateFunctions(val civInfo: Civilization) {
     /** Gain a random great person from the city state */
     fun giveGreatPersonToPatron(receivingCiv: Civilization) {
 
-        // Great Prophets can't be gotten from CS
+        // Great Prophets can't be gotten from CS, and the Greek Natural Philosopher
+        // (the single permanent Archimedes hero) is never gifted by City-States either
         val giftableUnits = civInfo.gameInfo.ruleset.units.values.filter { it.isGreatPerson
                 && !it.hasUnique(UniqueType.MayFoundReligion)
+                && it.name != "Natural Philosopher"
                 && (it.uniqueTo == null || receivingCiv.matchesFilter(it.uniqueTo!!)) }
         if (giftableUnits.isEmpty()) // For badly defined mods that don't have great people but do have the policy that makes city states grant them
             return

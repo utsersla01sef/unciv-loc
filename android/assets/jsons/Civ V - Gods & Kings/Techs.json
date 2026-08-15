@@ -9,7 +9,7 @@
 			{
 				"name": "Agriculture",
 				"row": 6,
-				"quote": "'Where tillage begins, other arts follow. The farmers therefore are the founders of human civilization.' - Daniel Webster",
+				"quote": "'In the sweat of thy face shalt thou eat bread, till thou return unto the ground.' - Genesis 3:19",
 				"uniques": ["Starting tech"]
 			}
 		]
@@ -46,7 +46,7 @@
 				"row": 9,
 				"prerequisites": ["Agriculture"],
                 "uniques": ["[+100]% weight to this choice for AI decisions"],
-				"quote": "'The meek shall inherit the Earth, but not its mineral rights.' - J. Paul Getty"
+				"quote": "'Surely there is a vein for the silver, and a place for gold where they fine it. Iron is taken out of the earth, and brass is molten out of the stone.' - Job 28:1-2"
 			}
 
 		]
@@ -77,7 +77,7 @@
 				"row": 3,
 				"prerequisites": ["Pottery"],
                 "uniques": ["Enables establishment of embassies <Civilopedia link [Tutorials/Embassies]>"],
-				"quote": "'He who destroys a good book kills reason itself.' - John Milton"
+				"quote": "'My heart is inditing a good matter... my tongue is the pen of a ready writer.' - Psalms 45:1"
 			},
 			{
 				"name": "Trapping",
@@ -121,27 +121,27 @@
 				"row": 1,
 				"prerequisites": ["Sailing"],
 				"uniques": ["Enables embarkation for land units"],
-				"quote": "'He made an instrument to know if the moon shine at full or no.' - Samuel Butler"
+				"quote": "'The light of the body is the eye: if therefore thine eye be single, thy whole body shall be full of light.' - Matthew 6:22"
 			},
 			{
 				"name": "Horseback Riding",
 				"row": 5,
 				"prerequisites": ["Trapping","The Wheel"],
                 "uniques": ["[+50]% weight to this choice for AI decisions"],
-				"quote": "'A Horse! A Horse! My kingdom for a horse!' - Shakespeare (Richard III)"
+				"quote": "'The air of heaven is that which blows between a horse's ears.' - Arabian proverb"
 			},
 			{
 				"name": "Reckoning",
 				"row": 7,
 				"prerequisites": ["The Wheel"],
-				"quote": "'Reckoning is the gate and key to the sciences.' - Roger Bacon"
+				"quote": "'Nothing in excess.' - Inscription at Delphi"
 			},
 			{
 				"name": "Construction",
 				"row": 9,
 				"prerequisites": ["Masonry","The Wheel"],
                 "uniques": ["[+100]% weight to this choice for AI decisions"],
-				"quote": "'Three things are to be looked to in a building: that it stands on the right spot; that it be securely founded; that it be successfully executed.' - Johann Wolfgang von Goethe"
+				"quote": "'Except the LORD build the house, they labour in vain that build it.' - Psalms 127:1"
 			}
 		]
 	},
@@ -156,13 +156,13 @@
 				"name": "Rhetoric",
 				"row": 2,
 				"prerequisites": ["Writing","Calendar"],
-				"quote": "'There is only one good, knowledge, and one evil, ignorance.' - Socrates"
+				"quote": "'The fear of the LORD is the beginning of wisdom: and the knowledge of the holy is understanding.' - Proverbs 9:10"
 			},
 			{
 				"name": "Drama and Poetry",
 				"row": 3,
 				"prerequisites": ["Writing"],
-				"quote": "'What is drama but life with the dull bits cut out.' - Alfred Hitchcock"
+				"quote": "'Whom the gods love dies young.' - Menander"
 			},
 			{
 				"name": "Currency",
@@ -176,14 +176,14 @@
 				"row": 8,
 				"prerequisites": ["Reckoning","Construction"],
 				"uniques": ["Roads connect tiles across rivers","[+100]% weight to this choice for AI decisions"],
-				"quote": "'Instrumental or mechanical science is the noblest and, above all others, the most useful.' - Leonardo da Vinci"
+				"quote": "'The spirit of the living creatures was in the wheels... for the spirit of life was in the wheels.' - Ezekiel 1:20-21"
 			},
 			{
 				"name": "Iron Working",
 				"row": 10,
 				"prerequisites": ["Bronze Working"],
                 "uniques": ["[-50]% weight to this choice for AI decisions"],
-				"quote": "'Do not wait to strike til the iron is hot, but make it hot by striking.' - William Butler Yeats"
+				"quote": "'Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.' - Proverbs 27:17"
 			}
 		]
 	},
@@ -219,7 +219,7 @@
 				"row": 5,
 				"prerequisites": ["Currency","Horseback Riding","Drama and Poetry"],
 				"uniques": ["Enables Open Borders agreements <Civilopedia link [Tutorials/Open Borders]>","[+100]% weight to this choice for AI decisions"],
-				"quote": "'The only thing that saves us from the bureaucracy is its inefficiency' - Eugene McCarthy"
+				"quote": "'He who governs by virtue is like the north star, which remains in its place while all other stars turn towards it.' - Confucius, Analects"
 			},
 			{
 				"name": "Canon Law",
@@ -257,7 +257,7 @@
 				"row": 1,
 				"prerequisites": ["Lookouts"],
                 "uniques": ["[-50]% weight to this choice for AI decisions"],
-				"quote": "'I find the great thing in this world is not so much where we stand, as in what direction we are moving.' - Oliver Wendell Holmes"
+				"quote": "'Canst thou bind the sweet influences of Pleiades, or loose the bands of Orion?' - Job 38:31"
 			},
 			{
 				"name": "Education",
@@ -267,21 +267,21 @@
                     "Enables conversion of city production to [Science]",
                     "[+100]% weight to this choice for AI decisions"
                 ],
-				"quote": "'Education is the best provision for old age.' - Aristotle"
+				"quote": "'Train up a child in the way he should go: and when he is old, he will not depart from it.' - Proverbs 22:6"
 			},
 			{
 				"name": "Alchemy",
 				"row": 4,
 				"prerequisites": ["Metal Casting","Guilds"],
                 "uniques": ["[+100]% weight to this choice for AI decisions"],
-				"quote": "'The alchemists in their search for gold discovered many other things of greater value.' - Arthur Schopenhauer"
+				"quote": "'The fining pot is for silver, and the furnace for gold: but the LORD trieth the hearts.' - Proverbs 17:3"
 			},
 			{
 				"name": "Parliamentary Law",
 				"row": 5,
 				"prerequisites": ["Education"],
                 "uniques": ["[+100]% weight to this choice for AI decisions"],
-				"quote": "'It is the common fate of the indolent to see their rights become a prey to the active.' - John Philpot Curran"
+				"quote": "'Justice, justice shalt thou pursue, that thou mayest live.' - Deuteronomy 16:20"
 			},
 			{
 				"name": "Chivalry",
@@ -311,20 +311,20 @@
 				"row": 8,
 				"prerequisites": ["Guilds","Metal Casting"],
 				"uniques": ["Improves movement speed on roads"],
-				"quote": "'The press is the best instrument for enlightening the mind of man, and improving him as a rational, moral and social being.' - Thomas Jefferson"
+				"quote": "'What I tell you in darkness, that speak ye in light: and what ye hear in the ear, that preach ye upon the housetops.' - Matthew 10:27"
 			},
 			{
 				"name": "Siegecraft",
 				"row": 9,
 				"prerequisites": ["Metal Casting"],
-				"quote": "'Measure what is measurable, and make measurable what is not so.' - Galileo Galilei"
+				"quote": "'Seek not to understand that thou mayest believe, but believe that thou mayest understand.' - St. Augustine"
 			},
 			{
 				"name": "Bladesmithing",
 				"row": 10,
 				"prerequisites": ["Metal Casting"],
                 "uniques": ["[-50]% weight to this choice for AI decisions"],
-				"quote": "'John Henry said to his Captain, / 'A man ain't nothin' but a man, / And before I'll let your steam drill beat me down, / I'll die with the hammer in my hand.'' - Anonymous: The Ballad of John Henry, the Steel-Drivin' Man"
+				"quote": "'Is not my word like as a fire? saith the LORD; and like a hammer that breaketh the rock in pieces?' - Jeremiah 23:29"
 			},
 			{
 				"name": "Shipbuilding",
@@ -338,7 +338,7 @@
 				"row": 6,
 				"prerequisites": ["Chivalry", "Education"],
                 "uniques": ["[+100]% weight to this choice for AI decisions"],
-				"quote": "'Happiness: a good bank account, a good cook and a good digestion' - Jean Jacques Rousseau"
+				"quote": "'For where your treasure is, there will your heart be also.' - Matthew 6:21"
 			}
 		]
 	},
@@ -354,26 +354,26 @@
 				"row": 8,
 				"prerequisites": ["Artisanry","Siegecraft"],
                 "uniques": ["[+100]% weight to this choice for AI decisions"],
-				"quote": "'It is a newspaper's duty to print the news and raise hell.' - The Chicago Times"
+				"quote": "'Go ye into all the world, and preach the gospel to every creature.' - Mark 16:15"
 			},
 			{
 				"name": "Wayfinding",
 				"row": 2,
 				"prerequisites": ["Shipbuilding"],
-				"quote": "'The winds and the waves are always on the side of the ablest navigators.' - Edward Gibbon"
+				"quote": "'They that sail the sea tell of the dangers thereof; and we marvel at the strange things we hear.' - Ecclesiasticus 43:24"
 			},
 			{
 				"name": "Cathedral Building",
 				"row": 4,
 				"prerequisites": ["Banking","Woodblock Printing"],
-				"quote": "'Architecture begins where engineering ends.' - Walter Gropius"
+				"quote": "'Well-building hath three conditions: firmness, commodity, and delight.' - Vitruvius"
 			},
 			{
 				"name": "Trade Craft",
 				"row": 6,
 				"prerequisites": ["Banking","Woodblock Printing"],
                 "uniques": ["[+50]% weight to this choice for AI decisions"],
-				"quote": "'Compound interest is the most powerful force in the universe.' - Albert Einstein"
+				"quote": "'The rich ruleth over the poor, and the borrower is servant to the lender.' - Proverbs 22:7"
 			}
 		]
 	},
@@ -396,7 +396,7 @@
 				"row": 2,
 				"prerequisites": ["Cathedral Building"],
 				"uniques": ["Only available <for [East Asian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
-				"quote": "'Studying is like sailing against the current: not to advance is to drop back.' - Chinese proverb"
+				"quote": "'A journey of a thousand miles begins with a single step.' - Lao Tzu, Tao Te Ching"
 			},
 			{
 				"name": "Irrigation Canals",
@@ -452,7 +452,7 @@
 				"row": 10,
 				"prerequisites": ["Trade Craft"],
 				"uniques": ["Only available <for [Greek] Civilizations>", "[+100]% weight to this choice for AI decisions"],
-				"quote": "'Give me a place to stand and I shall move the earth.' - Archimedes"
+				"quote": "'Each year the river takes the land, and the surveyors must stretch their ropes anew; from this craft, I believe, geometry first came to Egypt, and from there passed to Greece.' - Herodotus, Histories"
 			}
 		]
 	},
@@ -482,7 +482,7 @@
 				"row": 3,
 				"prerequisites": ["Irrigation Canals"],
 				"uniques": ["Only available <for [Middle Eastern] Civilizations>", "[+100]% weight to this choice for AI decisions"],
-				"quote": "'The stars are the letters of heaven.' - Arabian saying"
+				"quote": "'The moving heavens write their verse upon the wind; the wise build towers to read it, and the summer heat is turned to coolness.' - attributed to the Persian poets"
 			},
 			{
 				"name": "Stone Castles",
@@ -503,7 +503,7 @@
 				"row": 6,
 				"prerequisites": ["Stepwells"],
 				"uniques": ["Only available <for [South Asian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
-				"quote": "'Knowledge is the third eye of man.' - Sanskrit proverb"
+				"quote": "'Let a man lift himself by his own self; let him not degrade himself; for the self alone is the friend of the self, and the self alone is the enemy of the self.' - Bhagavad Gita 6:5"
 			},
 			{
 				"name": "Trans-Sahara Routes",
