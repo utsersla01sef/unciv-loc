@@ -236,7 +236,26 @@ class MapGenerator(val ruleset: Ruleset, private val coroutineScope: CoroutineSc
         for (tile in map.values)
             TileNormalizer.normalizeToRuleset(tile, ruleset)
 
+        runAndMeasure("ensureHellenicStartingResources") { ensureHellenicStartingResources(map) }
+
         return map
+    }
+
+    /** Themed rule: Greece - the sole science civilization - is granted Iron, Marble
+     *  and Whales near its starting position, after all regular placement is done.
+     *  Runs post-normalization so terrain checks are final. No Greece -> no-op. */
+    private fun ensureHellenicStartingResources(map: TileMap) {
+        val greekStart = map.startingLocationsByNation["Greece"]?.firstOrNull() ?: return
+        for (resourceName in sequenceOf("Iron", "Marble", "Whales")) {
+            val resource = ruleset.tileResources[resourceName] ?: continue
+            // Closest valid tile without an existing resource, within workable range
+            val target = greekStart.getTilesInDistance(3)
+                .filter { it != greekStart && it.resource == null && resource.generatesNaturallyOn(it) }
+                .minByOrNull { it.aerialDistanceTo(greekStart) }
+                ?: continue
+            // Iron as a major deposit (full count), luxuries default to their standard amount
+            target.setTileResource(resource, majorDeposit = resource.resourceType == ResourceType.Strategic)
+        }
     }
     
     private fun flipTopBottom(vector: HexCoord): HexCoord = HexCoord.of(-vector.y, -vector.x)
