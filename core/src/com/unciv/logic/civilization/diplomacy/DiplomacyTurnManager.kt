@@ -307,6 +307,8 @@ object DiplomacyTurnManager {
         // Positives
         revertToZero(DiplomaticModifiers.GaveUsUnits, 1 / 4f)
         revertToZero(DiplomaticModifiers.LiberatedCity, 1 / 8f)
+        // War merit fades faster than grudges - glory is remembered, but not forever
+        revertToZero(DiplomaticModifiers.ProvenWarStrength, 1 / 4f)
         if (hasModifier(DiplomaticModifiers.GaveUsGifts)) {
             val giftLoss = when (relationshipLevel()) {
                 RelationshipLevel.Ally -> 1f
@@ -332,6 +334,8 @@ object DiplomacyTurnManager {
         setDefensivePactBasedModifier()
 
         setReligionBasedModifier()
+
+        setCultureBasedModifier()
 
         if (!hasFlag(DiplomacyFlags.DeclarationOfFriendship))
             revertToZero(DiplomaticModifiers.DeclarationOfFriendship, 1 / 2f) //decreases slowly and will revert to full if it is declared later

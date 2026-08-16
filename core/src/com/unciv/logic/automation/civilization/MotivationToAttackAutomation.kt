@@ -86,10 +86,12 @@ object MotivationToAttackAutomation {
             modifiers.add(Pair("Research Agreement", -5f * personality.scaledFocus(PersonalityValue.Science) * personality.scaledFocus(PersonalityValue.Commerce)))
 
         if (diplomacyManager.hasFlag(DiplomacyFlags.DeclarationOfFriendship))
-            modifiers.add(Pair("Declaration of Friendship", -10f * personality.scaledFocus(PersonalityValue.Loyal)))
+            // Strengthened: loyal leaders now heavily resist backstabbing friends (was -10f * scaledFocus)
+            modifiers.add(Pair("Declaration of Friendship", -25f * personality.scaledFocus(PersonalityValue.Loyal)))
 
         if (diplomacyManager.hasFlag(DiplomacyFlags.DefensivePact))
-            modifiers.add(Pair("Defensive Pact", -15f * personality.scaledFocus(PersonalityValue.Loyal)))
+            // Strengthened: breaking a defensive pact is now near-unthinkable for loyal leaders (was -15f * scaledFocus)
+            modifiers.add(Pair("Defensive Pact", -35f * personality.scaledFocus(PersonalityValue.Loyal)))
 
         modifiers.add(Pair("Relationship", getRelationshipModifier(diplomacyManager)))
 

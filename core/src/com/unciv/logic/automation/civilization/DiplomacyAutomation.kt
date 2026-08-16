@@ -6,6 +6,8 @@ import com.unciv.logic.automation.ThreatLevel
 import com.unciv.logic.automation.civilization.MotivationToAttackAutomation.hasAtLeastMotivationToAttack
 import com.unciv.logic.civilization.AlertType
 import com.unciv.logic.civilization.Civilization
+import com.unciv.logic.civilization.NotificationCategory
+import com.unciv.logic.civilization.NotificationIcon
 import com.unciv.logic.civilization.PopupAlert
 import com.unciv.logic.civilization.diplomacy.DiplomacyFlags
 import com.unciv.logic.civilization.diplomacy.DiplomacyManager
@@ -18,6 +20,7 @@ import com.unciv.logic.trade.TradeOffer
 import com.unciv.logic.trade.TradeRequest
 import com.unciv.logic.trade.TradeOfferType
 import com.unciv.models.Counter
+import com.unciv.models.ruleset.nation.Personality
 import com.unciv.models.ruleset.nation.PersonalityValue
 import com.unciv.models.ruleset.unique.UniqueType
 import com.unciv.ui.screens.victoryscreen.RankingType
@@ -635,5 +638,124 @@ object DiplomacyAutomation {
                 numberOfActiveDenouncements++
             }
         }
+    }
+
+    // ==================== Structured proactivity: flavor messages ====================
+    // AI civs periodically address the human player with personality-driven, relationship-aware
+    // flavor messages. Purely cosmetic companionship - no gameplay effects, no serialization.
+
+    /** Every N turns, an AI civ gets one chance to send a flavor message to the human player */
+    private const val FLAVOR_MESSAGE_INTERVAL = 10
+
+    /**
+     * Entry point for structured proactivity. Called once per turn per AI civ from
+     * [NextTurnAutomation]. Messages are staggered by civ ID so they trickle instead of flooding,
+     * and frequency is scaled by the leader's diplomacy personality.
+     */
+    internal fun sendFlavorMessages(civInfo: Civilization) {
+        if (!civInfo.isAI() || civInfo.isDefeated()) return
+        val humanCiv = civInfo.gameInfo.civilizations.firstOrNull { it.isHuman() } ?: return
+        if (humanCiv.isDefeated() || !civInfo.knows(humanCiv)) return
+
+        // Stagger civs across turns: civ N speaks on turns where (turn + N) % INTERVAL == 0
+        if ((civInfo.gameInfo.turns + civInfo.civID.hashCode()) % FLAVOR_MESSAGE_INTERVAL != 0) return
+
+        val personality = civInfo.getPersonality()
+        val rng = civInfo.state.stateBasedRandom("DiplomacyAutomation.sendFlavorMessages")
+        // Talkativeness driven by diplomacy personality: hermit (0) stays silent, chatterbox (10) speaks often
+        val talkChance = (20 + 10 * personality[PersonalityValue.Diplomacy]).toInt().coerceAtMost(100)
+        if (rng.nextInt(100) >= talkChance) return
+
+        val message = buildFlavorMessage(civInfo, humanCiv, personality, rng) ?: return
+        humanCiv.addNotification("[${civInfo.civName}] $message",
+            NotificationCategory.Diplomacy, NotificationIcon.Diplomacy, civInfo.civName)
+    }
+
+    /** Picks a topic by priority: war sympathy > wonder praise > own war > relationship greeting */
+    private fun buildFlavorMessage(
+        civInfo: Civilization,
+        humanCiv: Civilization,
+        personality: Personality,
+        rng: Random
+    ): String? {
+        val diploManager = civInfo.getDiplomacyManager(humanCiv) ?: return null
+        val relationship = diploManager.relationshipIgnoreAfraid()
+
+        val mainTopic: String? = when {
+            // The player is at war and we like them - offer a shoulder to lean on
+            humanCiv.isAtWar() && relationship >= RelationshipLevel.Friend ->
+                listOf(
+                    "{We hear your lands are under attack. Call on us, friend.}",
+                    "{Word of your battles has reached our agora. Stay strong, friend.}"
+                ).random(rng)
+            // The player has wonders and we admire them - name-drop one
+            relationship >= RelationshipLevel.Favorable -> {
+                val wonderNames = humanCiv.cities.asSequence()
+                    .flatMap { it.cityConstructions.builtBuildings.asSequence() }
+                    .mapNotNull { civInfo.gameInfo.ruleset.buildings[it] }
+                    .filter { it.isAnyWonder() }
+                    .map { it.name }
+                    .toList()
+                if (wonderNames.isEmpty()) null
+                else "I have heard tales of your [${wonderNames.random(rng)}] - even our elders speak of it."
+            }
+            // We are busy with our own war
+            civInfo.isAtWar() && relationship <= RelationshipLevel.Competitor ->
+                "{Our spears are occupied with other quarrels at the moment.}"
+            else -> null
+        }
+
+        // Fallback or base: a greeting appropriate to the current relationship
+        val text = mainTopic ?: relationshipGreeting(relationship, rng) ?: return null
+
+        // Strong personality traits surface as a signature second sentence (50% of the time)
+        val flair = if (mainTopic == null && rng.nextInt(2) == 0) personalityFlair(personality, rng) else null
+        return if (flair != null) "$text $flair" else text
+    }
+
+    /** Relationship-appropriate greeting lines */
+    private fun relationshipGreeting(relationship: RelationshipLevel, rng: Random): String? = when (relationship) {
+        RelationshipLevel.Ally -> listOf(
+            "{Our bond is the envy of all the Greek world!}",
+            "{May our alliance stand as long as the columns of the Parthenon.}"
+        ).random(rng)
+        RelationshipLevel.Friend -> listOf(
+            "{The gods smile upon our friendship.}",
+            "{It is good to have a friend across the sea.}"
+        ).random(rng)
+        RelationshipLevel.Favorable -> listOf(
+            "{Your deeds are praised even in our marketplaces.}",
+            "{Travelers tell interesting stories about your people.}"
+        ).random(rng)
+        RelationshipLevel.Afraid, RelationshipLevel.Neutral -> listOf(
+            "{May trade flourish between our peoples.}",
+            "{Our caravans speak well of your roads.}"
+        ).random(rng)
+        RelationshipLevel.Competitor -> listOf(
+            "{We hear of your rapid growth... we are watching.}",
+            "{The world is large, but somehow our paths keep crossing.}"
+        ).random(rng)
+        RelationshipLevel.Enemy -> listOf(
+            "{The gods see what you have done.}",
+            "{Do not mistake our patience for weakness.}"
+        ).random(rng)
+        RelationshipLevel.Unforgivable -> listOf(
+            "{There is no word left between us but war.}"
+        ).random(rng)
+    }
+
+    /** Strong stat-focused traits (7+) surface as a characteristic remark */
+    private fun personalityFlair(personality: Personality, rng: Random): String? {
+        val candidates = sequenceOf(
+            personality.science to "{The lamps of our library burn through the night.}",
+            personality.culture to "{Our poets still argue over who writes the finer verse.}",
+            personality.military to "{Our phalanxes drill at dawn, as they always have.}",
+            personality.gold to "{Another merchant caravan set out for distant ports today.}",
+            personality.faith to "{The omens at today's sacrifice were favorable.}",
+            personality.food to "{This year's harvest weighs heavy on the storehouse shelves.}",
+            personality.production to "{The forges of our craftsmen never cool.}",
+            personality.happiness to "{There is wine and song in our streets tonight.}"
+        ).filter { it.first >= 7f }.toList()
+        return candidates.randomOrNull(rng)?.second
     }
 }

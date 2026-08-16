@@ -61,6 +61,7 @@ object NextTurnAutomation {
             DiplomacyAutomation.offerResearchAgreement(civInfo)
             DiplomacyAutomation.offerDefensivePact(civInfo)
             DiplomacyAutomation.checkMilitaryPresenceNearBorder(civInfo)
+            DiplomacyAutomation.sendFlavorMessages(civInfo)
             TradeAutomation.exchangeLuxuries(civInfo)
             
             issueRequests(civInfo)

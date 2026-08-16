@@ -13,12 +13,14 @@ import com.unciv.logic.trade.TradeEvaluation
 import com.unciv.logic.trade.TradeLogic
 import com.unciv.logic.trade.TradeOffer
 import com.unciv.logic.trade.TradeOfferType
+import com.unciv.models.ruleset.nation.PersonalityValue
 import com.unciv.models.ruleset.tile.ResourceSupplyList
 import com.unciv.models.ruleset.unique.GameContext
 import com.unciv.models.ruleset.unique.UniqueTriggerActivation
 import com.unciv.models.ruleset.unique.UniqueType
 import com.unciv.models.translations.fillPlaceholders
 import com.unciv.ui.components.extensions.toPercent
+import com.unciv.ui.screens.victoryscreen.RankingType
 import com.unciv.utils.Log
 import yairm210.purity.annotations.Cache
 import org.jetbrains.annotations.VisibleForTesting
@@ -137,8 +139,10 @@ enum class DiplomaticModifiers(val text: String) {
     EstablishedEmbassy("We have an embassy in your capital"),
     ReceivedEmbassy("You have an embassy in our capital"),
     SharedEmbassies("We have shared embassies"),
+    CulturalRenown("Your culture is the wonder of the age."),
     YearsOfPeace("Years of peace have strengthened our relations."),
     SharedEnemy("Our mutual military struggle brings us closer together."),
+    ProvenWarStrength("You have proven your strength in war - even the defeated speak of your generalship."),
     LiberatedCity("We applaud your liberation of conquered cities!"),
     DeclarationOfFriendship("We have signed a public declaration of friendship"),
     DeclaredFriendshipWithOurAllies("You have declared friendship with our allies"),
@@ -629,6 +633,28 @@ class DiplomacyManager() : IsPartOfGameInfoSerialization {
         makePeaceOneSide()
         otherCivDiplomacy().makePeaceOneSide()
 
+        // War merit: whoever captured cities from the other side during this war has proven
+        // their strength. All observers - and especially the defeated - raise their opinion of
+        // the victor, independent of overall score: battlefield merit outweighs paper strength.
+        // Aggressors still eat the WarMongerer penalty, so a defensive victor profits most.
+        val warVictor: Civilization? = when {
+            // The B->A manager carries "A captured B's cities" - A won
+            otherCivDiplomacy().hasModifier(DiplomaticModifiers.CapturedOurCities) -> civInfo
+            // The A->B manager carries "B captured A's cities" - B won
+            hasModifier(DiplomaticModifiers.CapturedOurCities) -> otherCiv
+            else -> null
+        }
+        if (warVictor != null) {
+            val defeated = if (warVictor == civInfo) otherCiv else civInfo
+            // The defeated respect the victor's generalship
+            defeated.getDiplomacyManager(warVictor)!!.addModifier(DiplomaticModifiers.ProvenWarStrength, 5f)
+            // So does everyone who witnessed the war
+            for (observer in getCommonKnownCivs()) {
+                if (observer == civInfo || observer == otherCiv) continue
+                observer.getDiplomacyManager(warVictor)!!.addModifier(DiplomaticModifiers.ProvenWarStrength, 8f)
+            }
+        }
+
         for (civ in getCommonKnownCivsWithSpectators()) {
             civ.addNotification(
                     "[${civInfo.civName}] and [${otherCiv.civName}] have signed a Peace Treaty!",
@@ -799,6 +825,35 @@ class DiplomacyManager() : IsPartOfGameInfoSerialization {
         else
             // their majority religions differ or one or both don't have a majority religion at all
             removeModifier(DiplomaticModifiers.BelieveSameReligion)
+    }
+
+    /**
+     * Cultural renown: civs admire a culturally flourishing civilization.
+     * The other civ's adopted-policy count is compared against the average of all alive major
+     * civs we know - being a cultural beacon earns steady admiration, scaled by how much WE
+     * ourselves value culture (cultured leaders appreciate art, warmongers shrug).
+     * Re-evaluated every turn, so the bonus tracks the actual cultural race.
+     */
+    internal fun setCultureBasedModifier() {
+        val knownMajorCivs = civInfo.getKnownCivs().filter { it.isMajorCiv() && it.isAlive() }.toList()
+        if (knownMajorCivs.size < 2) {
+            removeModifier(DiplomaticModifiers.CulturalRenown)
+            return
+        }
+        val theirCulture = otherCiv.getStatForRanking(RankingType.Culture).toFloat()
+        val averageCulture = (knownMajorCivs
+            .sumOf { it.getStatForRanking(RankingType.Culture) } + civInfo.getStatForRanking(RankingType.Culture))
+            .toFloat() / (knownMajorCivs.size + 1)
+
+        val modifier = when {
+            averageCulture <= 0f -> 0f  // nobody has policies yet - nothing to admire
+            theirCulture >= 2f * averageCulture -> 6f
+            theirCulture >= 1.5f * averageCulture -> 3f
+            else -> 0f
+        } * civInfo.getPersonality().scaledFocus(PersonalityValue.Culture)
+
+        if (modifier > 0f) setModifier(DiplomaticModifiers.CulturalRenown, modifier)
+        else removeModifier(DiplomaticModifiers.CulturalRenown)
     }
 
     fun denounce() {
