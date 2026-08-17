@@ -69,7 +69,12 @@
       "Rationalism": 5,
       "Freedom": 5,
       "Autocracy": 4,
-      "Order": 7
+      "Order": 7,
+      "Monasticism": 5,
+      "Hanseatic League": 6,
+      "Chivalry": 3,
+      "Crusading Tradition": 4,
+      "Guild Politics": 5
     }
   },
   {
@@ -99,7 +104,12 @@
       "Rationalism": 7,
       "Freedom": 5,
       "Autocracy": 8,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 3,
+      "Hanseatic League": 4,
+      "Chivalry": 8,
+      "Crusading Tradition": 5,
+      "Guild Politics": 4
     },
     "civilopediaText": [
       {
@@ -134,7 +144,12 @@
       "Rationalism": 8,
       "Freedom": 5,
       "Autocracy": 7,
-      "Order": 3
+      "Order": 3,
+      "Monasticism": 3,
+      "Hanseatic League": 3,
+      "Chivalry": 8,
+      "Crusading Tradition": 6,
+      "Guild Politics": 4
     }
   },
   {
@@ -164,7 +179,12 @@
       "Rationalism": 5,
       "Freedom": 4,
       "Autocracy": 7,
-      "Order": 4
+      "Order": 4,
+      "Monasticism": 7,
+      "Hanseatic League": 4,
+      "Chivalry": 4,
+      "Crusading Tradition": 6,
+      "Guild Politics": 4
     },
     "civilopediaText": [
       {
@@ -199,7 +219,12 @@
       "Rationalism": 3,
       "Freedom": 5,
       "Autocracy": 8,
-      "Order": 4
+      "Order": 4,
+      "Monasticism": 1,
+      "Hanseatic League": 1,
+      "Chivalry": 9,
+      "Crusading Tradition": 7,
+      "Guild Politics": 1
     },
     "civilopediaText": [
       {
@@ -234,7 +259,12 @@
       "Rationalism": 6,
       "Freedom": 6,
       "Autocracy": 5,
-      "Order": 8
+      "Order": 8,
+      "Monasticism": 4,
+      "Hanseatic League": 5,
+      "Chivalry": 4,
+      "Crusading Tradition": 3,
+      "Guild Politics": 8
     },
     "civilopediaText": [
       {
@@ -269,7 +299,12 @@
       "Rationalism": 8,
       "Freedom": 5,
       "Autocracy": 5,
-      "Order": 7
+      "Order": 7,
+      "Monasticism": 3,
+      "Hanseatic League": 5,
+      "Chivalry": 5,
+      "Crusading Tradition": 4,
+      "Guild Politics": 8
     },
     "civilopediaText": [
       {
@@ -304,7 +339,12 @@
       "Rationalism": 7,
       "Freedom": 8,
       "Autocracy": 6,
-      "Order": 6
+      "Order": 6,
+      "Monasticism": 6,
+      "Hanseatic League": 2,
+      "Chivalry": 8,
+      "Crusading Tradition": 4,
+      "Guild Politics": 2
     },
     "civilopediaText": [
       {
@@ -339,7 +379,12 @@
       "Rationalism": 4,
       "Freedom": 6,
       "Autocracy": 7,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 4,
+      "Hanseatic League": 4,
+      "Chivalry": 7,
+      "Crusading Tradition": 5,
+      "Guild Politics": 6
     }
   },
   {
@@ -369,7 +414,12 @@
       "Rationalism": 10,
       "Freedom": 2,
       "Autocracy": 3,
-      "Order": 6
+      "Order": 6,
+      "Monasticism": 4,
+      "Hanseatic League": 5,
+      "Chivalry": 6,
+      "Crusading Tradition": 5,
+      "Guild Politics": 7
     }
   },
   {
@@ -399,7 +449,12 @@
       "Rationalism": 6,
       "Freedom": 8,
       "Autocracy": 3,
-      "Order": 7
+      "Order": 7,
+      "Monasticism": 4,
+      "Hanseatic League": 6,
+      "Chivalry": 4,
+      "Crusading Tradition": 3,
+      "Guild Politics": 7
     }
   },
   {
@@ -429,7 +484,12 @@
       "Rationalism": 5,
       "Freedom": 5,
       "Autocracy": 6,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 3,
+      "Hanseatic League": 8,
+      "Chivalry": 4,
+      "Crusading Tradition": 3,
+      "Guild Politics": 6
     }
   },
   {
@@ -459,7 +519,12 @@
       "Rationalism": 6,
       "Freedom": 5,
       "Autocracy": 4,
-      "Order": 6
+      "Order": 6,
+      "Monasticism": 3,
+      "Hanseatic League": 9,
+      "Chivalry": 4,
+      "Crusading Tradition": 4,
+      "Guild Politics": 5
     }
   },
   {
@@ -489,7 +554,12 @@
       "Rationalism": 5,
       "Freedom": 5,
       "Autocracy": 3,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 2,
+      "Hanseatic League": 9,
+      "Chivalry": 3,
+      "Crusading Tradition": 5,
+      "Guild Politics": 5
     }
   },
   {
@@ -519,7 +589,12 @@
       "Rationalism": 4,
       "Freedom": 6,
       "Autocracy": 6,
-      "Order": 6
+      "Order": 6,
+      "Monasticism": 5,
+      "Hanseatic League": 5,
+      "Chivalry": 7,
+      "Crusading Tradition": 3,
+      "Guild Politics": 5
     }
   },
   {
@@ -549,7 +624,12 @@
       "Rationalism": 7,
       "Freedom": 10,
       "Autocracy": 1,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 9,
+      "Hanseatic League": 4,
+      "Chivalry": 1,
+      "Crusading Tradition": 1,
+      "Guild Politics": 5
     }
   },
   {
@@ -579,7 +659,12 @@
       "Rationalism": 4,
       "Freedom": 5,
       "Autocracy": 8,
-      "Order": 3
+      "Order": 3,
+      "Monasticism": 1,
+      "Hanseatic League": 1,
+      "Chivalry": 9,
+      "Crusading Tradition": 6,
+      "Guild Politics": 1
     }
   },
   {
@@ -609,7 +694,12 @@
       "Rationalism": 7,
       "Freedom": 5,
       "Autocracy": 6,
-      "Order": 6
+      "Order": 6,
+      "Monasticism": 3,
+      "Hanseatic League": 5,
+      "Chivalry": 8,
+      "Crusading Tradition": 6,
+      "Guild Politics": 6
     }
   },
   {
@@ -639,7 +729,12 @@
       "Rationalism": 4,
       "Freedom": 8,
       "Autocracy": 4,
-      "Order": 8
+      "Order": 8,
+      "Monasticism": 8,
+      "Hanseatic League": 3,
+      "Chivalry": 3,
+      "Crusading Tradition": 5,
+      "Guild Politics": 4
     }
   },
   {
@@ -669,7 +764,12 @@
       "Rationalism": 5,
       "Freedom": 5,
       "Autocracy": 7,
-      "Order": 4
+      "Order": 4,
+      "Monasticism": 3,
+      "Hanseatic League": 5,
+      "Chivalry": 7,
+      "Crusading Tradition": 5,
+      "Guild Politics": 3
     }
   },
   {
@@ -699,7 +799,12 @@
       "Rationalism": 8,
       "Freedom": 7,
       "Autocracy": 3,
-      "Order": 6
+      "Order": 6,
+      "Monasticism": 5,
+      "Hanseatic League": 9,
+      "Chivalry": 3,
+      "Crusading Tradition": 3,
+      "Guild Politics": 6
     }
   },
   {
@@ -729,7 +834,12 @@
       "Rationalism": 5,
       "Freedom": 6,
       "Autocracy": 2,
-      "Order": 7
+      "Order": 7,
+      "Monasticism": 5,
+      "Hanseatic League": 3,
+      "Chivalry": 5,
+      "Crusading Tradition": 2,
+      "Guild Politics": 4
     }
   },
   {
@@ -759,7 +869,12 @@
       "Rationalism": 3,
       "Freedom": 5,
       "Autocracy": 5,
-      "Order": 4
+      "Order": 4,
+      "Monasticism": 8,
+      "Hanseatic League": 4,
+      "Chivalry": 6,
+      "Crusading Tradition": 9,
+      "Guild Politics": 3
     }
   },
   {
@@ -789,7 +904,12 @@
       "Rationalism": 4,
       "Freedom": 7,
       "Autocracy": 5,
-      "Order": 7
+      "Order": 7,
+      "Monasticism": 4,
+      "Hanseatic League": 5,
+      "Chivalry": 5,
+      "Crusading Tradition": 2,
+      "Guild Politics": 4
     }
   },
   {
@@ -819,7 +939,12 @@
       "Rationalism": 5,
       "Freedom": 6,
       "Autocracy": 4,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 6,
+      "Hanseatic League": 7,
+      "Chivalry": 4,
+      "Crusading Tradition": 4,
+      "Guild Politics": 7
     }
   },
   {
@@ -849,7 +974,12 @@
       "Rationalism": 5,
       "Freedom": 6,
       "Autocracy": 9,
-      "Order": 3
+      "Order": 3,
+      "Monasticism": 4,
+      "Hanseatic League": 2,
+      "Chivalry": 8,
+      "Crusading Tradition": 5,
+      "Guild Politics": 3
     }
   },
   {
@@ -879,7 +1009,12 @@
       "Rationalism": 7,
       "Freedom": 4,
       "Autocracy": 9,
-      "Order": 3
+      "Order": 3,
+      "Monasticism": 3,
+      "Hanseatic League": 4,
+      "Chivalry": 8,
+      "Crusading Tradition": 6,
+      "Guild Politics": 5
     }
   },
   {
@@ -909,7 +1044,12 @@
       "Rationalism": 8,
       "Freedom": 5,
       "Autocracy": 5,
-      "Order": 6
+      "Order": 6,
+      "Monasticism": 5,
+      "Hanseatic League": 4,
+      "Chivalry": 4,
+      "Crusading Tradition": 3,
+      "Guild Politics": 6
     }
   },
   {
@@ -939,7 +1079,12 @@
       "Rationalism": 5,
       "Freedom": 5,
       "Autocracy": 9,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 2,
+      "Hanseatic League": 4,
+      "Chivalry": 9,
+      "Crusading Tradition": 5,
+      "Guild Politics": 5
     }
   },
   {
@@ -969,7 +1114,12 @@
       "Rationalism": 8,
       "Freedom": 6,
       "Autocracy": 3,
-      "Order": 7
+      "Order": 7,
+      "Monasticism": 8,
+      "Hanseatic League": 3,
+      "Chivalry": 3,
+      "Crusading Tradition": 4,
+      "Guild Politics": 3
     }
   },
   {
@@ -999,7 +1149,12 @@
       "Rationalism": 5,
       "Freedom": 4,
       "Autocracy": 4,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 5,
+      "Hanseatic League": 3,
+      "Chivalry": 5,
+      "Crusading Tradition": 3,
+      "Guild Politics": 6
     }
   },
   {
@@ -1029,7 +1184,12 @@
       "Rationalism": 5,
       "Freedom": 9,
       "Autocracy": 3,
-      "Order": 6
+      "Order": 6,
+      "Monasticism": 6,
+      "Hanseatic League": 4,
+      "Chivalry": 3,
+      "Crusading Tradition": 2,
+      "Guild Politics": 5
     }
   },
   {
@@ -1059,7 +1219,12 @@
       "Rationalism": 5,
       "Freedom": 6,
       "Autocracy": 5,
-      "Order": 8
+      "Order": 8,
+      "Monasticism": 5,
+      "Hanseatic League": 3,
+      "Chivalry": 4,
+      "Crusading Tradition": 2,
+      "Guild Politics": 4
     }
   },
   {
@@ -1089,7 +1254,12 @@
       "Rationalism": 6,
       "Freedom": 6,
       "Autocracy": 4,
-      "Order": 7
+      "Order": 7,
+      "Monasticism": 8,
+      "Hanseatic League": 4,
+      "Chivalry": 5,
+      "Crusading Tradition": 4,
+      "Guild Politics": 6
     }
   },
   {
@@ -1119,7 +1289,12 @@
       "Rationalism": 6,
       "Freedom": 6,
       "Autocracy": 5,
-      "Order": 8
+      "Order": 8,
+      "Monasticism": 8,
+      "Hanseatic League": 5,
+      "Chivalry": 4,
+      "Crusading Tradition": 3,
+      "Guild Politics": 5
     }
   },
   {
@@ -1149,7 +1324,12 @@
       "Rationalism": 4,
       "Freedom": 5,
       "Autocracy": 4,
-      "Order": 7
+      "Order": 7,
+      "Monasticism": 7,
+      "Hanseatic League": 4,
+      "Chivalry": 3,
+      "Crusading Tradition": 2,
+      "Guild Politics": 6
     }
   },
   {
@@ -1179,7 +1359,12 @@
       "Rationalism": 2,
       "Freedom": 6,
       "Autocracy": 9,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 1,
+      "Hanseatic League": 2,
+      "Chivalry": 9,
+      "Crusading Tradition": 5,
+      "Guild Politics": 1
     }
   },
   {
@@ -1209,7 +1394,12 @@
       "Rationalism": 7,
       "Freedom": 4,
       "Autocracy": 8,
-      "Order": 4
+      "Order": 4,
+      "Monasticism": 5,
+      "Hanseatic League": 5,
+      "Chivalry": 7,
+      "Crusading Tradition": 7,
+      "Guild Politics": 5
     }
   },
   {
@@ -1239,7 +1429,12 @@
       "Rationalism": 6,
       "Freedom": 6,
       "Autocracy": 4,
-      "Order": 8
+      "Order": 8,
+      "Monasticism": 7,
+      "Hanseatic League": 5,
+      "Chivalry": 4,
+      "Crusading Tradition": 5,
+      "Guild Politics": 5
     }
   },
   {
@@ -1269,7 +1464,12 @@
       "Rationalism": 7,
       "Freedom": 6,
       "Autocracy": 7,
-      "Order": 8
+      "Order": 8,
+      "Monasticism": 4,
+      "Hanseatic League": 6,
+      "Chivalry": 5,
+      "Crusading Tradition": 3,
+      "Guild Politics": 6
     }
   },
   {
@@ -1299,7 +1499,12 @@
       "Rationalism": 5,
       "Freedom": 7,
       "Autocracy": 4,
-      "Order": 5
+      "Order": 5,
+      "Monasticism": 5,
+      "Hanseatic League": 9,
+      "Chivalry": 5,
+      "Crusading Tradition": 5,
+      "Guild Politics": 8
     }
   },
   {
@@ -1329,7 +1534,12 @@
       "Rationalism": 9,
       "Freedom": 7,
       "Autocracy": 7,
-      "Order": 7
+      "Order": 7,
+      "Monasticism": 4,
+      "Hanseatic League": 7,
+      "Chivalry": 5,
+      "Crusading Tradition": 4,
+      "Guild Politics": 8
     }
   }
 ]
