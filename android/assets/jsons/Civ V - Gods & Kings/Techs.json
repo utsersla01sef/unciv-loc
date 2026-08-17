@@ -388,70 +388,70 @@
 				"name": "Roman Roads",
 				"row": 1,
 				"prerequisites": ["Cathedral Building"],
-				"uniques": ["Only available <for [Mediterranean] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Mediterranean] Civilizations>", "[+1] Movement <for [Land] units>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'All roads lead to Rome.' - Medieval proverb"
 			},
 			{
 				"name": "Imperial Exams",
 				"row": 2,
 				"prerequisites": ["Cathedral Building"],
-				"uniques": ["Only available <for [East Asian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [East Asian] Civilizations>", "[+1 Science] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'A journey of a thousand miles begins with a single step.' - Lao Tzu, Tao Te Ching"
 			},
 			{
 				"name": "Irrigation Canals",
 				"row": 3,
 				"prerequisites": ["Cathedral Building"],
-				"uniques": ["Only available <for [Middle Eastern] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Middle Eastern] Civilizations>", "[+1 Food] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'He who has no water has no land.' - Arabian proverb"
 			},
 			{
 				"name": "Longbow Traditions",
 				"row": 4,
 				"prerequisites": ["Cathedral Building"],
-				"uniques": ["Only available <for [European] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [European] Civilizations>", "[+1] Range <for [Archery] units>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Train up a cub and he will follow you as a bow.' - English proverb"
 			},
 			{
 				"name": "Terrace Agriculture",
 				"row": 5,
 				"prerequisites": ["Cathedral Building"],
-				"uniques": ["Only available <for [American] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [American] Civilizations>", "[+1 Food] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'The land is not inherited from our ancestors, but borrowed from our children.' - Andean saying"
 			},
 			{
 				"name": "Stepwells",
 				"row": 6,
 				"prerequisites": ["Cathedral Building"],
-				"uniques": ["Only available <for [South Asian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [South Asian] Civilizations>", "[+1 Food] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Water is the driving force of all nature.' - attributed to ancient Indian wisdom"
 			},
 			{
 				"name": "Rock Churches",
 				"row": 7,
 				"prerequisites": ["Cathedral Building"],
-				"uniques": ["Only available <for [African] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [African] Civilizations>", "[+1 Faith] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Faith moves mountains.' - Ethiopian tradition"
 			},
 			{
 				"name": "Wave Piloting",
 				"row": 8,
 				"prerequisites": ["Wayfinding"],
-				"uniques": ["Only available <for [Polynesian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Polynesian] Civilizations>", "[+1] Movement <for [Water] units>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Follow the stars to find your way home.' - Polynesian saying"
 			},
 			{
 				"name": "Horse Archery",
 				"row": 9,
 				"prerequisites": ["Trade Craft"],
-				"uniques": ["Only available <for [Hunnic] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Hunnic] Civilizations>", "[+1] Movement <for [Mounted] units>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'An arrow can only be shot by pulling it backward.' - Steppe proverb"
 			},
 			{
 				"name": "Land Measuring",
 				"row": 10,
 				"prerequisites": ["Trade Craft"],
-				"uniques": ["Only available <for [Greek] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Greek] Civilizations>", "[+2 Science] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Each year the river takes the land, and the surveyors must stretch their ropes anew; from this craft, I believe, geometry first came to Egypt, and from there passed to Greece.' - Herodotus, Histories"
 			}
 		]
@@ -467,70 +467,70 @@
 				"name": "Legion Discipline",
 				"row": 1,
 				"prerequisites": ["Roman Roads"],
-				"uniques": ["Only available <for [Mediterranean] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Mediterranean] Civilizations>", "[+15]% Strength <for [Sword] units>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Fortune favors the brave.' - Latin proverb"
 			},
 			{
 				"name": "Sericulture",
 				"row": 2,
 				"prerequisites": ["Imperial Exams"],
-				"uniques": ["Only available <for [East Asian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [East Asian] Civilizations>", "[+2 Gold] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'The silkworm spins its thread in silence.' - Chinese proverb"
 			},
 			{
 				"name": "Windcatchers",
 				"row": 3,
 				"prerequisites": ["Irrigation Canals"],
-				"uniques": ["Only available <for [Middle Eastern] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Middle Eastern] Civilizations>", "[+2 Science] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'The moving heavens write their verse upon the wind; the wise build towers to read it, and the summer heat is turned to coolness.' - attributed to the Persian poets"
 			},
 			{
 				"name": "Stone Castles",
 				"row": 4,
 				"prerequisites": ["Longbow Traditions"],
-				"uniques": ["Only available <for [European] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [European] Civilizations>", "[+15]% Strength <for [Land] units> <when defending>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'An Englishman's home is his castle.' - English proverb"
 			},
 			{
 				"name": "Calendar Stones",
 				"row": 5,
 				"prerequisites": ["Terrace Agriculture"],
-				"uniques": ["Only available <for [American] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [American] Civilizations>", "[+2 Culture] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Time is the longest distance between two places.' - Mesoamerican saying"
 			},
 			{
 				"name": "Sanskrit Lore",
 				"row": 6,
 				"prerequisites": ["Stepwells"],
-				"uniques": ["Only available <for [South Asian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [South Asian] Civilizations>", "[+2 Science] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Let a man lift himself by his own self; let him not degrade himself; for the self alone is the friend of the self, and the self alone is the enemy of the self.' - Bhagavad Gita 6:5"
 			},
 			{
 				"name": "Trans-Sahara Routes",
 				"row": 7,
 				"prerequisites": ["Rock Churches"],
-				"uniques": ["Only available <for [African] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [African] Civilizations>", "[+2 Gold] [in all cities]", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Salt comes from the north, gold from the south, but wisdom comes from the journey.' - Sahel proverb"
 			},
 			{
 				"name": "Outrigger Canoes",
 				"row": 8,
 				"prerequisites": ["Wave Piloting"],
-				"uniques": ["Only available <for [Polynesian] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Polynesian] Civilizations>", "[+1] Sight <for [Water] units>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'The canoe is your island, the ocean your road.' - Polynesian saying"
 			},
 			{
 				"name": "Composite Bows",
 				"row": 9,
 				"prerequisites": ["Horse Archery"],
-				"uniques": ["Only available <for [Hunnic] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Hunnic] Civilizations>", "[+15]% Strength <for [Archery] units>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'A bow without an arrow is a song without words.' - Steppe proverb"
 			},
 			{
 				"name": "Siege Engines",
 				"row": 10,
 				"prerequisites": ["Land Measuring"],
-				"uniques": ["Only available <for [Greek] Civilizations>", "[+100]% weight to this choice for AI decisions"],
+				"uniques": ["Only available <for [Greek] Civilizations>", "[+15]% Strength <for [Siege] units>", "[+100]% weight to this choice for AI decisions"],
 				"quote": "'Small opportunities are often the beginning of great enterprises.' - Demosthenes"
 			}
 		]

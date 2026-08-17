@@ -309,6 +309,8 @@ object DiplomacyTurnManager {
         revertToZero(DiplomaticModifiers.LiberatedCity, 1 / 8f)
         // War merit fades faster than grudges - glory is remembered, but not forever
         revertToZero(DiplomaticModifiers.ProvenWarStrength, 1 / 4f)
+        // Relic gifts are a gesture, not a lasting bond - fades with time
+        revertToZero(DiplomaticModifiers.RelicGift, 1 / 4f)
         if (hasModifier(DiplomaticModifiers.GaveUsGifts)) {
             val giftLoss = when (relationshipLevel()) {
                 RelationshipLevel.Ally -> 1f

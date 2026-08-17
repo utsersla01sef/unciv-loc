@@ -429,5 +429,96 @@
 					"Generated near City States with weight [15]",
 					"Doesn't generate naturally <in [{Forest} {Hill}] tiles>",
 					"Doesn't generate naturally <in [{Tundra} {Forest}] tiles>"]
+	},
+
+	// Sacred relics - ancient-world artifacts, not tied to any single culture.
+	// Stockpiled, tradeable resources found in ruins. Each grants a trickle of Faith
+	// while held; certain combinations (both held at once) unlock extra yields.
+	// Tagged [Relic] for the diplomacy gift hook in TradeLogic.
+	{
+		"name": "Code of Hammurabi",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": [],
+		"uniques": ["Stockpiled", "Relic",
+					"AI will buy at [150] Gold",
+					"AI will sell at [200] Gold",
+					"[+1 Faith]",
+				"[+1 Gold] <when above [0] [Standard of Ur]>",
+				"[+2 Faith] <when above [0] [Ziggurat Foundation Stone]>"]
+	},
+	{
+		"name": "Standard of Ur",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": [],
+		"uniques": ["Stockpiled", "Relic",
+					"AI will buy at [150] Gold",
+					"AI will sell at [200] Gold",
+					"[+1 Faith]",
+					"[+1 Gold] <when above [0] [Ishtar Gate Lion]>",
+					"[+2 Faith] <when above [0] [Ziggurat Foundation Stone]>"]
+	},
+	{
+		"name": "Ishtar Gate Lion",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": [],
+		"uniques": ["Stockpiled", "Relic",
+					"AI will buy at [150] Gold",
+					"AI will sell at [200] Gold",
+					"[+1 Faith]",
+					"[+1 Culture] <when above [0] [Oxus Chariot]>",
+					"[+2 Faith] <when above [0] [Ziggurat Foundation Stone]>"]
+	},
+	{
+		"name": "Eye of Horus Amulet",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": [],
+		"uniques": ["Stockpiled", "Relic",
+					"AI will buy at [150] Gold",
+					"AI will sell at [200] Gold",
+					"[+1 Faith]",
+					"[+2 Faith] <when above [0] [Anubis Figurine]>",
+					"[+2 Faith] <when above [0] [Book of the Dead Fragment]>"]
+	},
+	{
+		"name": "Anubis Figurine",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": [],
+		"uniques": ["Stockpiled", "Relic",
+					"AI will buy at [150] Gold",
+					"AI will sell at [200] Gold",
+					"[+1 Faith]",
+				"[+1 Culture] <when above [0] [Eye of Horus Amulet]>",
+				"[+2 Faith] <when above [0] [Book of the Dead Fragment]>"]
+	},
+	{
+		"name": "Oxus Chariot",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": [],
+		"uniques": ["Stockpiled", "Relic",
+					"AI will buy at [150] Gold",
+					"AI will sell at [200] Gold",
+					"[+1 Faith]",
+				"[+1 Gold] <when above [0] [Code of Hammurabi]>",
+				"[+2 Faith] <when above [0] [Ziggurat Foundation Stone]>"]
+	},
+	{
+		"name": "Ziggurat Foundation Stone",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": [],
+		"uniques": ["Stockpiled", "Relic",
+					"AI will buy at [180] Gold",
+					"AI will sell at [240] Gold",
+					"[+2 Faith]",
+					"[+2 Culture] <when above [0] [Book of the Dead Fragment]>"]
+	},
+	{
+		"name": "Book of the Dead Fragment",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": [],
+		"uniques": ["Stockpiled", "Relic",
+					"AI will buy at [180] Gold",
+					"AI will sell at [240] Gold",
+					"[+2 Faith]",
+					"[+2 Gold] <when above [0] [Ziggurat Foundation Stone]>"]
 	}
 ]

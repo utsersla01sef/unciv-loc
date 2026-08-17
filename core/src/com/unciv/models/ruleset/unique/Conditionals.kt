@@ -127,6 +127,11 @@ object Conditionals {
             UniqueType.ConditionalNotWar -> checkOnCiv { !isAtWar() }
             UniqueType.ConditionalWithResource -> state.getResourceAmount(conditional.params[0]) > 0
             UniqueType.ConditionalWithoutResource -> state.getResourceAmount(conditional.params[0]) <= 0
+            UniqueType.ConditionalNobodyHasResource -> checkOnCiv {
+                gameInfo.civilizations
+                    .filter { it.isAlive() && it.isMajorCiv() }
+                    .none { it.getResourceAmount(conditional.params[0]) > 0 }
+            }
 
             UniqueType.ConditionalWhenAboveAmountStatResource ->
                 checkResourceOrStatAmount(conditional.params[1], conditional.params[0].toFloat(), Float.MAX_VALUE, unique?.isModifiedByGameSpeed() == true)

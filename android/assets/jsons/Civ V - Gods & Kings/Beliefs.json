@@ -212,7 +212,7 @@
         "uniques": ["[+100 Gold] when a city adopts this religion for the first time <(modified by game speed)>"]
     },
     {
-        "name": "Interfaith Dialogue",
+        "name": "Sacred Debates",
         "type": "Founder",
         "uniques": ["When spreading religion to a city, gain [10] times the amount of followers of other religions as [Science]"]
     },

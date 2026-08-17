@@ -140,6 +140,19 @@ class TradeLogic(val ourCivilization: Civilization, val otherCivilization: Civil
                     val resource = from.gameInfo.ruleset.tileResources[offer.name] ?: return
                     to.gainStockpiledResource(resource, offer.amount)
                     from.gainStockpiledResource(resource, -offer.amount)
+
+                    // Gifting a sacred relic between major civs is a diplomatic gesture:
+                    // the receiver's opinion of the giver rises (capped, decays over time).
+                    if (offer.amount > 0
+                        && resource.hasTagUnique("Relic", to.state)
+                        && from.isMajorCiv() && to.isMajorCiv()
+                    ) {
+                        val receiverDiplo = to.getDiplomacyManager(from)!!
+                        val current = receiverDiplo.getModifier(DiplomaticModifiers.RelicGift)
+                        val bonus = (offer.amount * 6f).coerceAtMost(24f - current.coerceAtLeast(0f))
+                        if (bonus > 0f)
+                            receiverDiplo.addModifier(DiplomaticModifiers.RelicGift, bonus)
+                    }
                 }
                 TradeOfferType.Technology -> {
                     to.tech.addTechnology(offer.name)
