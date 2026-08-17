@@ -241,4 +241,25 @@ object UnitActionsGreatPerson {
     }
 
     // endregion
+
+    // region Great Physician (medicine great person)
+
+    /** Great Physician: instantly heals ALL damaged friendly units empire-wide, consuming this unit. */
+    internal fun getGreatPhysicianActions(unit: MapUnit, tile: Tile) = sequence {
+        if (unit.baseUnit.name != "Great Physician") return@sequence
+        val anyDamaged = unit.civ.units.getCivUnits().any { it.health < 100 }
+        yield(UnitAction(
+            UnitActionType.GreatPhysicianHeal, 78f,
+            action = {
+                for (other in unit.civ.units.getCivUnits().toList()) {
+                    if (other.health < 100) other.healBy(100)
+                }
+                unit.civ.addNotification("Your [Great Physician] has healed all wounded units of the empire!",
+                    NotificationCategory.General, NotificationIcon.Science)
+                unit.consume()
+            }.takeIf { unit.hasMovement() && anyDamaged }
+        ))
+    }
+
+    // endregion
 }

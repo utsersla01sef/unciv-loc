@@ -592,6 +592,10 @@
         ]
     },
     {
+        "name": "Physician",
+        "unitNames": ["Hippocrates", "Galen", "Avicenna", "Hua Tuo", "Zhang Zhongjing", "Charaka", "Rhazes", "Soranus", "Dioscorides", "Asclepius", "Aretaeus", "Al-Zahrawi", "Sun Simiao", "Vagbhata", "Oribasius", "Paul of Aegina", "Hunayn ibn Ishaq", "Ali ibn Abbas al-Majusi", "Constantine the African"]
+    },
+    {
         "name": "Khan",
         "unitNames": [
             "Batu",

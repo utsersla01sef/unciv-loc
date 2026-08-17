@@ -100,7 +100,8 @@ object UnitActions {
         UnitActionType.ChooseArchimedesSkill to UnitActionsGreatPerson::getChooseArchimedesSkillActions,
         UnitActionType.ArchimedesPhysics to UnitActionsGreatPerson::getArchimedesPhysicsActions,
         UnitActionType.ArchimedesMath to UnitActionsGreatPerson::getArchimedesMathActions,
-        UnitActionType.ArchimedesEngineering to UnitActionsGreatPerson::getArchimedesEngineeringActions
+        UnitActionType.ArchimedesEngineering to UnitActionsGreatPerson::getArchimedesEngineeringActions,
+        UnitActionType.GreatPhysicianHeal to UnitActionsGreatPerson::getGreatPhysicianActions
     )
 
     /** Gets the preferred "page" to display a [UnitAction] of type [unitActionType] on, possibly dynamic depending on the state or situation [unit] is in. */

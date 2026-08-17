@@ -50,7 +50,7 @@
 		"greatPersonPoints": {"Great Merchant": 1},
 		"isWonder": true,
 		"uniques": ["Must be next to [Coast]", "[+1] Movement <for [{Military} {Water}] units>",
-			"[+1] Sight <for [{Military} {Water}] units>", "Gain a free [Lighthouse] [in this city]", "ClassicalAge"],
+			"[+1] Sight <for [{Military} {Water}] units>", "Gain a free [Lighthouse] [in this city]"],
 		"requiredTech": "Sailing",
 		"quote": "'They that go down to the sea in ships, that do business in great waters; these see the works of the Lord, and his wonders in the deep.' - The Bible, Psalms 107:23-24"
 	},
@@ -140,6 +140,11 @@
 	},
 	{
 		"name": "Walls",
+		"cost": 75,
+		"cityStrength": 5,
+		"cityHealth": 50,
+		"hurryCostModifier": 25,
+		"requiredTech": "Masonry",
 		"uniques": ["Destroyed when the city is captured", "Suppress warning [is both granted free and could possibly be removed by triggers]"]
 	},
 	{
@@ -167,6 +172,17 @@
 		"hurryCostModifier": 25,
 		"requiredTech": "Masonry",
 		"uniques": ["Destroyed when the city is captured"]
+	},
+	{
+		"name": "Stockade",
+		"replaces": "Walls",
+		"uniqueTo": "America",
+		"cost": 65,
+		"cityStrength": 6,
+		"cityHealth": 50,
+		"hurryCostModifier": 25,
+		"uniques": ["Destroyed when the city is captured", "[+1 Happiness] [in this city]"],
+		"requiredTech": "Masonry"
 	},
 	{
 		"name": "The Pyramids",
@@ -260,7 +276,6 @@
 		"food": 10,
 		"culture": 1,
 		"isWonder": true,
-		"uniques": ["ClassicalAge"],
 		"requiredTech": "Reckoning",
 		"quote": "'Upon vaulted terraces the gardens rise, one above another, on stone pillars; and the whole is a wonder to behold, bearing trees as tall as the cedars.' - Diodorus Siculus, Library of History"
 	},
@@ -281,18 +296,42 @@
 		"requiredTech": "Construction"
 	},
 	{
+		"name": "Cistern",
+		"cost": 90,
+		"food": 1,
+		"hurryCostModifier": 25,
+		"maintenance": 1,
+		"uniques": ["Must be next to [Fresh water]"],
+		"requiredTech": "Construction"
+	},
+	{
+		"name": "Parthenon",
+		"cost": 250,
+		"culture": 4,
+		"isWonder": true,
+		"greatPersonPoints": {"Great Writer": 1},
+		"uniques": ["[+1 Culture] from every [Temple]"],
+		"requiredTech": "Construction",
+		"quote": "'Earth proudly wears the Parthenon as the best gem upon her zone.' - Ralph Waldo Emerson"
+	},
+	{
 		"name": "Great Wall",
 		"culture": 3,
 		"greatPersonPoints": {"Great Writer": 1},
 		"isWonder": true,
 		"uniques": ["Enemy [Land] units must spend [1] extra movement points when inside your territory <Suppress warning [*contains a conditional on a unit movement unique*]>",
-			"Gain a free [Walls] [in this city]", "ClassicalAge"],
+			"Gain a free [Walls] [in this city]"],
 		"requiredTech": "Hydraulics",
 		"quote": "'The art of war teaches us to rely not on the likelihood of the enemy's not attacking, but rather on the fact that we have made our position unassailable.' - Sun Tzu"
 	},
 	// Column 4
 	{
 		"name": "Temple",
+		"cost": 100,
+		"faith": 2,
+		"maintenance": 2,
+		"hurryCostModifier": 25,
+		"requiredTech": "Rhetoric",
 		"uniques": ["Destroyed when the city is captured", "Suppress warning [is both granted free and could possibly be removed by triggers]"]
 	},
 	{
@@ -349,6 +388,15 @@
 		"uniques": ["Never destroyed when the city is captured"]
 	},
 	{
+		"name": "Guild Hall",
+		"cost": 140,
+		"production": 2,
+		"gold": 1,
+		"hurryCostModifier": 25,
+		"maintenance": 2,
+		"requiredTech": "Feudalism"
+	},
+	{
 		"name": "Town Hall",
 		"cost": 120,
 		"gold": 2,
@@ -371,7 +419,7 @@
 		"culture": 3,
 		"greatPersonPoints": {"Great Writer": 1},
 		"isWonder": true,
-		"uniques": ["Free Social Policy", "ClassicalAge"],
+		"uniques": ["Free Social Policy"],
 		"requiredTech": "Rhetoric",
 		"quote": "'The lord whose oracle is at Delphi neither speaks nor conceals, but gives signs.' - Heraclitus"
 	},
@@ -382,6 +430,15 @@
 		"isNationalWonder": true,
 		"uniques": ["Only available <if [Monument] is constructed in all [non-[Puppeted]] cities>", "[+25]% Great Person generation [in this city]", "Cost increases by [30] per owned city"],
 		"requiredTech": "Rhetoric"
+	},
+	{
+		"name": "Sanchi Stupa",
+		"cost": 250,
+		"faith": 3,
+		"isWonder": true,
+		"uniques": ["[+2 Faith] [in this city]"],
+		"requiredTech": "Rhetoric",
+		"quote": "'Just as a candle cannot burn without fire, men cannot live without a spiritual life.' - Buddha"
 	},
 	{
 		"name": "Market",
@@ -412,12 +469,42 @@
 		"requiredTech": "Currency"
 	},
 	{
+		"name": "Forum",
+		"cost": 110,
+		"gold": 2,
+		"culture": 1,
+		"hurryCostModifier": 25,
+		"maintenance": 1,
+		"uniques": ["[+1 Gold] from every [Trading post]"],
+		"requiredTech": "Currency"
+	},
+	{
 		"name": "Aqueduct",
         "cost": 100,
 		"maintenance": 1,
 		"hurryCostModifier": 0,
 		"uniques": ["[40]% Food is carried over after population increases [in this city]"],
 		"requiredTech": "Hydraulics"
+	},
+	{
+		"name": "Pyramid of the Sun",
+		"cost": 300,
+		"faith": 2,
+		"culture": 2,
+		"isWonder": true,
+		"greatPersonPoints": {"Great Artist": 1},
+		"requiredTech": "Hydraulics",
+		"quote": "'The gods created the sun and the moon at Teotihuacan.' - Aztec tradition"
+	},
+	{
+		"name": "Apothecary",
+		"cost": 100,
+		"science": 1,
+		"food": 1,
+		"specialistSlots": {"Physician": 1},
+		"hurryCostModifier": 25,
+		"maintenance": 1,
+		"requiredTech": "Medicine"
 	},
 	{
 		"name": "Heroic Epic",
@@ -435,7 +522,7 @@
 		"gold": 5,
 		"greatPersonPoints": {"Great Merchant": 1},
 		"isWonder": true,
-		"uniques": ["Must be next to [Coast]", "[+1 Gold] from [Water] tiles [in this city]", "ClassicalAge"],
+		"uniques": ["Must be next to [Coast]", "[+1 Gold] from [Water] tiles [in this city]"],
 		"requiredTech": "Bronze Working",
 		"quote": "'Of the Colossus, men say that even lying fallen it excites wonder; few there are whose arms could span its thumb.' - Pliny the Elder, Natural History"
 	},
@@ -496,6 +583,16 @@
 		"uniques": ["[+50]% Golden Age length"],
 		"requiredTech": "Civil Service",
 		"quote": "'The katun is established at Chichen Itza. The settlement of the Itza shall take place there. The quetzal shall come, the green bird shall come. Ah Kantenal shall come. It is the word of God. The Itza shall come.' - The Books of Chilam Balam"
+	},
+	{
+		"name": "Borobudur",
+		"cost": 400,
+		"faith": 3,
+		"culture": 2,
+		"isWonder": true,
+		"uniques": ["Only available <when religion is enabled>"],
+		"requiredTech": "Civil Service",
+		"quote": "'The stupa is a mountain of ten thousand Buddhas.' - Javanese tradition"
 	},
 	{
 		"name": "National Treasury",
@@ -600,6 +697,16 @@
 		"requiredTech": "Education"
 	},
 	{
+		"name": "Infirmary",
+		"cost": 150,
+		"food": 2,
+		"science": 1,
+		"specialistSlots": {"Physician": 1},
+		"hurryCostModifier": 25,
+		"maintenance": 2,
+		"requiredTech": "Education"
+	},
+	{
 		"name": "Notre Dame",
 		"culture": 3,
 		"happiness": 10,
@@ -609,7 +716,23 @@
 		"quote": "'How dreadful is this place! This is none other but the house of God, and this is the gate of heaven.' - Genesis 28:17"
 	},
 	{
+		"name": "Great Zimbabwe",
+		"cost": 450,
+		"gold": 5,
+		"isWonder": true,
+		"greatPersonPoints": {"Great Merchant": 1},
+		"uniques": ["[+2 Gold] from [Cattle] tiles [in this city]", "[+2 Gold] from [Sheep] tiles [in this city]", "[+2 Gold] from [Deer] tiles [in this city]"],
+		"requiredTech": "Education",
+		"quote": "'From the towers of the chiefs we gaze upon the wealth of the world.' - Shona tradition"
+	},
+	{
 		"name": "Castle",
+		"cost": 200,
+		"cityStrength": 7,
+		"cityHealth": 25,
+		"hurryCostModifier": 25,
+		"requiredBuilding": "Walls",
+		"requiredTech": "Chivalry",
 		"uniques": ["Destroyed when the city is captured", "Suppress warning [is both granted free and could possibly be removed by triggers]"]
 	},
 	{
@@ -643,14 +766,37 @@
 		"requiredTech": "Chivalry"
 	},
 	{
+		"name": "Château",
+		"replaces": "Castle",
+		"uniqueTo": "France",
+		"cost": 200,
+		"cityStrength": 8,
+		"cityHealth": 25,
+		"culture": 2,
+		"gold": 2,
+		"hurryCostModifier": 25,
+		"requiredBuilding": "Walls",
+		"uniques": ["[+25]% [Gold] [in this city]"],
+		"requiredTech": "Chivalry"
+	},
+	{
 		"name": "Himeji Castle",
+		"cost": 500,
 		"culture": 3,
 		"isWonder": true,
-		"greatPersonPoints": {"Great Writer": 2},
-		"uniques": ["[+15]% Strength <for [All] units> <when fighting in [Friendly Land] tiles>",
-			"Gain a free [Castle] [in this city]"],
+		"greatPersonPoints": {"Great General": 1},
+		"uniques": ["[+15]% Strength <for [Land] units> <when defending>"],
 		"requiredTech": "Chivalry",
-		"quote": "'Bushido is realized in the presence of death. This means choosing death whenever there is a choice between life and death. There is no other reasoning.' - Yamamoto Tsunetomo"
+		"quote": "'The white heron stands unmoved amidst the storm.' - Japanese saying"
+	},
+	{
+		"name": "Caravanserai",
+		"cost": 130,
+		"gold": 2,
+		"production": 1,
+		"hurryCostModifier": 25,
+		"maintenance": 1,
+		"requiredTech": "Chivalry"
 	},
 	{
 		"name": "Ironworks",
@@ -747,6 +893,16 @@
 		"maintenance": 2,
 		"uniques": ["Must not be on [Hill]", "[+10]% Production when constructing [All] buildings [in this city]"],
 		"requiredTech": "Trade Craft"
+	},
+	{
+		"name": "Mesa Verde",
+		"cost": 500,
+		"food": 3,
+		"culture": 2,
+		"isWonder": true,
+		"uniques": ["[+2 Food] from every [Mountain]"],
+		"requiredTech": "Trade Craft",
+		"quote": "'We are the ones who came before; remember us.' - Ancestral Puebloan saying"
 	},
 
 	// All Eras

@@ -76,7 +76,7 @@
         "name": "Monument to the Gods",
         "type": "Pantheon",
         "uniques": ["[+15]% Production when constructing [Ancient era] wonders [in cities following this religion]",
-            "[+15]% Production when constructing [ClassicalAge] wonders [in cities following this religion]"]
+            "[+15]% Production when constructing [All] wonders [in cities following this religion]"]
     },
     {
         "name": "One with Nature",

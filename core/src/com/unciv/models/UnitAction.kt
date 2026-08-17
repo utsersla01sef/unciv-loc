@@ -229,6 +229,8 @@ enum class UnitActionType(
         { ImageGetter.getUnitActionPortrait("HurryResearch")}, UncivSound.Chimes),
     ArchimedesEngineering("Engineering",
         { ImageGetter.getUnitActionPortrait("HurryConstruction")}, UncivSound.Construction),
+    GreatPhysicianHeal("Heal All Units (${Fonts.death})",
+        { ImageGetter.getUnitActionPortrait("HurryResearch")}, UncivSound.Chimes),
     ;
 
     // Allow shorter initializations

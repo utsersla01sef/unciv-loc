@@ -22,5 +22,11 @@
 		"production":2,
 		"greatPersonPoints": {"Great Writer":3},
 		"color": [139,69,19]
+	},
+	{
+		"name":"Physician",
+		"food":2,
+		"greatPersonPoints": {"Great Physician":3},
+		"color": [60,179,113]
 	}
 ]

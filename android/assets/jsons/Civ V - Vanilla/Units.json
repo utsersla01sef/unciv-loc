@@ -33,6 +33,19 @@
 		"attackSound": "nonmetalhit"
 	},
 	{
+		"name": "Pathfinder",
+		"unitType": "Scout",
+		"replaces": "Scout",
+		"uniqueTo": "America",
+		"movement": 3,
+		"strength": 7,
+		"cost": 25,
+		"requiredTech": "Agriculture",
+		"uniques": ["May upgrade to [Archer] through ruins-like effects", "Never appears as a Barbarian unit", "[+1] Sight"],
+		"promotions": ["Ignore terrain cost"],
+		"attackSound": "nonmetalhit"
+	},
+	{
 		"name": "Warrior",
 		"unitType": "Sword",
 		"movement": 2,
@@ -160,8 +173,8 @@
 		"cost": 56,
 		"requiredTech": "Sailing",
 		"uniques": ["Cannot enter ocean tiles", "Never appears as a Barbarian unit"],
-		"upgradesTo": "Caravel",
-		"obsoleteTech": "Shipbuilding",
+		"upgradesTo": "Liburnian",
+		"obsoleteTech": "Hydraulics",
 		"attackSound": "nonmetalhit"
 	},
 	{
@@ -177,6 +190,19 @@
 		"obsoleteTech": "Shipbuilding",
 		"attackSound": "nonmetalhit"
 		//Barbarian unique naval unit, weaker and slower than Trireme.
+	},
+	{
+		"name": "Liburnian",
+		"unitType": "Melee Water",
+		"movement": 4,
+		"strength": 14,
+		"cost": 70,
+		"requiredTech": "Hydraulics",
+		"upgradesTo": "Caravel",
+		"obsoleteTech": "Shipbuilding",
+		"uniques": ["[+1] Sight"],
+		"hurryCostModifier": 20,
+		"attackSound": "nonmetalhit"
 	},
 	{
 		"name": "Chariot Archer",
@@ -320,7 +346,7 @@
 		"requiredTech": "Reckoning",
 		"requiredResource": "Iron",
 		"obsoleteTech": "Siegecraft",
-		"upgradesTo": "Trebuchet",
+		"upgradesTo": "Mangonel",
 		"uniques": ["[+50]% Strength <vs cities> <when attacking>", "No defensive terrain bonus",
 			"Must set up to ranged attack", "[-1] Sight", "Never appears as a Barbarian unit"],
 		"hurryCostModifier": 20,
@@ -338,9 +364,23 @@
 		"requiredResource": "Iron",
 		"requiredTech": "Reckoning",
 		"obsoleteTech": "Siegecraft",
-		"upgradesTo": "Trebuchet",
+		"upgradesTo": "Mangonel",
 		"uniques": ["[+50]% Strength <vs cities> <when attacking>", "No defensive terrain bonus",
 			"Must set up to ranged attack", "[-1] Sight"],
+		"hurryCostModifier": 20,
+		"attackSound": "throw"
+	},
+	{
+		"name": "Mangonel",
+		"unitType": "Siege",
+		"movement": 2,
+		"strength": 8,
+		"rangedStrength": 11,
+		"cost": 100,
+		"requiredTech": "Metal Casting",
+		"upgradesTo": "Trebuchet",
+		"obsoleteTech": "Siegecraft",
+		"uniques": ["[-33]% Strength <vs [Land] units>", "No defensive terrain bonus", "Must set up to ranged attack"],
 		"hurryCostModifier": 20,
 		"attackSound": "throw"
 	},
@@ -383,6 +423,21 @@
 		"upgradesTo": "Longswordsman",
 		"hurryCostModifier": 20,
 		"promotions": ["[Mohawk Warrior] ability"],
+		"attackSound": "metalhit"
+	},
+	{
+		"name": "Druzhina",
+		"unitType": "Sword",
+		"replaces": "Swordsman",
+		"uniqueTo": "Russia",
+		"movement": 2,
+		"strength": 16,
+		"cost": 75,
+		"requiredTech": "Iron Working",
+		"upgradesTo": "Longswordsman",
+		"requiredResource": "Iron",
+		"uniques": ["[+25]% XP gained from combat", "No defensive terrain bonus"],
+		"hurryCostModifier": 20,
 		"attackSound": "metalhit"
 	},
 
@@ -490,6 +545,19 @@
 		"uniques": ["Can move after attacking","No defensive terrain bonus"],
 		"promotions": ["Great Generals I", "Quick Study"],
 		"attackSound": "arrow"
+	},
+	{
+		"name": "Paladin",
+		"unitType": "Mounted",
+		"replaces": "Knight",
+		"uniqueTo": "France",
+		"movement": 3,
+		"strength": 22,
+		"cost": 120,
+		"requiredTech": "Chivalry",
+		"uniques": ["[+15]% Strength <when defending>", "Heals [25] damage if it kills a unit"],
+		"hurryCostModifier": 20,
+		"attackSound": "horse"
 	},
 	{
 		"name": "Crossbowman",
@@ -728,6 +796,13 @@
 		"movement": 2
 	},
 	{
+		"name": "Great Physician",
+		"unitType": "Civilian",
+		"uniques": ["Can heal all wounded units of the empire <by consuming this unit>",
+			"Is part of Great Person group [Great Person]",
+			"Great Person - [Medicine]", "Unbuildable", "Uncapturable"],
+		"movement": 2
+	},	{
 		"name": "Great Merchant",
 		"unitType": "Civilian",
 		"uniques": ["Can undertake a trade mission with City-State, giving a large sum of gold and [30] Influence",
