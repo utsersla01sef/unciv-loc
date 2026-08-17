@@ -110,7 +110,7 @@
 	},
 	{
 		"columnNumber": 3,
-		"era": "Classical era",
+		"era": "Early Classical era",
 		"techCost": 105,
 		"buildingCost": 100,
 		"wonderCost": 250,
@@ -135,20 +135,13 @@
 				"row": 7,
 				"prerequisites": ["The Wheel"],
 				"quote": "'Nothing in excess.' - Inscription at Delphi"
-			},
-			{
-				"name": "Construction",
-				"row": 9,
-				"prerequisites": ["Masonry","The Wheel"],
-                "uniques": ["[+100]% weight to this choice for AI decisions"],
-				"quote": "'Except the LORD build the house, they labour in vain that build it.' - Psalms 127:1"
 			}
 		]
 	},
 	{
 		"columnNumber": 4,
-		"era": "Classical era",
-		"techCost": 175,
+		"era": "Mid Classical era",
+		"techCost": 140,
 		"buildingCost": 100,
 		"wonderCost": 250,
 		"techs": [
@@ -172,6 +165,22 @@
 				"quote": "'Better is bread with a happy heart than wealth with vexation.' - Amenemope"
 			},
 			{
+				"name": "Construction",
+				"row": 9,
+				"prerequisites": ["Masonry","The Wheel"],
+                "uniques": ["[+100]% weight to this choice for AI decisions"],
+				"quote": "'Except the LORD build the house, they labour in vain that build it.' - Psalms 127:1"
+			}
+		]
+	},
+	{
+		"columnNumber": 5,
+		"era": "Late Classical era",
+		"techCost": 175,
+		"buildingCost": 100,
+		"wonderCost": 250,
+		"techs": [
+			{
 				"name": "Hydraulics",
 				"row": 8,
 				"prerequisites": ["Reckoning","Construction"],
@@ -184,11 +193,18 @@
 				"prerequisites": ["Bronze Working"],
                 "uniques": ["[-50]% weight to this choice for AI decisions"],
 				"quote": "'Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.' - Proverbs 27:17"
+			},
+			{
+				"name": "Medicine",
+				"row": 1,
+				"prerequisites": ["Lookouts","Rhetoric"],
+                "uniques": ["[+100]% weight to this choice for AI decisions"],
+				"quote": "'First, do no harm.' - attributed to Hippocrates"
 			}
 		]
 	},
 	{
-		"columnNumber": 5,
+		"columnNumber": 6,
 		"era": "Early Medieval era",
 		"techCost": 275,
 		"buildingCost": 120,
@@ -245,7 +261,7 @@
 		]
 	},
 	{
-		"columnNumber": 6,
+		"columnNumber": 7,
 		"era": "Mid Medieval era",
 		"techCost": 485,
 		"buildingCost": 160,
@@ -300,7 +316,7 @@
 		]
 	},
 	{
-		"columnNumber": 7,
+		"columnNumber": 8,
 		"era": "Late Medieval era",
 		"techCost": 780,
 		"buildingCost": 200,
@@ -343,7 +359,7 @@
 		]
 	},
 	{
-		"columnNumber": 8,
+		"columnNumber": 9,
 		"era": "Late Medieval era",
 		"techCost": 1150,
 		"buildingCost": 250,
@@ -378,7 +394,7 @@
 		]
 	},
 	{
-		"columnNumber": 9,
+		"columnNumber": 10,
 		"era": "Late Medieval era",
 		"techCost": 1300,
 		"buildingCost": 280,
@@ -457,7 +473,7 @@
 		]
 	},
 	{
-		"columnNumber": 10,
+		"columnNumber": 11,
 		"era": "Late Medieval era",
 		"techCost": 1500,
 		"buildingCost": 300,

@@ -102,7 +102,7 @@
 	},
 	{
 		"columnNumber": 3,
-		"era": "Classical era",
+		"era": "Early Classical era",
 		"techCost": 105,
 		"buildingCost": 100,
 		"wonderCost": 250,
@@ -132,7 +132,16 @@
 				"row": 7,
 				"prerequisites": ["The Wheel", "Archery"],
 				"quote": "'Nothing in excess.' - Inscription at Delphi"
-			},
+			}
+		]
+	},
+	{
+		"columnNumber": 4,
+		"era": "Mid Classical era",
+		"techCost": 140,
+		"buildingCost": 100,
+		"wonderCost": 250,
+		"techs": [
 			{
 				"name": "Construction",
 				"row": 9,
@@ -140,15 +149,45 @@
 				"quote": "'Except the LORD build the house, they labour in vain that build it.' - Psalms 127:1"
 			},
 			{
-				"name": "Iron Working",
-				"row": 10,
-				"prerequisites": ["Bronze Working"],
-				"quote": "'Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.' - Proverbs 27:17"
+				"name": "Currency",
+				"row": 7,
+				"prerequisites": ["Reckoning"],
+				"uniques": ["Enables conversion of city production to [Gold]"],
+				"quote": "'Better is bread with a happy heart than wealth with vexation.' - Amenemope"
 			}
 		]
 	},
 	{
-		"columnNumber": 4,
+		"columnNumber": 5,
+		"era": "Late Classical era",
+		"techCost": 175,
+		"buildingCost": 100,
+		"wonderCost": 250,
+		"techs": [
+			{
+				"name": "Iron Working",
+				"row": 10,
+				"prerequisites": ["Bronze Working"],
+				"quote": "'Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.' - Proverbs 27:17"
+			},
+			{
+				"name": "Hydraulics",
+				"row": 8,
+				"prerequisites": ["Reckoning","Construction"],
+				"uniques": ["Roads connect tiles across rivers"],
+				"quote": "'The spirit of the living creatures was in the wheels... for the spirit of life was in the wheels.' - Ezekiel 1:20-21"
+			},
+			{
+				"name": "Medicine",
+				"row": 1,
+				"prerequisites": ["Lookouts","Rhetoric"],
+                "uniques": ["[+100]% weight to this choice for AI decisions"],
+				"quote": "'First, do no harm.' - attributed to Hippocrates"
+			}
+		]
+	},
+	{
+		"columnNumber": 6,
 		"era": "Early Medieval era",
 		"techCost": 275,
 		"buildingCost": 120,
@@ -172,7 +211,7 @@
 				"row": 3,
 				"prerequisites": ["Civil Service","Currency"],
 				"uniques": ["[+100]% weight to this choice for AI decisions"],
-				"quote": "'A feudal lord is a king in his own domain.' - Medieval proverb"
+				"quote": "'A feudal lord is a king in its own domain.' - Medieval proverb"
 			},
 			{
 				"name": "Civil Service",
@@ -188,20 +227,6 @@
 				"quote": "'The law is not made for a righteous person, but for the lawless and disobedient.' - 1 Timothy 1:9"
 			},
 			{
-				"name": "Currency",
-				"row": 7,
-				"prerequisites": ["Reckoning"],
-				"uniques": ["Enables conversion of city production to [Gold]"],
-				"quote": "'Better is bread with a happy heart than wealth with vexation.' - Amenemope"
-			},
-			{
-				"name": "Hydraulics",
-				"row": 8,
-				"prerequisites": ["Reckoning","Construction"],
-				"uniques": ["Roads connect tiles across rivers"],
-				"quote": "'The spirit of the living creatures was in the wheels... for the spirit of life was in the wheels.' - Ezekiel 1:20-21"
-			},
-			{
 				"name": "Metal Casting",
 				"row": 10,
 				"prerequisites": ["Construction","Iron Working"],
@@ -210,7 +235,7 @@
 		]
 	},
 	{
-		"columnNumber": 5,
+		"columnNumber": 7,
 		"era": "Mid Medieval era",
 		"techCost": 485,
 		"buildingCost": 160,
@@ -261,7 +286,7 @@
 		]
 	},
 	{
-		"columnNumber": 6,
+		"columnNumber": 8,
 		"era": "Late Medieval era",
 		"techCost": 780,
 		"buildingCost": 200,
@@ -302,7 +327,7 @@
 		]
 	},
 	{
-		"columnNumber": 7,
+		"columnNumber": 9,
 		"era": "Late Medieval era",
 		"techCost": 1150,
 		"buildingCost": 250,
@@ -329,7 +354,7 @@
 		]
 	},
 	{
-		"columnNumber": 8,
+		"columnNumber": 10,
 		"era": "Late Medieval era",
 		"techCost": 1300,
 		"buildingCost": 280,
@@ -401,7 +426,7 @@
 		]
 	},
 	{
-		"columnNumber": 9,
+		"columnNumber": 11,
 		"era": "Late Medieval era",
 		"techCost": 1500,
 		"buildingCost": 300,

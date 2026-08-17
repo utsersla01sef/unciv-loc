@@ -17,7 +17,7 @@
         "iconRGB": [255, 87, 35]
     },
     {
-        "name": "Classical era",
+        "name": "Early Classical era",
         "researchAgreementCost": 150,
         "startingSettlerCount": 1,
         "startingWorkerCount": 0,
@@ -31,6 +31,40 @@
         "startPercent": 10,
         "citySound": "cityClassical",
         "iconRGB": [233, 31, 99]
+    },
+    {
+        "name": "Mid Classical era",
+        "researchAgreementCost": 150,
+        "startingSettlerCount": 1,
+        "startingWorkerCount": 1,
+        "startingMilitaryUnitCount": 2,
+        "startingMilitaryUnit": "Spearman",
+        "startingGold": 15,
+        "startingCulture": 150,
+        "settlerPopulation": 1,
+        "settlerBuildings": ["Monument"],
+        "baseUnitBuyCost": 200,
+        "embarkDefense": 5,
+        "startPercent": 15,
+        "citySound": "cityClassical",
+        "iconRGB": [208, 35, 138]
+    },
+    {
+        "name": "Late Classical era",
+        "researchAgreementCost": 150,
+        "startingSettlerCount": 2,
+        "startingWorkerCount": 1,
+        "startingMilitaryUnitCount": 3,
+        "startingMilitaryUnit": "Swordsman",
+        "startingGold": 20,
+        "startingCulture": 200,
+        "settlerPopulation": 1,
+        "settlerBuildings": ["Monument"],
+        "baseUnitBuyCost": 200,
+        "embarkDefense": 5,
+        "startPercent": 20,
+        "citySound": "cityClassical",
+        "iconRGB": [183, 38, 176]
     },
     {
         "name": "Early Medieval era",

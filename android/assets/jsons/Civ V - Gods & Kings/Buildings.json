@@ -95,7 +95,7 @@
 	},
 	{
 		"name": "Library",
-		"uniques": ["[+1 Science, "Suppress warning [is both granted free and could possibly be removed by triggers]"] per [2] population [in this city]"],
+		"uniques": ["[+1 Science] per [2] population [in this city]", "Suppress warning [is both granted free and could possibly be removed by triggers]"],
 		"requiredTech": "Writing"
 	},
 	{
@@ -238,8 +238,8 @@
 	// Column 3
 	{
 		"name": "Lighthouse",
-		"uniques": ["Must be next to [Coast, "Suppress warning [is both granted free and could possibly be removed by triggers]"]", "[+1 Food] from [Ocean] tiles [in this city]",
-			"[+1 Food] from [Coast] tiles [in this city]", "[+1 Food] from [Fish] tiles [in this city]" ],
+		"uniques": ["Must be next to [Coast]", "[+1 Food] from [Ocean] tiles [in this city]",
+			"[+1 Food] from [Coast] tiles [in this city]", "[+1 Food] from [Fish] tiles [in this city]", "Suppress warning [is both granted free and could possibly be removed by triggers]" ],
 		"requiredTech": "Lookouts"
 	},
 	{
@@ -251,7 +251,7 @@
 		"cost": 75,
 		"hurryCostModifier": 25,
 		"maintenance": 1,
-		"uniques": ["Must be next to [Coast]", "[+1 Food] from [Ocean] tiles [in this city]",
+		"uniques": ["Must be next to [Coast]", "[+1 Food] from [Ocean] tiles [in this city]", "ClassicalAge",
 			"[+1 Food] from [Coast] tiles [in this city]", "[+1 Food] from [Fish] tiles [in this city]" ],
 		"requiredTech": "Lookouts"
 	},
@@ -301,7 +301,7 @@
 		"culture": 1,
 		"isWonder": true,
 		"requiredTech": "Reckoning",
-		"uniques": ["Gain a free [Garden] [in this city]"],
+		"uniques": ["Gain a free [Garden] [in this city]", "ClassicalAge"],
 		"quote": "'Upon vaulted terraces the gardens rise, one above another, on stone pillars; and the whole is a wonder to behold, bearing trees as tall as the cedars.' - Diodorus Siculus, Library of History"
 	},
 	{
@@ -316,6 +316,7 @@
 		"culture": 6,
 		"isWonder": true,
 		"greatPersonPoints": {"Great Artist": 1},
+		"uniques": ["ClassicalAge"],
 		"requiredTech": "Construction",
 		"quote": "'Regard your soldiers as your children, and they will follow you into the deepest valleys; look on them as your own beloved sons, and they will stand by you even unto death.' - Sun Tzu"
 	},
@@ -399,7 +400,7 @@
 		"culture": 3,
 		"greatPersonPoints": {"Great Writer": 1},
 		"isWonder": true,
-		"uniques": ["Free Social Policy"],
+		"uniques": ["Free Social Policy", "ClassicalAge"],
 		"requiredTech": "Rhetoric",
 		"quote": "'The lord whose oracle is at Delphi neither speaks nor conceals, but gives signs.' - Heraclitus"
 	},
@@ -462,7 +463,7 @@
 		"culture": 1,
 		"isWonder": true,
 		"greatPersonPoints": {"Great Writer": 1},
-		"uniques": ["Must be next to [Desert]", "[+1 Food, +1 Production, +1 Gold] from [Desert] tiles without [Flood plains] [in this city]", "Gain a free [Amphitheater] [in this city]"],
+		"uniques": ["Must be next to [Desert]", "[+1 Food, +1 Production, +1 Gold] from [Desert] tiles without [Flood plains] [in this city]", "Gain a free [Amphitheater] [in this city]", "ClassicalAge"],
 		"requiredTech": "Currency",
 		"quote": "'The metropolis of the Nabataeans is Petra, for it is set in a place that is sheltered and fortified, and its people govern their state with justice.' - Strabo, Geography"
 	},
@@ -479,7 +480,7 @@
 		"greatPersonPoints": {"Great Writer": 1},
 		"isWonder": true,
 		"uniques": ["Enemy [Land] units must spend [1] extra movement points when inside your territory",
-			"Gain a free [Walls] [in this city]"],
+			"Gain a free [Walls] [in this city]", "ClassicalAge"],
 		"requiredTech": "Hydraulics",
 		"quote": "'The art of war teaches us to rely not on the likelihood of the enemy's not attacking, but rather on the fact that we have made our position unassailable.' - Sun Tzu"
 	},
@@ -499,7 +500,7 @@
 		"gold": 5,
 		"greatPersonPoints": {"Great Merchant": 1},
 		"isWonder": true,
-		"uniques": ["Must be next to [Coast]", "[+1 Gold] from [Water] tiles [in this city]"],
+		"uniques": ["Must be next to [Coast]", "[+1 Gold] from [Water] tiles [in this city]", "ClassicalAge"],
 		"requiredTech": "Iron Working",
 		"quote": "'Of the Colossus, men say that even lying fallen it excites wonder; few there are whose arms could span its thumb.' - Pliny the Elder, Natural History"
 	},
@@ -509,7 +510,7 @@
 	// Column 5
 	{
 		"name": "Garden",
-		"uniques": ["[+25, "Suppress warning [is both granted free and could possibly be removed by triggers]"]% Great Person generation [in this city]", "Must be next to [Fresh water]"],
+		"uniques": ["[+25]% Great Person generation [in this city]", "Must be next to [Fresh water]", "Suppress warning [is both granted free and could possibly be removed by triggers]"],
 		"hurryCostModifier": 25,
 		"maintenance": 1,
 		"requiredTech": "Theology"
@@ -617,8 +618,8 @@
 	// Column 6
 	{
 		"name": "Harbor",
-		"uniques": ["[+1 Production, "Suppress warning [is both granted free and could possibly be removed by triggers]"] from [Water resource] tiles [in this city]",
-			"Connects trade routes over water","Must be next to [Coast]"],
+		"uniques": ["[+1 Production] from [Water resource] tiles [in this city]",
+			"Connects trade routes over water","Must be next to [Coast]", "Suppress warning [is both granted free and could possibly be removed by triggers]"],
 		"requiredTech": "Compass"
 	},
 	{
