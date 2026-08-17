@@ -903,6 +903,7 @@
             "Can build [Fort] improvements on tiles",
             "Remove [All] improvements from this tile <for all movement>",
             "Remove [All] resources from this tile <for all movement>",
+            "Remove [Building] [in this city] <for all movement>",
             "Withdraws before melee combat <with [100]% chance>",
             "No damage penalty for wounded units",
             "[15] HP when healing",
