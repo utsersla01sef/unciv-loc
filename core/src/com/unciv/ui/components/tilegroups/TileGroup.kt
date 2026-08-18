@@ -101,7 +101,7 @@ open class TileGroup(
 
     open fun update(viewingCiv: CivView? = null) {
         if (viewingCiv == null) {
-            if (tileView.getViewer() != null)
+            if (tileView.getCivView() != null)
                 tileView = TileMapView(tile.tileMap, null).getTile(tile)
         } else {
             val newTileMapView = viewingCiv.gameView.tileMapView
@@ -116,7 +116,7 @@ open class TileGroup(
 
         // Do not update layers if tile is not explored by viewing player
         if (viewingCiv != null && !(isForceVisible || viewingCiv.hasExplored(tileView))) {
-            if (tileView.getVisibleNeighbors().none { viewingCiv.hasExplored(it) }) {
+            if (tileView.getVisibleNeighbors().none()) {
                 // No explored neighbors - hide all layers
                 setAllLayersVisible(false)
             } else {

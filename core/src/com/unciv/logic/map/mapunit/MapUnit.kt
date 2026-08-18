@@ -491,7 +491,7 @@ class MapUnit : IsPartOfGameInfoSerialization {
     fun canFortify(ignoreAlreadyFortified: Boolean = false) = when {
         baseUnit.isWaterUnit -> false
         isCivilian() -> false
-        baseUnit.movesLikeAirUnits -> false
+        baseUnit.isAirUnit() -> false
         isEmbarked() -> false
         hasUnique(UniqueType.NoDefensiveTerrainBonus, checkCivInfoUniques = true) -> false
         ignoreAlreadyFortified -> true
@@ -604,7 +604,7 @@ class MapUnit : IsPartOfGameInfoSerialization {
         var damageFactor = 1f
         for (unique in getMatchingUniques(UniqueType.DamageFromInterceptionReduced))
             damageFactor *= 1f - unique.params[0].toFloat() / 100f
-        return damageFactor
+        return damageFactor.coerceAtLeast(0f)
     }
 
     @Readonly
@@ -615,7 +615,7 @@ class MapUnit : IsPartOfGameInfoSerialization {
     @Readonly
     fun isTransportTypeOf(mapUnit: MapUnit): Boolean {
         // Currently, only missiles and airplanes can be carried
-        if (!mapUnit.baseUnit.movesLikeAirUnits) return false
+        if (!mapUnit.baseUnit.isAirUnit()) return false
         return getMatchingUniques(UniqueType.CarryAirUnits).any { mapUnit.matchesFilter(it.params[1]) }
     }
 
@@ -1013,12 +1013,12 @@ class MapUnit : IsPartOfGameInfoSerialization {
                 val currentTile = if (hasTile()) currentTile else null
                 throw IllegalStateException("Unit $name of ${civ.civID} at $currentTile can't be put in tile $tile, reason: ${movement.getCannotMoveToReason(tile)}")
             }
-            baseUnit.movesLikeAirUnits -> tile.airUnits.add(this)
+            baseUnit.isAirUnit() -> tile.airUnits.add(this)
             isCivilian() -> tile.civilianUnit = this
             else -> tile.militaryUnit = this
         }
         // this check is here in order to not load the fresh built unit into carrier right after the build
-        if (baseUnit.movesLikeAirUnits){
+        if (baseUnit.isAirUnit()){
             if (!tile.isCityCenter()) isTransported = true
             else {
                 val currentUntransportedUnits = tile.getUnits().count { it.type.isAirUnit() && !it.isTransported }

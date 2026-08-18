@@ -1,3 +1,59 @@
+## 4.21.9
+
+Fix: Defeated singleplayer players again have full map visibility
+
+Fixed crash ewhen clicking on civ relationships lines
+
+Prevent natural-wonder coast conversion artifacts - By mvanhorn
+
+By ssamt:
+- hide spectator in global politics
+- AI avoid selling spaceship parts for resource
+
+Fix WLTKD demand rewrite mid-celebration - By Fanfblrik
+
+Mention which civ took our CS alliance in notification - By unciv-loof
+
+Puppet city in console - By BobbyCobby
+
+## 4.21.8
+
+Fixed rivers on water near Rock of Gibraltar
+
+Resolved OOM errors on crash screen
+
+Resolved ANRs from tech picker and notification overview screens
+
+Fixed checking tile resource filters in dev console, for resources with revealing tech
+
+AI "trade for war declaration" reworked to disallow "kamikaze wars"
+
+Nicer trade overview UI
+
+By unciv-loof:
+- Non vanilla ranking types 
+- Hide average turn time until a full turn has been played 
+
+Max players with spectator - By SomeTroglodyte
+
+## 4.21.7
+
+CPU and memory performance improvements 
+
+ANR Bugfix: Only rebuild the minimap on drag, IF the minimap size actually changed.
+
+Hopefully solved Android 11/12 notch areas on some phones
+
+Fixed improvements not shown in map editor
+
+By unciv-loof:
+- Display players' average turn times in MP preview 
+- Fix Korean tech boost UA 
+
+Fixes for AI bugs - By ssamt
+
+fix: preserve carrier payloads during paradrop and transform - By mvanhorn
+
 ## 4.21.6
 
 CPU performance improvements
