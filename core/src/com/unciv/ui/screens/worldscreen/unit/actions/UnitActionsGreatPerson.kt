@@ -7,11 +7,13 @@ import com.unciv.logic.map.tile.Tile
 import com.unciv.models.UnitAction
 import com.unciv.models.UnitActionType
 import com.unciv.models.ruleset.Building
+import com.unciv.models.ruleset.unit.BaseUnit
 import com.unciv.models.ruleset.unique.UniqueType
 import com.unciv.models.translations.tr
 import com.unciv.ui.components.extensions.toPercent
 import com.unciv.ui.screens.worldscreen.unit.actions.UnitActionModifiers.getUseFrequency
 import kotlin.math.min
+import yairm210.purity.annotations.Readonly
 
 @Suppress("UNUSED_PARAMETER") // references need to have the signature expected by UnitActions.actionTypeToFunctions
 object UnitActionsGreatPerson {
@@ -24,10 +26,14 @@ object UnitActionsGreatPerson {
             val onCooldown = turnsSinceLastUse < GREAT_SCIENTIST_COOLDOWN_TURNS
             val cooldownRemaining = GREAT_SCIENTIST_COOLDOWN_TURNS - turnsSinceLastUse
             val useFrequency = getUseFrequency(unit, unique, 76f)
+            val isNaturalPhilosopher = unit.baseUnit.name == "Natural Philosopher"
             yield(UnitAction(
                 UnitActionType.HurryResearch, useFrequency,
-                title = if (onCooldown) "Hurry Research ([$cooldownRemaining] turns)"
-                    else UnitActionType.HurryResearch.value,
+                title = when {
+                    onCooldown -> "Hurry Research ([$cooldownRemaining] turns)"
+                    isNaturalPhilosopher -> "Hurry Research (+[1] skill point)"
+                    else -> UnitActionType.HurryResearch.value
+                },
                 action = {
                     unit.civ.tech.completeCurrentTech()
                     unit.greatScientistLastUsedTurn = unit.civ.gameInfo.turns
@@ -151,30 +157,30 @@ object UnitActionsGreatPerson {
     private const val ARCHIMEDES_PHYSICS_COOLDOWN = 8
     private const val ARCHIMEDES_MATH_COOLDOWN = 10
     private const val ARCHIMEDES_ENGINEERING_COOLDOWN = 12
+    private const val ARCHIMEDES_SHIP_COOLDOWN = 15
+    private const val ARCHIMEDES_SIEGE_COOLDOWN = 12
 
-    /** Shows a "Choose Skill" button when Archimedes has unspent upgrade points. */
+    /** Shows "Learn X" buttons when Archimedes has unspent upgrade points - one per available skill, with effect descriptions. */
     internal fun getChooseArchimedesSkillActions(unit: MapUnit, tile: Tile) = sequence {
         if (unit.baseUnit.name != "Natural Philosopher" || unit.archimedesUpgradePoints <= 0) return@sequence
-        val physicsKnown = unit.promotions.promotions.contains("ArchimedesPhysics")
-        val mathKnown = unit.promotions.promotions.contains("ArchimedesMath")
-        val engineeringKnown = unit.promotions.promotions.contains("ArchimedesEngineering")
-        val anyAvailable = !physicsKnown || !mathKnown || !engineeringKnown
-        if (!anyAvailable) return@sequence
+        val known = unit.promotions.promotions
         val picks = sequenceOf(
-            Triple("ArchimedesPhysics", "Physics", physicsKnown),
-            Triple("ArchimedesMath", "Mathematics", mathKnown),
-            Triple("ArchimedesEngineering", "Engineering", engineeringKnown)
-        ).filter { !it.third }.toList()
-        yield(UnitAction(
-            UnitActionType.ChooseArchimedesSkill, 200f,
-            title = "Choose Skill ([$${unit.archimedesUpgradePoints}])",
-            action = {
-                val choice = if (unit.civ.isAI()) picks.random(unit.civ.state.stateBasedRandom("ArchimedesSkill"))
-                    else picks.first()  // Human: simplified, picks first available; a full picker UI could be added later
-                unit.promotions.addPromotion(choice.first, isFree = true)
-                unit.archimedesUpgradePoints -= 1
-            }.takeIf { picks.isNotEmpty() }
-        ))
+            Triple("ArchimedesPhysics", "Learn Physics ([+1] Sight, reveal [3] tiles)", "ArchimedesPhysics" !in known),
+            Triple("ArchimedesMath", "Learn Mathematics ([+2] Movement, +[300] Science)", "ArchimedesMath" !in known),
+            Triple("ArchimedesEngineering", "Learn Engineering (terraform, Citadel, ships, [+200] Production)", "ArchimedesEngineering" !in known)
+        ).filter { it.third }.toList()
+        for ((promotion, title, _) in picks) {
+            yield(UnitAction(
+                UnitActionType.ChooseArchimedesSkill, 200f,
+                title = title,
+                action = {
+                    unit.promotions.addPromotion(promotion, isFree = true)
+                    unit.archimedesUpgradePoints -= 1
+                    unit.civ.addNotification("Your [Natural Philosopher] has mastered a new skill!",
+                        NotificationCategory.Units, NotificationIcon.Science)
+                }
+            ))
+        }
     }
 
     /** Physics: grants combat buffs to nearby friendly military units for 3 turns. Cooldown 8. */
@@ -185,7 +191,7 @@ object UnitActionsGreatPerson {
         val cooldownRemaining = ARCHIMEDES_PHYSICS_COOLDOWN - turnsSinceLastUse
         yield(UnitAction(
             UnitActionType.ArchimedesPhysics, 90f,
-            title = if (onCooldown) "Physics ([$cooldownRemaining] turns)" else UnitActionType.ArchimedesPhysics.value,
+            title = if (onCooldown) "Physics ([$cooldownRemaining] turns)" else "Physics (rally troops, [3] turns)",
             action = {
                 for (nearbyTile in tile.getTilesInDistance(2)) {
                     for (otherUnit in nearbyTile.getUnits()) {
@@ -212,7 +218,7 @@ object UnitActionsGreatPerson {
         val cooldownRemaining = ARCHIMEDES_MATH_COOLDOWN - turnsSinceLastUse
         yield(UnitAction(
             UnitActionType.ArchimedesMath, 90f,
-            title = if (onCooldown) "Mathematics ([$cooldownRemaining] turns)" else UnitActionType.ArchimedesMath.value,
+            title = if (onCooldown) "Mathematics ([$cooldownRemaining] turns)" else "Mathematics (+[300] Science)",
             action = {
                 unit.civ.tech.addScience(300)
                 unit.archimedesMathLastUsedTurn = unit.civ.gameInfo.turns
@@ -230,7 +236,7 @@ object UnitActionsGreatPerson {
         val city = tile.getCity()
         yield(UnitAction(
             UnitActionType.ArchimedesEngineering, 90f,
-            title = if (onCooldown) "Engineering ([$cooldownRemaining] turns)" else UnitActionType.ArchimedesEngineering.value,
+            title = if (onCooldown) "Engineering ([$cooldownRemaining] turns)" else "Engineering (Manufactory, [+200] Production)",
             action = {
                 tile.setImprovement("Manufactory", unit.civ, unit)
                 city?.cityConstructions?.addProductionPoints(200)
@@ -238,6 +244,104 @@ object UnitActionsGreatPerson {
                 unit.useMovementPoints(unit.currentMovement)
             }.takeIf { !onCooldown && unit.hasMovement() && city != null }
         ))
+    }
+
+    /** Engineering shipyard: construct any ship the civ can currently build, on an adjacent water tile. One button per ship. Cooldown 15. */
+    internal fun getArchimedesShipyardActions(unit: MapUnit, tile: Tile) = sequence {
+        if (unit.baseUnit.name != "Natural Philosopher") return@sequence
+        if (!unit.promotions.promotions.contains("ArchimedesEngineering")) return@sequence
+        val turnsSinceLastUse = unit.civ.gameInfo.turns - unit.archimedesShipLastUsedTurn
+        val onCooldown = turnsSinceLastUse < ARCHIMEDES_SHIP_COOLDOWN
+        val cooldownRemaining = ARCHIMEDES_SHIP_COOLDOWN - turnsSinceLastUse
+        if (onCooldown) {
+            yield(UnitAction(UnitActionType.ArchimedesShipyard, 88f,
+                title = "Construct Ship ([$cooldownRemaining] turns)"))
+            return@sequence
+        }
+        val waterTile = if (tile.isWater) tile else tile.neighbors.firstOrNull { it.isWater }
+        for (ship in getConstructibleShips(unit)) {
+            yield(UnitAction(
+                UnitActionType.ArchimedesShipyard, 88f,
+                title = "Construct Ship ([${ship.name}], [-90]% maintenance)",
+                action = {
+                    val target = if (tile.isWater) tile
+                        else tile.neighbors.firstOrNull { it.isWater } ?: return@UnitAction
+                    val placedUnit = unit.civ.units.placeUnitNearTile(target.position.toHexCoord(), ship.name)
+                        ?: return@UnitAction  // placement can fail (e.g. ice-blocked) - stay quiet, no cost
+                    placedUnit.archimedesConstructed = true
+                    unit.archimedesShipLastUsedTurn = unit.civ.gameInfo.turns
+                    unit.useMovementPoints(unit.currentMovement)
+                    unit.civ.addNotification("Your [Natural Philosopher] has constructed a [${ship.name}]!",
+                        NotificationCategory.Units, ship.name)
+                }.takeIf { unit.hasMovement() && waterTile != null }
+            ))
+        }
+    }
+
+    /** All ships this civ can currently build - water units, great people excluded, best first. */
+    @Readonly
+    private fun getConstructibleShips(unit: MapUnit): List<BaseUnit> {
+        val civ = unit.civ
+        return getConstructibleUnits(unit) { it.unitType.endsWith("Water") }
+            .sortedByDescending { techColumn(unit, it) }
+    }
+
+    /** All siege engines this civ can currently build, best first. */
+    @Readonly
+    private fun getConstructibleSiegeEngines(unit: MapUnit): List<BaseUnit> {
+        return getConstructibleUnits(unit) { it.unitType == "Siege" }
+            .sortedByDescending { techColumn(unit, it) }
+    }
+
+    /** Common filter for Archimedes workshop construction: not great people, tech known, not obsolete, unique fits, resources affordable. */
+    @Readonly
+    private fun getConstructibleUnits(unit: MapUnit, typeFilter: (BaseUnit) -> Boolean): List<BaseUnit> {
+        val civ = unit.civ
+        return civ.gameInfo.ruleset.units.values.asSequence()
+            .filter(typeFilter)
+            .filter { !it.isGreatPerson }
+            .filter { it.uniqueTo == null || civ.matchesFilter(it.uniqueTo!!) }
+            .filter { it.requiredTech == null || civ.tech.isResearched(it.requiredTech!!) }
+            .filter { !civ.tech.isObsolete(it) }
+            .filter { baseUnit ->
+                baseUnit.getResourceRequirementsPerTurn(civ.state).none {
+                    it.value > 0 && civ.getResourceAmount(it.key) < it.value
+                }
+            }
+            .toList()
+    }
+
+    @Readonly
+    private fun techColumn(unit: MapUnit, baseUnit: BaseUnit): Int =
+        unit.civ.gameInfo.ruleset.technologies[baseUnit.requiredTech]?.column?.columnNumber ?: -1
+
+    /** Engineering siege workshop: construct any siege engine the civ can currently build, near the current tile. One button per engine. Cooldown 12. */
+    internal fun getArchimedesSiegeActions(unit: MapUnit, tile: Tile) = sequence {
+        if (unit.baseUnit.name != "Natural Philosopher") return@sequence
+        if (!unit.promotions.promotions.contains("ArchimedesEngineering")) return@sequence
+        val turnsSinceLastUse = unit.civ.gameInfo.turns - unit.archimedesSiegeLastUsedTurn
+        val onCooldown = turnsSinceLastUse < ARCHIMEDES_SIEGE_COOLDOWN
+        val cooldownRemaining = ARCHIMEDES_SIEGE_COOLDOWN - turnsSinceLastUse
+        if (onCooldown) {
+            yield(UnitAction(UnitActionType.ArchimedesSiege, 87f,
+                title = "Construct Siege Engine ([$cooldownRemaining] turns)"))
+            return@sequence
+        }
+        for (engine in getConstructibleSiegeEngines(unit)) {
+            yield(UnitAction(
+                UnitActionType.ArchimedesSiege, 87f,
+                title = "Construct Siege Engine ([${engine.name}], [-90]% maintenance)",
+                action = {
+                    val placedUnit = unit.civ.units.placeUnitNearTile(tile.position.toHexCoord(), engine.name)
+                        ?: return@UnitAction  // placement can fail - stay quiet, no cost
+                    placedUnit.archimedesConstructed = true
+                    unit.archimedesSiegeLastUsedTurn = unit.civ.gameInfo.turns
+                    unit.useMovementPoints(unit.currentMovement)
+                    unit.civ.addNotification("Your [Natural Philosopher] has constructed a [${engine.name}]!",
+                        NotificationCategory.Units, engine.name)
+                }.takeIf { unit.hasMovement() }
+            ))
+        }
     }
 
     // endregion

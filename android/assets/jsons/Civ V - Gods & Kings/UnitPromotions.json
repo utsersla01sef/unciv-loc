@@ -784,14 +784,31 @@
 	},
 	{
 		"name": "ArchimedesPhysics",
-		"uniques": ["[-100]% weight to this choice for AI decisions"]
+		"uniques": ["[+1] Sight",
+			"Reveal up to [all] [All] within a [3] tile radius <for all movement>",
+			"[-100]% weight to this choice for AI decisions"]
 	},
 	{
 		"name": "ArchimedesMath",
-		"uniques": ["[-100]% weight to this choice for AI decisions"]
+		"uniques": ["[+2] Movement",
+			"[-100]% weight to this choice for AI decisions"]
 	},
 	{
 		"name": "ArchimedesEngineering",
-		"uniques": ["[-100]% weight to this choice for AI decisions"]
+		"uniques": ["Can instantly construct a [{All} {non-[Great Improvement]} {non-[Railroad]}] improvement <for all movement>",
+			"Can instantly construct a [Citadel] improvement <for all movement>",
+			"Turn this tile into a [Plains] tile <for all movement>",
+			"Add [Iron] to this tile <for all movement>",
+			"Turn this tile into a [Coast] tile <for all movement> <in [Land] tiles>",
+			"Can speed up construction of a building",
+			"Can speed up the construction of a wonder",
+			"May travel on Water tiles without embarking",
+			"[0] Movement point cost to disembark",
+			"[0] Movement point cost to embark",
+			"Ignores river movement cost",
+			"[+1] Sight <when [Embarked]>",
+			"[+100]% Strength <when defending> <when [Embarked]>",
+			"May attack when embarked",
+			"[-100]% weight to this choice for AI decisions"]
 	}
 ]

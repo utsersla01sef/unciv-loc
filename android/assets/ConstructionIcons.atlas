@@ -1775,6 +1775,13 @@ UnitIcons/Great Scientist
   orig: 100, 100
   offset: 0, 0
   index: -1
+UnitIcons/Natural Philosopher
+  rotate: false
+  xy: 968, 1404
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
 UnitIcons/Great War Bomber
   rotate: false
   xy: 1025, 1620

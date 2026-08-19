@@ -97,6 +97,8 @@ object UnitActions {
         UnitActionType.ArchimedesPhysics to UnitActionsGreatPerson::getArchimedesPhysicsActions,
         UnitActionType.ArchimedesMath to UnitActionsGreatPerson::getArchimedesMathActions,
         UnitActionType.ArchimedesEngineering to UnitActionsGreatPerson::getArchimedesEngineeringActions,
+        UnitActionType.ArchimedesShipyard to UnitActionsGreatPerson::getArchimedesShipyardActions,
+        UnitActionType.ArchimedesSiege to UnitActionsGreatPerson::getArchimedesSiegeActions,
         UnitActionType.GreatPhysicianHeal to UnitActionsGreatPerson::getGreatPhysicianActions
     )
 

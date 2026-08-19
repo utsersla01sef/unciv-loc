@@ -99,7 +99,12 @@ class MapUnit : IsPartOfGameInfoSerialization {
     var archimedesPhysicsLastUsedTurn: Int = Int.MIN_VALUE / 2
     var archimedesMathLastUsedTurn: Int = Int.MIN_VALUE / 2
     var archimedesEngineeringLastUsedTurn: Int = Int.MIN_VALUE / 2
-
+    /** Cooldown tracker for the Archimedes shipyard (Engineering skill). */
+    var archimedesShipLastUsedTurn: Int = Int.MIN_VALUE / 2
+    /** Cooldown tracker for the Archimedes siege workshop (Engineering skill). */
+    var archimedesSiegeLastUsedTurn: Int = Int.MIN_VALUE / 2
+    /** `true` for ships and siege engines constructed by the Natural Philosopher (Archimedes workshop) - they cost 90% less maintenance. */
+    var archimedesConstructed: Boolean = false
     var religion: String? = null
     var religiousStrengthLost = 0
 

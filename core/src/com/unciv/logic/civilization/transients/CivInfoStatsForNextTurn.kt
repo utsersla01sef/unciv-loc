@@ -58,6 +58,8 @@ class CivInfoStatsForNextTurn(val civInfo: Civilization) {
         for (unit in unitsToPayFor) {
             val stateForConditionals = unit.cache.state
             var unitMaintenance = 1f
+            if (unit.archimedesConstructed)
+                unitMaintenance *= 0.1f  // Archimedes-built ships and siege engines cost 90% less
             val uniquesThatApply = unit.getMatchingUniques(
                 UniqueType.UnitMaintenanceDiscount,
                 stateForConditionals

@@ -229,6 +229,10 @@ enum class UnitActionType(
         { ImageGetter.getUnitActionPortrait("HurryResearch")}, UncivSound.Chimes),
     ArchimedesEngineering("Engineering",
         { ImageGetter.getUnitActionPortrait("HurryConstruction")}, UncivSound.Construction),
+    ArchimedesShipyard("Construct Ship",
+        { ImageGetter.getImage("UnitTypeIcons/DomainWater")}, UncivSound.Chimes, defaultPage = 1),
+    ArchimedesSiege("Construct Siege Engine",
+        { ImageGetter.getImage("UnitIcons/Catapult")}, UncivSound.Construction, defaultPage = 1),
     GreatPhysicianHeal("Heal All Units (${Fonts.death})",
         { ImageGetter.getUnitActionPortrait("HurryResearch")}, UncivSound.Chimes),
     ;

@@ -109,6 +109,10 @@ object CivilianUnitAutomation {
             if (UnitActions.invokeUnitAction(unit, UnitActionType.ArchimedesMath)) return
             // Use Engineering when in a city (production boost)
             if (UnitActions.invokeUnitAction(unit, UnitActionType.ArchimedesEngineering)) return
+            // Build ships near water when off cooldown
+            if (UnitActions.invokeUnitAction(unit, UnitActionType.ArchimedesShipyard)) return
+            // Build siege engines when off cooldown
+            if (UnitActions.invokeUnitAction(unit, UnitActionType.ArchimedesSiege)) return
             // Use Physics when near military units
             if (UnitActions.invokeUnitAction(unit, UnitActionType.ArchimedesPhysics)) return
         }
